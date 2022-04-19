@@ -14,6 +14,8 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
+    "@tweenjs/tween.js": "^18.6.4",
+    "animejs": "^3.2.1",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "pinia": "^2.0.11",
