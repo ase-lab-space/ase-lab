@@ -1,5 +1,7 @@
 <template>
-  <div id="globeViz"></div>
+  <div id="globeViz">
+    <canvas id="globe-canvas" />
+  </div>
 </template>
 
 <script lang="ts">
@@ -8,22 +10,28 @@ import ThreeGlobe from 'three-globe';
 import * as THREE from 'three';
 import TWEEN from '@tweenjs/tween.js';
 import { api } from 'src/boot/axios';
+import { sleep } from 'src/utils/PromiseUtil';
 // import TrackballControls from 'three/examples/js/controls/TrackballControls';
 
-class GlobeManager {
+class GlobeManager implements IStartable, ITickable {
   private _globe!: ThreeGlobe;
   private _renderer!: THREE.WebGLRenderer;
   private _scene!: THREE.Scene;
   private _camera!: THREE.PerspectiveCamera;
 
-  constructor() {
-    this._initGlobe();
+  private _scaleMultiplier = 1;
+  private _allowScaleUpdating = false;
+
+  async start() {
+    await this._initGlobe();
     this._initRenderer();
     this._initScene();
     this._initCamera();
 
-    // kickoff renderer
-    this._tick();
+    // initialization
+    this.onResize();
+
+    window.addEventListener('resize', () => this.onResize());
   }
 
   private async _initGlobe() {
@@ -61,15 +69,21 @@ class GlobeManager {
       .arcDashInitialGap(() => Math.random() * 5)
       .arcDashAnimateTime(1000);
 
+    this._globe.scale.set(0, 0, 0);
+
     const globeMaterial =
       this._globe.globeMaterial() as THREE.MeshPhongMaterial;
     globeMaterial.color = new THREE.Color(0xf0e5c9);
   }
 
   private _initRenderer() {
-    this._renderer = new THREE.WebGLRenderer({ alpha: true });
-    this._renderer.setSize(window.innerWidth, window.innerHeight);
-    document.getElementById('globeViz')?.appendChild(this._renderer.domElement);
+    const canvas = document.getElementById('globe-canvas');
+    if (canvas !== null) {
+      this._renderer = new THREE.WebGLRenderer({
+        alpha: true,
+        canvas,
+      });
+    }
   }
 
   private _initScene() {
@@ -81,23 +95,148 @@ class GlobeManager {
 
   private _initCamera() {
     this._camera = new THREE.PerspectiveCamera();
-    this._camera.aspect = window.innerWidth / window.innerHeight;
-    this._camera.updateProjectionMatrix();
     this._camera.position.z = 500;
   }
 
-  private _tick() {
-    requestAnimationFrame(this._tick);
+  public tweenGlobeRotation() {
+    const rotation = {
+      x: 0,
+      y: 0,
+      z: 0,
+    };
+    new TWEEN.Tween(rotation)
+      .to({ y: 0.5 }, 1000)
+      .easing(TWEEN.Easing.Back.Out)
+      .onUpdate((rotation) => {
+        this._globe.rotation.set(rotation.x, rotation.y, rotation.z);
+      })
+      .start();
+  }
 
+  public tweenGlobeScale() {
+    const scale = {
+      value: 0,
+    };
+    new TWEEN.Tween(scale)
+      .to({ value: this._scaleMultiplier }, 700)
+      .easing(TWEEN.Easing.Back.Out)
+      .onUpdate((scale) => {
+        this._globe.scale.set(scale.value, scale.value, scale.value);
+      })
+      .onComplete(() => (this._allowScaleUpdating = true))
+      .start();
+  }
+
+  tick() {
     this._globe.rotateY(0.003);
+
+    if (this._allowScaleUpdating) {
+      this._globe.scale.set(
+        this._scaleMultiplier,
+        this._scaleMultiplier,
+        this._scaleMultiplier
+      );
+    }
+
+    // const worldPos = this._globe.getWorldPosition(new THREE.Vector3());
+    // console.log(worldPos.project(this._camera));
+    // const screenPos = worldPos.project(this._camera);
+    // screenPos.x = -1;
+    // const worldUnproject = screenPos.unproject(this._camera);
+    // console.log(worldUnproject);
+
+    this._globe.position.setX(-80 * this._scaleMultiplier);
+
     this._renderer.render(this._scene, this._camera);
   }
+
+  onResize() {
+    const width = window.innerWidth;
+    const height = window.innerHeight * 1.2;
+    this._scaleMultiplier = width / 750;
+
+    this._renderer.setPixelRatio(window.devicePixelRatio);
+    this._renderer.setSize(width, height);
+
+    this._camera.aspect = width / height;
+    this._camera.updateProjectionMatrix();
+  }
+}
+
+interface ITickable {
+  tick(): void;
+}
+
+interface IStartable {
+  start(): void;
+}
+
+// FIXME: tickableの中でthisがキャプチャできない
+// class LifecycleManager {
+//   private _behaviours: (ITickable | IStartable)[] = [];
+//   private _tickables: (() => void)[] = [];
+
+//   public register(behaviour: ITickable | IStartable) {
+//     this._behaviours.push(behaviour);
+//   }
+
+//   public async kickoff() {
+//     const allStartables: (() => Promise<void>)[] = [];
+//     this._behaviours.forEach((behaviour) => {
+//       if ('start' in behaviour) {
+//         allStartables.push(async () => behaviour.start());
+//       }
+//     });
+//     await Promise.all(allStartables);
+
+//     this._behaviours.forEach((behaviour) => {
+//       if ('tick' in behaviour) {
+//         console.log(behaviour);
+//         this._tickables.push(() => {
+//           behaviour.tick();
+//         });
+//       }
+//     });
+
+//     this.tick();
+//   }
+
+//   tick() {
+//     TWEEN.update();
+//     requestAnimationFrame(() => this.tick());
+
+//     this._tickables.forEach((tickable) => tickable());
+//   }
+// }
+
+const tickables: (() => void)[] = [];
+
+function tick() {
+  requestAnimationFrame(tick);
+  tickables.forEach((tickable) => tickable());
+  TWEEN.update();
 }
 
 export default defineComponent({
   setup() {
     onMounted(async () => {
-      new GlobeManager();
+      const globeManager = new GlobeManager();
+      await globeManager.start();
+      tickables.push(() => globeManager.tick());
+      tick();
+
+      await sleep(3000);
+
+      globeManager.tweenGlobeRotation();
+      globeManager.tweenGlobeScale();
+
+      // const lifecycleManager = new LifecycleManager();
+
+      // const globeManager = new GlobeManager();
+
+      // lifecycleManager.register(globeManager);
+
+      // await lifecycleManager.kickoff();
     });
   },
 });
