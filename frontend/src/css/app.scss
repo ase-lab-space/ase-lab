@@ -1,4 +1,43 @@
 // app global css in SCSS form
-h2 {
+h1,
+h2,
+h3 {
   margin: 0;
+}
+
+body {
+  letter-spacing: 1px;
+}
+
+.tilt-on-hover {
+  transition: all 0.3s;
+  &:hover {
+    transform: rotate(-1deg); // もしかしたら余計
+  }
+}
+
+.section-container {
+  width: 100%;
+}
+
+.section-catch-phrase {
+  line-height: 2.5rem;
+  letter-spacing: 4px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.section-title {
+  .title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: $primary;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-left: 24px;
+    margin-bottom: -12px;
+  }
 }

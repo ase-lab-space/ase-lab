@@ -1,5 +1,5 @@
 <template>
-  <a class="link" :href="path">
+  <a class="link tilt-on-hover" :href="path">
     {{ text }}
   </a>
 </template>
@@ -20,7 +20,6 @@ export default defineComponent({
   text-decoration: none;
   position: relative;
   padding: 4px 4px;
-  transition: all 0.3s;
   letter-spacing: 2px;
 
   &:after {
@@ -37,10 +36,6 @@ export default defineComponent({
 
   &:hover::after {
     width: 100%;
-  }
-
-  &:hover {
-    transform: rotate(1deg); // もしかしたら余計
   }
 }
 </style>

@@ -10,8 +10,6 @@ import ThreeGlobe from 'three-globe';
 import * as THREE from 'three';
 import TWEEN from '@tweenjs/tween.js';
 import { api } from 'src/boot/axios';
-import { sleep } from 'src/utils/PromiseUtil';
-// import TrackballControls from 'three/examples/js/controls/TrackballControls';
 
 class GlobeManager implements IStartable, ITickable {
   private _globe!: ThreeGlobe;
@@ -65,7 +63,7 @@ class GlobeManager implements IStartable, ITickable {
       .arcsData(arcsData)
       .arcColor('color')
       .arcDashLength(0.4)
-      .arcDashGap(4)
+      .arcDashGap(2)
       .arcDashInitialGap(() => Math.random() * 5)
       .arcDashAnimateTime(1000);
 
@@ -73,7 +71,7 @@ class GlobeManager implements IStartable, ITickable {
 
     const globeMaterial =
       this._globe.globeMaterial() as THREE.MeshPhongMaterial;
-    globeMaterial.color = new THREE.Color(0xf0e5c9);
+    globeMaterial.color = new THREE.Color(0xf0e5d6);
   }
 
   private _initRenderer() {
@@ -145,15 +143,16 @@ class GlobeManager implements IStartable, ITickable {
     // const worldUnproject = screenPos.unproject(this._camera);
     // console.log(worldUnproject);
 
-    this._globe.position.setX(-80 * this._scaleMultiplier);
+    this._globe.position.setX(-150 * this._scaleMultiplier);
+    this._globe.position.setY(35 * this._scaleMultiplier);
 
     this._renderer.render(this._scene, this._camera);
   }
 
   onResize() {
     const width = window.innerWidth;
-    const height = window.innerHeight * 1.2;
-    this._scaleMultiplier = width / 750;
+    const height = window.innerHeight * 1;
+    this._scaleMultiplier = width / 1100;
 
     this._renderer.setPixelRatio(window.devicePixelRatio);
     this._renderer.setSize(width, height);
@@ -219,16 +218,22 @@ function tick() {
 
 export default defineComponent({
   setup() {
+    const globeManager = new GlobeManager();
+
     onMounted(async () => {
-      const globeManager = new GlobeManager();
       await globeManager.start();
       tickables.push(() => globeManager.tick());
       tick();
+    });
 
-      await sleep(3000);
-
-      globeManager.tweenGlobeRotation();
-      globeManager.tweenGlobeScale();
+    return {
+      globeManager,
+    };
+  },
+  methods: {
+    async startAnimation() {
+      // globeManager.tweenGlobeRotation();
+      this.globeManager.tweenGlobeScale();
 
       // const lifecycleManager = new LifecycleManager();
 
@@ -237,7 +242,7 @@ export default defineComponent({
       // lifecycleManager.register(globeManager);
 
       // await lifecycleManager.kickoff();
-    });
+    },
   },
 });
 </script>

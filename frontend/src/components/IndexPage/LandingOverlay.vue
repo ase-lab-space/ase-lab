@@ -1,0 +1,131 @@
+<template>
+  <div class="full-screen-overlay row items-center justify-center">
+    <h1 class="ml11">
+      <span class="text-wrapper">
+        <span class="line line1"></span>
+        <span class="letters">ASE-Lab.</span>
+      </span>
+    </h1>
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent, onMounted } from 'vue';
+import anime from 'animejs';
+
+export default defineComponent({
+  setup(props, context) {
+    onMounted(async () => {
+      // Wrap every letter in a span
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      var textWrapper = document.querySelector('.ml11 .letters')!;
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      textWrapper.innerHTML = textWrapper.textContent!.replace(
+        /([^\x00-\x80]|\w|.|-)/g,
+        "<span class='letter'>$&</span>"
+      );
+
+      await anime
+        .timeline({ loop: false })
+        .add({
+          targets: '.ml11',
+          opacity: 1,
+          duration: 1000,
+          easing: 'easeOutExpo',
+        })
+        .add({
+          targets: '.ml11 .line',
+          scaleY: [0, 1],
+          opacity: [0.5, 1],
+          easing: 'easeOutExpo',
+          duration: 700,
+        })
+        .add({
+          targets: '.ml11 .line',
+          translateX: [
+            0,
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+            document.querySelector('.ml11 .letters')!.getBoundingClientRect()
+              .width + 10,
+          ],
+          easing: 'easeOutExpo',
+          duration: 1000,
+          delay: 0,
+        })
+        .add({
+          targets: '.ml11 .letter',
+          opacity: [0, 1],
+          easing: 'easeOutExpo',
+          duration: 600,
+          offset: '-=775',
+          delay: (_el, i) => 74 * i,
+        })
+        .add({
+          targets: '.ml11',
+          opacity: 0,
+          duration: 700,
+          easing: 'easeOutExpo',
+          delay: 1000,
+        })
+        .add({
+          targets: '.full-screen-overlay',
+          opacity: 0,
+          duration: 1000,
+          easing: 'easeOutExpo',
+        }).finished;
+
+      context.emit('finish-animation');
+      (
+        document.getElementsByClassName('full-screen-overlay')[0] as HTMLElement
+      ).style.zIndex = '-100';
+    });
+    return;
+  },
+});
+</script>
+
+<style lang="scss">
+.full-screen-overlay {
+  background-color: white;
+  z-index: 100000;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.ml11 {
+  font-weight: 700;
+  font-size: 3.5em;
+  opacity: 0;
+
+  .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+  }
+  .line {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: $primary;
+    transform-origin: 0 50%;
+  }
+  .line1 {
+    top: 0;
+    left: 0;
+  }
+  .letter {
+    display: inline-block;
+    line-height: 1em;
+    padding: 0 1px;
+    font-weight: 300;
+    font-size: 4rem;
+    font-family: $typography-title-font-family;
+  }
+}
+</style>
