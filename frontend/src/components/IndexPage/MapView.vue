@@ -1,37 +1,6 @@
 <template>
   <section class="section-container section-full-size">
     <div class="content-container row justify-between">
-      <div class="col-6 column justify-start">
-        <div class="col-3"></div>
-        <div class="col-9">
-          <slide-in id="about-catch-phrase">
-            <h3 class="section-catch-phrase">
-              宇宙×理学・工学<br />
-              アカデミックな学びの場
-            </h3>
-          </slide-in>
-
-          <slide-in id="about-decription">
-            <p class="">
-              現在は、宇宙理学や宇宙工学についての教材に取り組む勉強会、その基礎となる数学や物理学に関する勉強会、より気楽に参加できる教養のような勉強会などが企画されています。
-            </p>
-
-            <p class="">
-              ASE-Lab.には、理学部の学生も工学部の学生も、文系の学生もいます。
-              宇宙への学びを深めたいという思いがあれば、肩書は関係ありません。
-            </p>
-          </slide-in>
-
-          <slide-in id="about-link">
-            <double-line-link
-              class="link"
-              href="/vision"
-              label="私たちのVISION →"
-            />
-          </slide-in>
-        </div>
-      </div>
-
       <div class="col-5 column">
         <h2 class="section-title row items-end">
           <div class="title">About</div>
@@ -42,6 +11,36 @@
           <a href="/vision">
             <img src="/img/1.jpeg" alt="" class="image3" />
           </a>
+        </div>
+      </div>
+
+      <div class="col-6 column justify-start">
+        <div class="col-9">
+          <slide-in id="map-catch-phrase">
+            <h3 class="section-catch-phrase">
+              全国どこにいたって、<br />
+              仲間は見つかる。
+            </h3>
+          </slide-in>
+
+          <slide-in id="map-decription">
+            <p class="">
+              現在は、宇宙理学や宇宙工学についての教材に取り組む勉強会、その基礎となる数学や物理学に関する勉強会、より気楽に参加できる教養のような勉強会などが企画されています。
+            </p>
+
+            <p class="">
+              ASE-Lab.には、理学部の学生も工学部の学生も、文系の学生もいます。
+              宇宙への学びを深めたいという思いがあれば、肩書は関係ありません。
+            </p>
+          </slide-in>
+
+          <slide-in id="map-link">
+            <double-line-link
+              class="link"
+              href="/vision"
+              label="参加者の声 →"
+            />
+          </slide-in>
         </div>
       </div>
     </div>

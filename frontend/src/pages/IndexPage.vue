@@ -3,6 +3,7 @@
     <landing-overlay @finish-animation="startMainViewAnim" />
     <main-view ref="mainView" />
     <about-view />
+    <map-view />
   </q-page>
 </template>
 
@@ -11,6 +12,7 @@ import { defineComponent, ref } from 'vue';
 import MainView from 'src/components/IndexPage/MainView.vue';
 import LandingOverlay from 'src/components/IndexPage/LandingOverlay.vue';
 import AboutView from 'src/components/IndexPage/AboutView.vue';
+import MapView from 'src/components/IndexPage/MapView.vue';
 
 export default defineComponent({
   name: 'IndexPage',
@@ -18,6 +20,7 @@ export default defineComponent({
     MainView,
     LandingOverlay,
     AboutView,
+    MapView,
   },
 
   setup() {
