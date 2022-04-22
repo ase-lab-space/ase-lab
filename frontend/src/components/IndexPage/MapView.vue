@@ -1,5 +1,5 @@
 <template>
-  <section class="section-container section-full-size">
+  <section class="section-container section-full-size column items-center">
     <div class="content-container row justify-between">
       <div class="col-5 column">
         <h2 class="section-title row items-end">
@@ -44,6 +44,14 @@
         </div>
       </div>
     </div>
+
+    <slide-in id="map-entry-button">
+      <border-button
+        href="/contact"
+        label="参加はコチラから"
+        class="entry-button tilt-on-hover"
+      />
+    </slide-in>
   </section>
 </template>
 
@@ -51,11 +59,13 @@
 import { defineComponent } from 'vue';
 import DoubleLineLink from '../Common/Button/DoubleLineLink.vue';
 import SlideIn from '../Common/Transition/SlideIn.vue';
+import BorderButton from '../Common/Button/BorderButton.vue';
 
 export default defineComponent({
   components: {
     DoubleLineLink,
     SlideIn,
+    BorderButton,
   },
 });
 </script>
