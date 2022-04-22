@@ -1,27 +1,19 @@
 <template>
-  <div :id="id" class="slidein">
+  <div ref="target" class="slidein">
     <slot />
   </div>
 </template>
 
 <script lang="ts">
 import anime from 'animejs';
-import { defineComponent, onMounted } from 'vue';
+import { defineComponent, onMounted, ref } from 'vue';
 
 export default defineComponent({
-  props: ['id'],
-
-  setup(props) {
+  setup() {
     let eased = false;
+    const target = ref<HTMLElement>();
+
     onMounted(() => {
-      if (!props.id) {
-        console.error("'id' is not specified. Maybe you forgot?");
-        return;
-      }
-
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-      const target = document.getElementById(props.id)!;
-
       const options: IntersectionObserverInit = {
         rootMargin: '-100px',
       };
@@ -29,7 +21,7 @@ export default defineComponent({
         entries.forEach((entry) => {
           if (entry.isIntersecting && !eased) {
             anime({
-              targets: target,
+              targets: target.value,
               duration: 1500,
               translateY: [40, 0],
               opacity: 1,
@@ -40,8 +32,13 @@ export default defineComponent({
         });
       }, options);
 
-      observer.observe(target);
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      observer.observe(target.value!);
     });
+
+    return {
+      target,
+    };
   },
 });
 </script>

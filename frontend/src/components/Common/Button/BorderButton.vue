@@ -10,7 +10,12 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  props: ['label'],
+  props: {
+    label: {
+      type: String,
+      required: true,
+    },
+  },
 });
 </script>
 

@@ -33,20 +33,6 @@ export default defineComponent({
 .label {
   position: relative;
   display: inline-block;
-  &::after {
-    content: '';
-    background-color: $primary;
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 1px;
-    width: 0;
-    transition: all 0.3s;
-  }
-
-  &:hover::after {
-    width: 100%;
-  }
 
   &::before {
     content: '';

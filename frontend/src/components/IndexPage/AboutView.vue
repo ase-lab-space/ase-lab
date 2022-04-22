@@ -4,14 +4,14 @@
       <div class="col-6 column justify-start">
         <div class="col-3"></div>
         <div class="col-9">
-          <slide-in id="about-catch-phrase">
+          <slide-in>
             <h3 class="section-catch-phrase">
               宇宙×理学・工学<br />
               アカデミックな学びの場
             </h3>
           </slide-in>
 
-          <slide-in id="about-decription">
+          <slide-in>
             <p class="">
               現在は、宇宙理学や宇宙工学についての教材に取り組む勉強会、その基礎となる数学や物理学に関する勉強会、より気楽に参加できる教養のような勉強会などが企画されています。
             </p>
@@ -22,7 +22,7 @@
             </p>
           </slide-in>
 
-          <slide-in id="about-link">
+          <slide-in>
             <double-line-link
               class="link"
               href="/vision"

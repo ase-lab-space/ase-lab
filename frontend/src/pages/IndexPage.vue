@@ -4,6 +4,7 @@
     <main-view ref="mainView" />
     <about-view />
     <map-view />
+    <seminars-view />
   </q-page>
 </template>
 
@@ -13,6 +14,7 @@ import MainView from 'src/components/IndexPage/MainView.vue';
 import LandingOverlay from 'src/components/IndexPage/LandingOverlay.vue';
 import AboutView from 'src/components/IndexPage/AboutView.vue';
 import MapView from 'src/components/IndexPage/MapView.vue';
+import SeminarsView from 'src/components/IndexPage/SeminarsView.vue';
 
 export default defineComponent({
   name: 'IndexPage',
@@ -21,6 +23,7 @@ export default defineComponent({
     LandingOverlay,
     AboutView,
     MapView,
+    SeminarsView,
   },
 
   setup() {
