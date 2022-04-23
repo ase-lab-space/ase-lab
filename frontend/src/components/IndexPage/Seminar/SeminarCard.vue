@@ -74,6 +74,7 @@ export default defineComponent({
 
   &:hover {
     transform: translateX(10px);
+    background-color: #ededed;
   }
 }
 

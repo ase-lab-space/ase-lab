@@ -1,5 +1,5 @@
 <template>
-  <section class="row section-container q-gutter-lg">
+  <section class="row section-container q-col-gutter-xl">
     <div class="col-6 column">
       <div class="col row justify-between items-end section-title-container">
         <h4 class="section-title">実施中のゼミ</h4>
