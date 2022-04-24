@@ -4,11 +4,12 @@
       <div class="col row justify-between items-end section-title-container">
         <h4 class="section-title">実施中のゼミ</h4>
 
-        <single-line-link href="/activities" label="ゼミをもっと見る →" />
+        <single-line-link to="/activities" label="ゼミをもっと見る →" />
       </div>
 
       <slide-in v-for="seminar in seminars" :key="seminar.title">
         <seminar-card
+          class="seminar-card"
           :title="seminar.title"
           :description="seminar.description"
           :tags="seminar.tags"
@@ -20,11 +21,12 @@
       <div class="col row justify-between items-end section-title-container">
         <h4 class="section-title">メンバーが企画中のゼミ</h4>
 
-        <single-line-link href="/activities" label="ゼミをもっと見る →" />
+        <single-line-link to="/activities" label="ゼミをもっと見る →" />
       </div>
 
       <slide-in v-for="seminar in seminars" :key="seminar.title">
         <seminar-card
+          class="seminar-card"
           :title="seminar.title"
           :description="seminar.description"
           :tags="seminar.tags"
@@ -122,5 +124,6 @@ export default defineComponent({
 
 .seminar-card {
   margin-bottom: 16px;
+  width: 90% !important;
 }
 </style>

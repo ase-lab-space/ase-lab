@@ -8,9 +8,9 @@
         </h2>
 
         <div class="img-container row items-center justify-center">
-          <a href="/vision">
+          <router-link to="/vision">
             <img src="/img/1.jpeg" alt="" class="image3" />
-          </a>
+          </router-link>
         </div>
       </div>
 
@@ -35,11 +35,7 @@
           </slide-in>
 
           <slide-in>
-            <double-line-link
-              class="link"
-              href="/vision"
-              label="参加者の声 →"
-            />
+            <double-line-link class="link" to="/vision" label="参加者の声 →" />
           </slide-in>
         </div>
       </div>
@@ -47,7 +43,7 @@
 
     <slide-in>
       <border-button
-        href="/contact"
+        to="/contact"
         label="参加はコチラから"
         class="entry-button tilt-on-hover"
       />

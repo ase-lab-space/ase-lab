@@ -4,7 +4,13 @@
     <main-view ref="mainView" />
     <about-view />
     <map-view />
-    <seminars-view />
+    <seminars-view class="seminars-view" />
+    <articles-view />
+    <border-button
+      to="/contact"
+      label="参加はコチラから"
+      class="entry-button tilt-on-hover"
+    />
   </q-page>
 </template>
 
@@ -15,6 +21,8 @@ import LandingOverlay from 'src/components/IndexPage/LandingOverlay.vue';
 import AboutView from 'src/components/IndexPage/AboutView.vue';
 import MapView from 'src/components/IndexPage/MapView.vue';
 import SeminarsView from 'src/components/IndexPage/SeminarsView.vue';
+import ArticlesView from 'src/components/IndexPage/ArticlesView.vue';
+import BorderButton from 'src/components/Common/Button/BorderButton.vue';
 
 export default defineComponent({
   name: 'IndexPage',
@@ -24,6 +32,8 @@ export default defineComponent({
     AboutView,
     MapView,
     SeminarsView,
+    ArticlesView,
+    BorderButton,
   },
 
   setup() {
@@ -41,3 +51,13 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="scss" scoped>
+.seminars-view {
+  margin-bottom: 64px;
+}
+
+.entry-button {
+  margin-top: 64px;
+}
+</style>

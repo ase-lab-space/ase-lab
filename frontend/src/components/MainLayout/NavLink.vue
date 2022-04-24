@@ -1,7 +1,7 @@
 <template>
-  <a class="link tilt-on-hover" :href="path">
+  <router-link class="link tilt-on-hover" :to="path">
     {{ text }}
-  </a>
+  </router-link>
 </template>
 
 <script lang="ts">

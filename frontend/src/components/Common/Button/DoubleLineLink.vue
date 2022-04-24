@@ -1,9 +1,7 @@
 <template>
-  <div>
-    <a class="link label tilt-on-hover" :href="href">
-      {{ label }}
-    </a>
-  </div>
+  <router-link :to="to" class="link label tilt-on-hover">
+    {{ label }}
+  </router-link>
 </template>
 
 <script lang="ts">
@@ -15,7 +13,7 @@ export default defineComponent({
       type: String,
       required: true,
     },
-    href: {
+    to: {
       type: String,
       required: true,
     },

@@ -22,7 +22,7 @@
         </div>
 
         <border-button
-          href="/contact"
+          to="/contact"
           label="参加はコチラから"
           class="entry-button tilt-on-hover"
         />

@@ -1,9 +1,9 @@
 <template>
-  <a class="link">
+  <router-link :to="to" class="link">
     <div class="link-text">
       {{ label }}
     </div>
-  </a>
+  </router-link>
 </template>
 
 <script lang="ts">
@@ -12,6 +12,10 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   props: {
     label: {
+      type: String,
+      required: true,
+    },
+    to: {
       type: String,
       required: true,
     },

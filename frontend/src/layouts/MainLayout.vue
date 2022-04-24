@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh Lpr lFf" class="layout-background">
+  <q-layout view="lHh Lpr lff" class="layout-background">
     <q-page-container class="frame-container">
       <div class="frame-container-top">
         <header class="row justify-between">
@@ -12,7 +12,14 @@
             <nav-link text="Contact" path="/contact" />
           </nav>
         </header>
-        <router-view />
+        <transition>
+          <router-view />
+          <!-- <transition mode="out-in">
+            <component :is="Component" />
+          </transition> -->
+        </transition>
+
+        <footer-view />
       </div>
     </q-page-container>
   </q-layout>
@@ -21,12 +28,14 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import NavLink from 'src/components/MainLayout/NavLink.vue';
+import FooterView from 'src/components/MainLayout/FooterView.vue';
 
 export default defineComponent({
   name: 'MainLayout',
 
   components: {
     NavLink,
+    FooterView,
   },
 
   setup() {
@@ -35,7 +44,16 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s;
+}
+.v-enter,
+.v-leave-to {
+  opacity: 0;
+}
+
 .frame-container {
   margin: 0 40px;
   overflow: hidden;
@@ -43,7 +61,7 @@ export default defineComponent({
 
 .frame-container-top {
   background-color: #fff;
-  margin-top: 40px;
+  margin: 40px 0;
   padding: 40px;
   border-radius: 25px;
 }

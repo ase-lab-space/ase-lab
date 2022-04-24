@@ -25,7 +25,7 @@
           <slide-in>
             <double-line-link
               class="link"
-              href="/vision"
+              to="/vision"
               label="私たちのVISION →"
             />
           </slide-in>
@@ -39,9 +39,9 @@
         </h2>
 
         <div class="img-container row items-center justify-center">
-          <a href="/vision">
+          <router-link to="/vision">
             <img src="/img/1.jpeg" alt="" class="image3" />
-          </a>
+          </router-link>
         </div>
       </div>
     </div>
