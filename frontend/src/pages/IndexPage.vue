@@ -1,6 +1,9 @@
 <template>
   <q-page class="row items-center justify-evenly">
-    <landing-overlay @finish-animation="mainView.startAnimation()" />
+    <landing-overlay
+      v-if="route.query['no-ovl'] !== 't'"
+      @finish-animation="mainView?.startAnimation()"
+    />
     <main-view ref="mainView" />
     <about-view />
     <map-view />
@@ -15,7 +18,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent, onMounted, ref } from 'vue';
+import { useRoute } from 'vue-router';
 import MainView from 'src/components/IndexPage/MainView.vue';
 import LandingOverlay from 'src/components/IndexPage/LandingOverlay.vue';
 import AboutView from 'src/components/IndexPage/AboutView.vue';
@@ -23,6 +27,7 @@ import MapView from 'src/components/IndexPage/MapView.vue';
 import SeminarsView from 'src/components/IndexPage/SeminarsView.vue';
 import ArticlesView from 'src/components/IndexPage/ArticlesView.vue';
 import BorderButton from 'src/components/Common/Button/BorderButton.vue';
+import { sleep } from 'src/utils/PromiseUtil';
 
 export default defineComponent({
   name: 'IndexPage',
@@ -37,8 +42,19 @@ export default defineComponent({
   },
 
   setup() {
+    const route = useRoute();
+    const mainView = ref();
+    onMounted(async () => {
+      if (route.query['no-ovl'] === 't') {
+        // onMountedのタイミングで少し待たないといけない
+        await sleep(1000);
+        mainView?.value.startAnimation();
+      }
+    });
+
     return {
-      mainView: ref(),
+      route,
+      mainView,
     };
   },
 });

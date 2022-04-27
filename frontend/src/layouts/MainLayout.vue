@@ -4,7 +4,7 @@
       <div class="frame-container-top">
         <header class="row justify-between">
           <h2 class="ase-lab-title">
-            <a href="/">ASE-Lab.</a>
+            <router-link to="/?no-ovl=t">ASE-Lab.</router-link>
           </h2>
 
           <nav class="navbar row items-center">

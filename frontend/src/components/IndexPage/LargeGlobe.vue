@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted } from 'vue';
+import { defineComponent, onBeforeMount, onMounted } from 'vue';
 import ThreeGlobe from 'three-globe';
 import * as THREE from 'three';
 import TWEEN from '@tweenjs/tween.js';
@@ -210,8 +210,10 @@ interface IStartable {
 
 const tickables: (() => void)[] = [];
 
+let frameId = 0;
+
 function tick() {
-  requestAnimationFrame(tick);
+  frameId = requestAnimationFrame(tick);
   tickables.forEach((tickable) => tickable());
   TWEEN.update();
 }
@@ -224,6 +226,10 @@ export default defineComponent({
       await globeManager.start();
       tickables.push(() => globeManager.tick());
       tick();
+    });
+
+    onBeforeMount(() => {
+      cancelAnimationFrame(frameId);
     });
 
     return {
