@@ -1,34 +1,33 @@
 <template>
-  <section class="column section-container">
-    <div class="col row justify-between section-title-container">
-      <h4 class="section-title">メンバーに関する記事</h4>
-
-      <single-line-link to="/articles" label="記事をもっと見る →" />
-    </div>
-
-    <div class="col row justify-start q-gutter-md">
-      <slide-in v-for="article in articles" :key="article.title">
+  <q-page class="column items-center">
+    <page-title
+      title="Articles"
+      description="ASE-Lab. やASE-Lab. メンバーに関するnote記事を書いています。続々更新中なのでお楽しみに。"
+      class="title-container"
+    />
+    <div class="row justify-start q-gutter-xl">
+      <slide-in v-for="article in articles" :key="article.title" :delay="500">
         <article-card :article="article" />
       </slide-in>
     </div>
-  </section>
+  </q-page>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import SingleLineLink from '../Common/Button/SingleLineLink.vue';
-import SlideIn from '../Common/Transition/SlideIn.vue';
-import ArticleCard, { IArticleProps } from './Article/ArticleCard.vue';
+import PageTitle from 'src/components/Common/PageTitle.vue';
+import SlideIn from 'src/components/Common/Transition/SlideIn.vue';
+import ArticleCard from 'src/components/IndexPage/Article/ArticleCard.vue';
 
 export default defineComponent({
   components: {
-    ArticleCard,
-    SingleLineLink,
+    PageTitle,
     SlideIn,
+    ArticleCard,
   },
 
   setup() {
-    const articles: IArticleProps[] = [
+    const articles = [
       {
         img: '/img/sleeping_max.jpg',
         title: '【MAX】〜地方メンバーの声（第一回）〜',
@@ -55,22 +54,14 @@ export default defineComponent({
       },
     ];
     return {
-      articles,
+      articles: articles.concat(articles),
     };
   },
 });
 </script>
 
 <style lang="scss" scoped>
-.section-container {
-  padding: 0 24px;
-}
-.section-title-container {
-  margin-bottom: 24px;
-}
-.section-title {
-  font-size: 1.5rem;
-  text-decoration: underline;
-  font-weight: 700;
+.title-container {
+  margin-bottom: 60px;
 }
 </style>
