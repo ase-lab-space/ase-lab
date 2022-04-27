@@ -1,45 +1,46 @@
 <template>
-  <section>
-    <div class="container row justify-end">
+  <section class="form-container">
+    <div class="row justify-end">
       <div class="col-12">
-        <q-form class="contact-form q-mx-auto px-6" @submit="send" greedy>
-          <div class="text-h5 text-center pt-4">Contact Form</div>
-          <div class="text-caption text-center pb-4">
-            ご気軽にお問い合わせください！
-          </div>
+        <q-form class="contact-form q-mx-auto form" @submit="send" greedy>
           <q-input
             v-model="name"
             type="text"
             label="名前"
-            outlined
-            class="mt-3"
             :rules="[rules.required]"
           />
           <q-input
             v-model="email"
             type="email"
             label="E-mail"
-            outlined
-            class="mt-3"
             :rules="[rules.required]"
           />
+          <div class="q-gutter-sm">
+            <q-radio
+              v-for="(color, s) in STATUS_TYPE"
+              :key="s"
+              v-model="status"
+              :val="s"
+              :label="s"
+              :color="color"
+            />
+          </div>
           <q-input
             v-model="body"
             type="textarea"
             label="内容"
-            outlined
-            class="mt-3"
             :rules="[rules.required]"
           />
-
-          <q-btn
-            outline
-            type="submit"
-            label="送信"
-            :loading="loading"
-            class="full-width mt-3 mb-6"
-            color="secondary"
-          />
+          <div class="row justify-end">
+            <q-btn
+              outline
+              type="submit"
+              label="送信"
+              :loading="loading"
+              color="secondary"
+              class="submit"
+            />
+          </div>
         </q-form>
       </div>
     </div>
@@ -48,23 +49,38 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import { useQuasar } from 'quasar';
+import { QForm, useQuasar } from 'quasar';
 import { send } from '@emailjs/browser';
+
+const STATUS_TYPE = {
+  高校生: 'teal',
+  大学生: 'orange',
+  社会人: 'red',
+  その他: 'cyan',
+};
 
 export default defineComponent({
   setup() {
+    const form = ref<QForm>();
     const q = useQuasar();
 
     const name = ref('');
     const email = ref('');
+    const status = ref<keyof typeof STATUS_TYPE>('大学生');
     const body = ref('');
     const loading = ref(false);
 
     return {
+      form,
+
       name,
       email,
+      status,
       body,
+
+      // style
       loading,
+      STATUS_TYPE,
 
       rules: {
         required: (value: string) => !!value || 'この項目は必須です。',
@@ -80,16 +96,13 @@ export default defineComponent({
             {
               name: name.value,
               email: email.value,
+              status: status.value,
               body: body.value,
             },
             'user_UdBeQl08zUEhs9grdeS90'
           );
 
           q.notify('正常に送信されました。返信をお待ちください。');
-
-          name.value = '';
-          email.value = '';
-          body.value = '';
         } catch {
           q.notify(
             '何らかの理由で正常に送信できませんでした。時間を開けてもう一度送るか、ase.lab.academic@gmail.comへ直接ご連絡ください。'
@@ -102,3 +115,19 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="scss" scoped>
+.form-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.form {
+  * {
+    margin-bottom: 12px;
+  }
+}
+.submit {
+  min-width: 80px;
+}
+</style>

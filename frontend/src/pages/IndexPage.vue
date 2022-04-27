@@ -1,6 +1,6 @@
 <template>
   <q-page class="row items-center justify-evenly">
-    <landing-overlay @finish-animation="startMainViewAnim" />
+    <landing-overlay @finish-animation="mainView.startAnimation()" />
     <main-view ref="mainView" />
     <about-view />
     <map-view />
@@ -37,17 +37,9 @@ export default defineComponent({
   },
 
   setup() {
-    const mainView = ref();
-
     return {
-      mainView,
+      mainView: ref(),
     };
-  },
-
-  methods: {
-    startMainViewAnim() {
-      this.mainView.startAnimation();
-    },
   },
 });
 </script>

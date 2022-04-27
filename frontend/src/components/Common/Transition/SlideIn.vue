@@ -9,7 +9,13 @@ import anime from 'animejs';
 import { defineComponent, onMounted, ref } from 'vue';
 
 export default defineComponent({
-  setup() {
+  props: {
+    delay: {
+      type: Number,
+      default: 0,
+    },
+  },
+  setup(props) {
     let eased = false;
     const target = ref<HTMLElement>();
 
@@ -26,6 +32,7 @@ export default defineComponent({
               translateY: [40, 0],
               opacity: 1,
               easing: 'easeOutExpo',
+              delay: props.delay,
             });
             eased = true;
           }

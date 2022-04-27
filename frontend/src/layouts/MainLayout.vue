@@ -49,7 +49,7 @@ export default defineComponent({
 <style lang="scss">
 .v-enter-active,
 .v-leave-active {
-  transition: opacity 0.2s;
+  transition: opacity 0.3s;
 }
 .v-enter-from,
 .v-leave-to {
