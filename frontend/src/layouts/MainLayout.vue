@@ -3,7 +3,9 @@
     <q-page-container class="frame-container">
       <div class="frame-container-top">
         <header class="row justify-between">
-          <h2 class="ase-lab-title">ASE-Lab.</h2>
+          <h2 class="ase-lab-title">
+            <a href="/">ASE-Lab.</a>
+          </h2>
 
           <nav class="navbar row items-center">
             <nav-link text="Vision" path="/vision" />
@@ -47,9 +49,9 @@ export default defineComponent({
 <style lang="scss">
 .v-enter-active,
 .v-leave-active {
-  transition: opacity 0.5s;
+  transition: opacity 0.2s;
 }
-.v-enter,
+.v-enter-from,
 .v-leave-to {
   opacity: 0;
 }
@@ -78,6 +80,11 @@ export default defineComponent({
 .ase-lab-title {
   font-family: $typography-title-font-family;
   font-size: 3.5rem;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
 }
 
 .navbar {
