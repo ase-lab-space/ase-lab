@@ -12,12 +12,7 @@
             <nav-link text="Contact" path="/contact" />
           </nav>
         </header>
-        <!-- <transition>
-          <router-view />
-          <transition mode="out-in">
-            <component :is="Component" />
-          </transition>
-        </transition> -->
+
         <router-view v-slot="{ Component }">
           <transition mode="out-in">
             <component :is="Component" />
