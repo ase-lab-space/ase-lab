@@ -31,13 +31,13 @@ services:
 
   frontend:
     container_name: frontend_aselab
-    image: node:16.12.0
+    image: node:18
     networks:
       - backend_tier
     volumes:
       - ./frontend:/app/frontend
     working_dir: /app/frontend
-    command: [sh, -c, npm i && npm run dev]
+    command: [sh, -c, npm ci && npm run dev]
     ports:
       - 8080:8080
 
