@@ -2,16 +2,11 @@
   <section class="section-container section-full-size column items-center">
     <div class="content-container row justify-between">
       <div class="col-5 column">
-        <h2 class="section-title row items-end">
-          <div class="title">About</div>
-          <div class="subtitle">ー 私たちについて</div>
-        </h2>
-
-        <div class="img-container row items-center justify-center">
+        <slide-in class="img-container row items-center justify-center">
           <router-link to="/vision">
-            <img src="/img/1.jpeg" alt="" class="image3" />
+            <img src="/img/japanmap.jpeg" alt="" class="image" />
           </router-link>
-        </div>
+        </slide-in>
       </div>
 
       <div class="col-6 column justify-start">
@@ -86,23 +81,14 @@ export default defineComponent({
 .img-container {
   width: 400px;
   min-height: 400px;
-  // display: block;
   position: relative;
 
-  .image3 {
-    // clip-path: circle(40% at 50% 50%);
-    border-radius: 50%;
+  .image {
     width: 80%;
     transition: all 0.3s;
     cursor: pointer;
 
-    filter: saturate(0.7) sepia(0.2) blur(0.1px)
-      drop-shadow(12px 12px 0px #bababa);
-
-    &:hover {
-      filter: saturate(0) sepia(0.2) blur(1px)
-        drop-shadow(12px 12px 0px #bababa);
-    }
+    filter: saturate(1.5) sepia(0.2);
   }
 }
 </style>

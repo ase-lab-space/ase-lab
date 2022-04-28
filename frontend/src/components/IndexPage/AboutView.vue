@@ -40,7 +40,7 @@
 
         <div class="img-container row items-center justify-center">
           <router-link to="/vision">
-            <img src="/img/1.jpeg" alt="" class="image3" />
+            <img src="/img/slides/slide4.jpg" alt="" class="image" />
           </router-link>
         </div>
       </div>
@@ -81,23 +81,16 @@ export default defineComponent({
 .img-container {
   width: 400px;
   min-height: 400px;
-  // display: block;
   position: relative;
 
-  .image3 {
-    // clip-path: circle(40% at 50% 50%);
+  .image {
     border-radius: 50%;
     width: 80%;
     transition: all 0.3s;
     cursor: pointer;
 
-    filter: saturate(0.7) sepia(0.2) blur(0.1px)
+    filter: saturate(1) sepia(0.2) blur(0.1px)
       drop-shadow(12px 12px 0px #bababa);
-
-    &:hover {
-      filter: saturate(0) sepia(0.2) blur(1px)
-        drop-shadow(12px 12px 0px #bababa);
-    }
   }
 }
 </style>

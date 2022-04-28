@@ -33,7 +33,7 @@ export default defineComponent({
 
     const articles: IArticleProps[] = [
       {
-        img: '/img/sleeping_max.jpg',
+        img: '/img/laughing_max.webp',
         title: '【MAX】〜地方メンバーの声（第一回）〜',
         bodyDigest:
           '元々阿部と今運営にいる本田の三人で、大学一年生に入ってから勉強会をする機会があって、その勉強会の延長というか、同じようなことをしていきたいねという風に思って...',
@@ -41,7 +41,7 @@ export default defineComponent({
         url: 'https://note.com/ase_lab_/n/nb899b1739d39',
       },
       {
-        img: '/img/sleeping_max.jpg',
+        img: '/img/laughing_max.webp',
         title: '【MAX】〜地方メンバーの声（第一回）〜',
         bodyDigest:
           '元々阿部と今運営にいる本田の三人で、大学一年生に入ってから勉強会をする機会があって、その勉強会の延長というか、同じようなことをしていきたいねという風に思って...',
@@ -49,7 +49,7 @@ export default defineComponent({
         url: 'https://note.com/ase_lab_/n/nb899b1739d39',
       },
       {
-        img: '/img/sleeping_max.jpg',
+        img: '/img/laughing_max.webp',
         title: '【MAX】〜地方メンバーの声（第一回）〜',
         bodyDigest:
           '元々阿部と今運営にいる本田の三人で、大学一年生に入ってから勉強会をする機会があって、その勉強会の延長というか、同じようなことをしていきたいねという風に思って...',
