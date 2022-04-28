@@ -35,7 +35,6 @@ export default defineComponent({
     const router = useRouter();
     router.afterEach(() => {
       if (router.currentRoute.value.path.startsWith(props.path)) {
-        console.log(`${router.currentRoute.value.path}!`);
         className.value = 'nav-border__active';
       } else {
         className.value = '';
