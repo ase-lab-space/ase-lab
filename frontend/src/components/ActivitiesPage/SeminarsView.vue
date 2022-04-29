@@ -11,7 +11,7 @@
     <slide-in
       v-for="(seminar, index) in filteredSeminars"
       :key="index"
-      class="col-4"
+      class="col-3"
     >
       <seminar-card :seminar="seminar" class="seminar-card" />
     </slide-in>
@@ -95,7 +95,7 @@ export default defineComponent({
 
   computed: {
     filteredSeminars(): ISeminar[] {
-      return this.showAllSeminars ? this.seminars : this.seminars.slice(0, 3);
+      return this.showAllSeminars ? this.seminars : this.seminars.slice(0, 4);
     },
   },
 });

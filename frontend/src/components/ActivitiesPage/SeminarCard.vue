@@ -1,21 +1,16 @@
 <template>
-  <q-card
-    :class="seminar.status === 'wanted' ? ['wanted'] : ['in-progress']"
-    style="width: 250px"
-    class="shadow-7 col-12"
-  >
+  <q-card class="shadow-2 col-12 seminar-card">
     <img
       :src="seminar.url"
       :alt="`${seminar.name}の本`"
-      style="max-width: 100%; height: 208px; object-fit: contain"
-      class="q-mx-auto"
+      class="q-mx-auto book-image"
     />
     <div class="badge shadow-18" :class="`badge-${seminar.status}`">
       {{ STATUS[seminar.status] }}
     </div>
-    <hr class="my-0" />
+    <hr />
     <q-card-section>
-      <div class="text-h6 text-center">{{ seminar.name }}</div>
+      <div class="name">{{ seminar.name }}</div>
       <div class="text-caption text-center">
         {{ seminar.span }}
       </div>
@@ -71,15 +66,27 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+.seminar-card {
+  width: 200px;
+}
+.book-image {
+  max-width: 100%;
+  height: 170px;
+  object-fit: contain;
+}
+.name {
+  font-size: 1rem;
+  text-align: center;
+}
 .badge {
   position: absolute;
-  bottom: 70px;
+  bottom: 63px;
   right: 20px;
   border-radius: 10px !important;
   color: white;
   padding: 2px 8px;
   z-index: 101;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 500;
 
   &-wanted {
@@ -94,5 +101,9 @@ export default defineComponent({
 }
 .q-card > .badge {
   box-shadow: inherit !important;
+}
+
+hr {
+  margin: 0;
 }
 </style>
