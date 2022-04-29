@@ -35,6 +35,57 @@ import HeadingView from '../HeadingView.vue';
 import SeminarCard, { ISeminar } from './SeminarCard.vue';
 import SlideIn from '../../Common/Transition/SlideIn.vue';
 
+const seminars: ISeminar[] = [
+  {
+    name: '軌道力学',
+    status: 'in-progress',
+    url: 'https://www.nippyo.co.jp/shop/img/books/temp/07557.jpg',
+    span: '1~3月',
+  },
+  {
+    name: '軌道力学',
+    status: 'preparing',
+    url: 'https://www.nippyo.co.jp/shop/img/books/temp/07557.jpg',
+    span: '1~3月',
+  },
+  {
+    name: '軌道力学',
+    status: 'wanted',
+    url: 'https://www.nippyo.co.jp/shop/img/books/temp/07557.jpg',
+    span: '1~3月',
+  },
+  {
+    name: '軌道力学',
+    status: 'in-progress',
+    url: 'https://www.nippyo.co.jp/shop/img/books/temp/07557.jpg',
+    span: '1~3月',
+  },
+  {
+    name: '軌道力学',
+    status: 'preparing',
+    url: 'https://www.nippyo.co.jp/shop/img/books/temp/07557.jpg',
+    span: '1~3月',
+  },
+  {
+    name: '軌道力学',
+    status: 'wanted',
+    url: 'https://www.nippyo.co.jp/shop/img/books/temp/07557.jpg',
+    span: '1~3月',
+  },
+  {
+    name: '軌道力学',
+    status: 'wanted',
+    url: 'https://www.nippyo.co.jp/shop/img/books/temp/07557.jpg',
+    span: '1~3月',
+  },
+  {
+    name: '軌道力学',
+    status: 'finished',
+    url: 'https://www.nippyo.co.jp/shop/img/books/temp/07557.jpg',
+    span: '1~3月',
+  },
+];
+
 export default defineComponent({
   components: {
     HeadingView,
@@ -45,56 +96,6 @@ export default defineComponent({
   setup() {
     const showAllSeminars = ref(false);
 
-    const seminars: ISeminar[] = [
-      {
-        name: '軌道力学',
-        status: 'in-progress',
-        url: 'https://www.nippyo.co.jp/shop/img/books/temp/07557.jpg',
-        span: '1~3月',
-      },
-      {
-        name: '軌道力学',
-        status: 'preparing',
-        url: 'https://www.nippyo.co.jp/shop/img/books/temp/07557.jpg',
-        span: '1~3月',
-      },
-      {
-        name: '軌道力学',
-        status: 'wanted',
-        url: 'https://www.nippyo.co.jp/shop/img/books/temp/07557.jpg',
-        span: '1~3月',
-      },
-      {
-        name: '軌道力学',
-        status: 'in-progress',
-        url: 'https://www.nippyo.co.jp/shop/img/books/temp/07557.jpg',
-        span: '1~3月',
-      },
-      {
-        name: '軌道力学',
-        status: 'preparing',
-        url: 'https://www.nippyo.co.jp/shop/img/books/temp/07557.jpg',
-        span: '1~3月',
-      },
-      {
-        name: '軌道力学',
-        status: 'wanted',
-        url: 'https://www.nippyo.co.jp/shop/img/books/temp/07557.jpg',
-        span: '1~3月',
-      },
-      {
-        name: '軌道力学',
-        status: 'wanted',
-        url: 'https://www.nippyo.co.jp/shop/img/books/temp/07557.jpg',
-        span: '1~3月',
-      },
-      {
-        name: '軌道力学',
-        status: 'finished',
-        url: 'https://www.nippyo.co.jp/shop/img/books/temp/07557.jpg',
-        span: '1~3月',
-      },
-    ];
     return {
       seminars,
       showAllSeminars,

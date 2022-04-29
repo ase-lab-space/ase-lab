@@ -1,28 +1,22 @@
 <template>
   <q-page class="column items-center">
     <page-title title="About Us" />
-    <section class="vision-body">
-      <slide-in
-        class="vision-body"
-        v-for="paragraph in body"
-        :key="paragraph"
-        :delay="200"
-      >
-        <p>{{ paragraph }}</p>
-      </slide-in>
-    </section>
+
+    <about-section title="仲間と出会い、学ぶ場所になる" :paragraphs="body" />
+
+    <about-section title="テクノロジーで日本中を繋ぐ" :paragraphs="body" />
   </q-page>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import PageTitle from 'src/components/Common/PageTitle.vue';
-import SlideIn from 'src/components/Common/Transition/SlideIn.vue';
+import AboutSection from 'src/components/AboutPage/AboutSection.vue';
 
 export default defineComponent({
   components: {
     PageTitle,
-    SlideIn,
+    AboutSection,
   },
 
   setup() {
@@ -42,15 +36,4 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss" scoped>
-.vision-body {
-  max-width: 750px;
-}
-
-p {
-  font-size: 1.1rem;
-  letter-spacing: 3px;
-  line-height: 2rem;
-  margin-bottom: 32px;
-}
-</style>
+<style lang="scss" scoped></style>
