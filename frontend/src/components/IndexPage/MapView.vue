@@ -19,11 +19,11 @@
           </slide-in>
 
           <slide-in>
-            <p class="">
+            <p>
               現在は、宇宙理学や宇宙工学についての教材に取り組む勉強会、その基礎となる数学や物理学に関する勉強会、より気楽に参加できる教養のような勉強会などが企画されています。
             </p>
 
-            <p class="">
+            <p>
               ASE-Lab.には、理学部の学生も工学部の学生も、文系の学生もいます。
               宇宙への学びを深めたいという思いがあれば、肩書は関係ありません。
             </p>
@@ -38,7 +38,7 @@
 
     <slide-in>
       <border-button
-        to="/contact"
+        to="https://docs.google.com/forms/d/1F3E-cEGQr9geMDtjl_xRRLTiMPqgbR5kOUU5-EBzW_I"
         label="参加はコチラから"
         class="entry-button tilt-on-hover"
       />

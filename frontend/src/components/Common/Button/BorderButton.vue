@@ -1,9 +1,14 @@
 <template>
-  <router-link :to="to" class="link">
+  <router-link :to="to" class="link" v-if="to.startsWith('/')">
     <div class="link-text">
       {{ label }}
     </div>
   </router-link>
+  <a target="_blank" :href="to" class="link" v-else>
+    <div class="link-text">
+      {{ label }}
+    </div>
+  </a>
 </template>
 
 <script lang="ts">
