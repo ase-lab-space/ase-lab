@@ -90,13 +90,13 @@ export default defineComponent({
   font-weight: 500;
 
   &-wanted {
-    background-color: $secondary;
+    background-color: rgb(255, 62, 23);
   }
   &-preparing {
-    background-color: $secondary;
+    background-color: rgb(89, 89, 89);
   }
   &-in-progress {
-    background-color: $secondary;
+    background-color: rgb(16, 154, 53);
   }
 }
 .q-card > .badge {
