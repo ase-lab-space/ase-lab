@@ -2,6 +2,8 @@
   <q-page class="column items-center">
     <page-title title="About Us" />
 
+    <map-section />
+
     <about-section title="仲間と出会い、学ぶ場所になる" :paragraphs="body" />
 
     <about-section title="テクノロジーで日本中を繋ぐ" :paragraphs="body" />
@@ -12,11 +14,13 @@
 import { defineComponent } from 'vue';
 import PageTitle from 'src/components/Common/PageTitle.vue';
 import AboutSection from 'src/components/AboutPage/AboutSection.vue';
+import MapSection from 'src/components/AboutPage/MapSection.vue';
 
 export default defineComponent({
   components: {
     PageTitle,
     AboutSection,
+    MapSection,
   },
 
   setup() {

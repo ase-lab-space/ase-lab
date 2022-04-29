@@ -85,9 +85,7 @@ export default defineComponent({
 
   .image {
     width: 80%;
-    transition: all 0.3s;
     cursor: pointer;
-
     filter: saturate(1.5) sepia(0.2);
   }
 }
