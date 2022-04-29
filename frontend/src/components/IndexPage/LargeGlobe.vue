@@ -49,7 +49,6 @@ class GlobeManager implements IStartable, ITickable {
     }));
 
     this._globe = new ThreeGlobe()
-      // .globeImageUrl('//unpkg.com/three-globe/example/img/earth-day.jpg')
       .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
       .hexPolygonsData(countries.features)
       .hexPolygonResolution(3)
@@ -68,6 +67,7 @@ class GlobeManager implements IStartable, ITickable {
       .arcDashAnimateTime(1000);
 
     this._globe.scale.set(0, 0, 0);
+    this._globe.rotation.set((23.4 * Math.PI) / 180, 0, 0);
 
     const globeMaterial =
       this._globe.globeMaterial() as THREE.MeshPhongMaterial;
