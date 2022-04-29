@@ -12,9 +12,10 @@
 <script lang="ts">
 import { defineComponent, onMounted } from 'vue';
 import anime from 'animejs';
+import { sleep } from 'src/utils/PromiseUtil';
 
 export default defineComponent({
-  setup(props, context) {
+  setup(_props, context) {
     onMounted(async () => {
       // Wrap every letter in a span
       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
@@ -25,20 +26,24 @@ export default defineComponent({
         "<span class='letter'>$&</span>"
       );
 
+      // document.querySelector('.ml11 .letters')?.getBoundingClientRect().width が不安定なのでちょっと待つ
+      await sleep(50);
+
       await anime
-        .timeline({ loop: false })
+        .timeline({
+          easing: 'easeOutExpo',
+          loop: false,
+          duration: 800,
+        })
         .add({
           targets: '.ml11',
           opacity: 1,
-          duration: 1000,
-          easing: 'easeOutExpo',
         })
         .add({
           targets: '.ml11 .line',
           scaleY: [0, 1],
           opacity: [0.5, 1],
-          easing: 'easeOutExpo',
-          duration: 700,
+          duration: 500,
         })
         .add({
           targets: '.ml11 .line',
@@ -48,31 +53,32 @@ export default defineComponent({
             document.querySelector('.ml11 .letters')!.getBoundingClientRect()
               .width + 10,
           ],
-          easing: 'easeOutExpo',
+          easing: 'easeOutQuart',
           duration: 1000,
-          delay: 0,
         })
-        .add({
-          targets: '.ml11 .letter',
-          opacity: [0, 1],
-          easing: 'easeOutExpo',
-          duration: 600,
-          offset: '-=775',
-          delay: (_el, i) => 74 * i,
-        })
+        .add(
+          {
+            targets: '.ml11 .letter',
+            opacity: [0, 1],
+            duration: 600,
+            delay: (_el, i) => 74 * i,
+          },
+          '-=875'
+        )
         .add({
           targets: '.ml11',
           opacity: 0,
           duration: 700,
-          easing: 'easeOutExpo',
-          delay: 1000,
+          delay: 200,
         })
-        .add({
-          targets: '.full-screen-overlay',
-          opacity: 0,
-          duration: 1000,
-          easing: 'easeOutExpo',
-        }).finished;
+        .add(
+          {
+            targets: '.full-screen-overlay',
+            opacity: 0,
+            duration: 1000,
+          },
+          '-=300'
+        ).finished;
 
       context.emit('finish-animation');
       (
