@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh Lpr lff" class="layout-background">
+  <q-layout view="lHh Lpr lff">
     <q-page-container class="frame-container">
       <div class="frame-container-top">
         <header class="row justify-between">
@@ -25,6 +25,7 @@
       </div>
     </q-page-container>
   </q-layout>
+  <div class="layout-background" />
 </template>
 
 <script lang="ts">
@@ -75,6 +76,12 @@ export default defineComponent({
     rgba(125, 88, 233, 0.53) 60.4%,
     rgba(65, 189, 122, 0.38) 97.13%
   );
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
 }
 
 .ase-lab-title {
