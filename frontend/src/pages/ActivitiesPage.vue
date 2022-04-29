@@ -11,7 +11,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import PageTitle from 'src/components/Common/PageTitle.vue';
-import SeminarsView from 'src/components/ActivitiesPage/SeminarsView.vue';
+import SeminarsView from 'src/components/ActivitiesPage/Seminar/SeminarsView.vue';
 
 export default defineComponent({
   components: {

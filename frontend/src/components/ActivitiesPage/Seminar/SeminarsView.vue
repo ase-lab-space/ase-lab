@@ -29,9 +29,9 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import HeadingView from './HeadingView.vue';
+import HeadingView from '../HeadingView.vue';
 import SeminarCard, { ISeminar } from './SeminarCard.vue';
-import SlideIn from '../Common/Transition/SlideIn.vue';
+import SlideIn from '../../Common/Transition/SlideIn.vue';
 
 export default defineComponent({
   components: {
