@@ -11,7 +11,7 @@ const routes: RouteRecordRaw[] = [
       },
       {
         path: '/about',
-        component: () => import('pages/VisionPage.vue'),
+        component: () => import('src/pages/AboutPage.vue'),
       },
       {
         path: 'activities',

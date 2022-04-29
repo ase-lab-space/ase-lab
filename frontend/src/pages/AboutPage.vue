@@ -1,6 +1,6 @@
 <template>
   <q-page class="column items-center">
-    <page-title title="Vision" />
+    <page-title title="About Us" />
     <section class="vision-body">
       <slide-in
         class="vision-body"
