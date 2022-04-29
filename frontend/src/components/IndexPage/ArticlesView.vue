@@ -18,7 +18,8 @@
 import { defineComponent } from 'vue';
 import SingleLineLink from '../Common/Button/SingleLineLink.vue';
 import SlideIn from '../Common/Transition/SlideIn.vue';
-import ArticleCard, { IArticleProps } from './Article/ArticleCard.vue';
+import ArticleCard from './Article/ArticleCard.vue';
+import { articles } from 'src/pages/ArticlesPage.vue';
 
 export default defineComponent({
   components: {
@@ -28,32 +29,6 @@ export default defineComponent({
   },
 
   setup() {
-    const articles: IArticleProps[] = [
-      {
-        img: '/img/laughing_max.webp',
-        title: '【MAX】〜地方メンバーの声（第一回）〜',
-        bodyDigest:
-          '元々阿部と今運営にいる本田の三人で、大学一年生に入ってから勉強会をする機会があって、その勉強会の延長というか、同じようなことをしていきたいねという風に思って...',
-        date: '2022/05/16',
-        url: 'https://note.com/ase_lab_/n/nb899b1739d39',
-      },
-      {
-        img: '/img/laughing_max.webp',
-        title: '【MAX】〜地方メンバーの声（第一回）〜',
-        bodyDigest:
-          '元々阿部と今運営にいる本田の三人で、大学一年生に入ってから勉強会をする機会があって、その勉強会の延長というか、同じようなことをしていきたいねという風に思って...',
-        date: '2022/05/16',
-        url: 'https://note.com/ase_lab_/n/nb899b1739d39',
-      },
-      {
-        img: '/img/laughing_max.webp',
-        title: '【MAX】〜地方メンバーの声（第一回）〜',
-        bodyDigest:
-          '元々阿部と今運営にいる本田の三人で、大学一年生に入ってから勉強会をする機会があって、その勉強会の延長というか、同じようなことをしていきたいねという風に思って...',
-        date: '2022/05/16',
-        url: 'https://note.com/ase_lab_/n/nb899b1739d39',
-      },
-    ];
     return {
       articles,
     };
