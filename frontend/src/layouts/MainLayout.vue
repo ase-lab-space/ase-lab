@@ -8,7 +8,7 @@
           </h2>
 
           <nav class="navbar row items-center">
-            <nav-link text="Vision" path="/vision" />
+            <nav-link text="About Us" path="/about" />
             <nav-link text="Activities" path="/activities" />
             <nav-link text="Articles" path="/articles" />
             <nav-link text="Contact" path="/contact" />

@@ -3,7 +3,7 @@
     <div class="content-container row justify-between">
       <div class="col-5 column">
         <slide-in class="img-container row items-center justify-center">
-          <router-link to="/vision">
+          <router-link to="/about">
             <img src="/img/japanmap.jpeg" alt="" class="image" />
           </router-link>
         </slide-in>
@@ -30,7 +30,7 @@
           </slide-in>
 
           <slide-in>
-            <double-line-link class="link" to="/vision" label="参加者の声 →" />
+            <double-line-link class="link" to="/about" label="参加者の声 →" />
           </slide-in>
         </div>
       </div>
