@@ -33,7 +33,7 @@
 <script lang="ts">
 import { defineComponent, PropType } from 'vue';
 
-type StatusType = 'wanted' | 'preparing' | 'in-progress';
+type StatusType = 'wanted' | 'preparing' | 'in-progress' | 'finished';
 
 const STATUS: {
   [key in StatusType]: string;
@@ -41,6 +41,7 @@ const STATUS: {
   wanted: '募集中',
   preparing: '準備中',
   'in-progress': '進行中',
+  finished: '終了済',
 } as const;
 
 export interface ISeminar {
@@ -97,6 +98,9 @@ export default defineComponent({
   }
   &-in-progress {
     background-color: rgb(16, 154, 53);
+  }
+  &-finished {
+    background-color: rgb(0, 87, 217);
   }
 }
 .q-card > .badge {

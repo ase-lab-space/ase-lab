@@ -1,12 +1,17 @@
 <template>
-  <q-page class="column items-center">
+  <q-page class="column items-center articles-container">
     <page-title
       title="Articles"
       description="ASE-Lab. やASE-Lab. メンバーに関するnote記事を書いています。続々更新中なのでお楽しみに。"
       class="title-container"
     />
-    <div class="row justify-start q-gutter-xl">
-      <slide-in v-for="article in articles" :key="article.title" :delay="delay">
+    <div class="row justify-start q-col-gutter-xl">
+      <slide-in
+        v-for="article in articles"
+        :key="article.title"
+        :delay="delay"
+        class="col-3"
+      >
         <article-card :article="article" />
       </slide-in>
     </div>
@@ -72,6 +77,12 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+.articles-container {
+  > * {
+    width: 100%;
+    max-width: 1100px;
+  }
+}
 .title-container {
   margin-bottom: 60px;
 }

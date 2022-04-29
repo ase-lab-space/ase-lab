@@ -4,7 +4,14 @@
     <a href="https://twitter.com/ASE_lab_" target="_blank" class="icon">
       <q-btn icon="mdi-twitter" flat round />
     </a>
-    <div class="text-center text-body2">
+    <a
+      href="https://www.facebook.com/ASE.lab.community"
+      target="_blank"
+      class="icon"
+    >
+      <q-btn icon="mdi-facebook" flat round />
+    </a>
+    <div class="text-center text-body2 copyright">
       &copy; {{ new Date().getFullYear() }} – ASE-Lab.
     </div>
   </footer>
@@ -18,7 +25,7 @@
 .footer {
   margin: 16px 0;
 
-  * {
+  > * {
     margin: 0 8px;
   }
 }
@@ -28,5 +35,9 @@
   height: 1px;
   width: 100%;
   background-color: #e7e7e7;
+}
+
+.copyright {
+  margin-left: 32px;
 }
 </style>

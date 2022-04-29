@@ -89,8 +89,7 @@ export default defineComponent({
     transition: all 0.3s;
     cursor: pointer;
 
-    filter: saturate(1) sepia(0.2) blur(0.1px)
-      drop-shadow(12px 12px 0px #bababa);
+    filter: saturate(1.3) drop-shadow(12px 12px 0px #bababa) brightness(1.1);
   }
 }
 </style>

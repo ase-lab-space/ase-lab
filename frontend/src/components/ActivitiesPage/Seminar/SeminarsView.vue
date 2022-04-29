@@ -88,6 +88,12 @@ export default defineComponent({
         url: 'https://www.nippyo.co.jp/shop/img/books/temp/07557.jpg',
         span: '1~3月',
       },
+      {
+        name: '軌道力学',
+        status: 'finished',
+        url: 'https://www.nippyo.co.jp/shop/img/books/temp/07557.jpg',
+        span: '1~3月',
+      },
     ];
     return {
       seminars,
