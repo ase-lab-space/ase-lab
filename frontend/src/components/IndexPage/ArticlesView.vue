@@ -19,7 +19,7 @@ import { defineComponent } from 'vue';
 import SingleLineLink from '../Common/Button/SingleLineLink.vue';
 import SlideIn from '../Common/Transition/SlideIn.vue';
 import ArticleCard from './Article/ArticleCard.vue';
-import { articles } from 'src/pages/ArticlesPage.vue';
+import { articles } from 'src/models/articles';
 
 export default defineComponent({
   components: {

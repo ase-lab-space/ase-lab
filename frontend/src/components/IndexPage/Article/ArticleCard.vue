@@ -28,14 +28,7 @@
 
 <script lang="ts">
 import { defineComponent, PropType, ref } from 'vue';
-
-export interface IArticleProps {
-  img: string;
-  title: string;
-  bodyDigest: string;
-  date: string;
-  url: string;
-}
+import { IArticleProps } from 'src/models/articles';
 
 export default defineComponent({
   props: {
