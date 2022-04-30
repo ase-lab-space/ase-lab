@@ -15,25 +15,13 @@
         {{ seminar.span }}
       </div>
     </q-card-section>
-    <!-- <div
-      v-if="
-        seminar.hovering &&
-        (seminar.status === 'wanted' || seminar.status === 'in-progress')
-      "
-      class="show-detail full-width full-height absolute-full row justify-center items-center"
-    >
-      <q-btn
-        color="primary"
-        label="詳細を見る"
-      />
-    </div> -->
   </q-card>
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from 'vue';
 
-type StatusType = 'wanted' | 'preparing' | 'in-progress' | 'finished';
+export type StatusType = 'wanted' | 'preparing' | 'in-progress' | 'finished';
 
 const STATUS: {
   [key in StatusType]: string;
@@ -44,11 +32,23 @@ const STATUS: {
   finished: '終了済',
 } as const;
 
+type StyleType = 'zoom' | 'hybrid' | 'face-to-face';
+
+const STYLE: {
+  [key in StyleType]: string;
+} = {
+  zoom: 'オンライン（Zoom）',
+  hybrid: 'ハイブリッド',
+  'face-to-face': '対面',
+};
+
 export interface ISeminar {
   name: string;
+  description?: string;
   status: keyof typeof STATUS;
   url: string;
   span: string;
+  style: keyof typeof STYLE;
 }
 
 export default defineComponent({

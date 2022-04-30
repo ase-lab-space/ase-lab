@@ -7,7 +7,7 @@
         <single-line-link to="/activities" label="ゼミをもっと見る →" />
       </div>
 
-      <slide-in v-for="seminar in seminars" :key="seminar.title">
+      <slide-in v-for="seminar in inProgressSeminars" :key="seminar.title">
         <seminar-card
           class="seminar-card"
           :title="seminar.title"
@@ -17,14 +17,14 @@
       </slide-in>
     </div>
 
-    <div class="col-6 column">
+    <div class="col-6 column justify-start">
       <div class="col row justify-between items-end section-title-container">
         <h4 class="section-title">メンバーが企画中のゼミ</h4>
 
         <single-line-link to="/activities" label="ゼミをもっと見る →" />
       </div>
 
-      <slide-in v-for="seminar in seminars" :key="seminar.title">
+      <slide-in v-for="seminar in preparingSeminars" :key="seminar.title">
         <seminar-card
           class="seminar-card"
           :title="seminar.title"
@@ -40,14 +40,25 @@
 import { defineComponent } from 'vue';
 import SingleLineLink from '../Common/Button/SingleLineLink.vue';
 import SlideIn from '../Common/Transition/SlideIn.vue';
-import SeminarCard from './Seminar/SeminarCard.vue';
-import { ITag } from './Seminar/SeminarCard.vue';
+import SeminarCard, { ITag, TAG_COLOR } from './Seminar/SeminarCard.vue';
+import { seminars as _seminars } from '../ActivitiesPage/Seminar/SeminarsView.vue';
+import { StatusType } from '../ActivitiesPage/Seminar/SeminarCard.vue';
+import { hash } from 'src/utils/HashUtil';
 
 export interface ISeminar {
   title: string;
   description: string;
+  status: StatusType;
   tags: ITag[];
 }
+
+const TAG_COLOR_KEYS = Object.keys(TAG_COLOR);
+
+const getColor = (s: string) => {
+  return TAG_COLOR_KEYS[
+    Math.abs(hash(s) % TAG_COLOR_KEYS.length)
+  ] as keyof typeof TAG_COLOR;
+};
 
 export default defineComponent({
   components: {
@@ -56,56 +67,35 @@ export default defineComponent({
     SlideIn,
   },
   setup() {
-    const seminars: ISeminar[] = [
-      {
-        title: '軌道力学',
-        description:
-          '円錐曲線の運動から、軌道遷移、簡単なランベルト問題、スイングバイなどまでの基本的な運動を扱うことを一緒に頑張ってくれるメンバーを募集します！',
-        tags: [
-          {
-            text: '1月~3月',
-            color: 'cyan',
-          },
-          {
-            text: 'ハイブリッド',
-            color: 'orange',
-          },
-        ],
-      },
-      {
-        title: '軌道力学',
-        description:
-          '円錐曲線の運動から、軌道遷移、簡単なランベルト問題、スイングバイなどまでの基本的な運動を扱うことを一緒に頑張ってくれるメンバーを募集します！',
-        tags: [
-          {
-            text: '1月~3月',
-            color: 'cyan',
-          },
-          {
-            text: 'ハイブリッド',
-            color: 'orange',
-          },
-        ],
-      },
-      {
-        title: '軌道力学',
-        description:
-          '円錐曲線の運動から、軌道遷移、簡単なランベルト問題、スイングバイなどまでの基本的な運動を扱うことを一緒に頑張ってくれるメンバーを募集します！',
-        tags: [
-          {
-            text: '1月~3月',
-            color: 'cyan',
-          },
-          {
-            text: 'ハイブリッド',
-            color: 'orange',
-          },
-        ],
-      },
-    ];
+    const seminars: ISeminar[] = _seminars
+      .filter((seminar) => seminar.description !== undefined)
+      .map((seminar) => {
+        return {
+          title: seminar.name,
+          // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+          description: seminar.description!,
+          status: seminar.status,
+          tags: [
+            {
+              text: seminar.span,
+              color: getColor(seminar.span),
+            },
+            {
+              text: seminar.style,
+              color: getColor(seminar.style),
+            },
+          ],
+        };
+      });
 
     return {
-      seminars,
+      inProgressSeminars: seminars
+        .filter((seminar) => seminar.status === 'in-progress')
+        .slice(0, 3),
+      preparingSeminars: seminars
+        // .filter((seminar) => seminar.status in ['preparing', 'wanted'])
+        .filter((seminar) => seminar.status === 'in-progress')
+        .slice(3, 6),
     };
   },
 });

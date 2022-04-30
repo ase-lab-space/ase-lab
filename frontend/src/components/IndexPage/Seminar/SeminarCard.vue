@@ -1,5 +1,5 @@
 <template>
-  <q-card class="seminar-card">
+  <q-card class="seminar-card" @click="router.push('/activities')">
     <q-card-section class="row items-center">
       <div class="col-12">
         <div class="row items-end">
@@ -12,7 +12,7 @@
             :key="tag.text"
             :label="tag.text"
             size="sm"
-            :color="tag.color === undefined ? '' : tagColor[tag.color]"
+            :color="tag.color === undefined ? '' : TAG_COLOR[tag.color]"
             text-color="white"
           />
         </div>
@@ -27,13 +27,14 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from 'vue';
+import { useRouter } from 'vue-router';
 
 export interface ITag {
   text: string;
-  color?: keyof typeof tagColor;
+  color?: keyof typeof TAG_COLOR;
 }
 
-const tagColor = {
+export const TAG_COLOR = {
   green: 'green-14',
   cyan: 'cyan-14',
   orange: 'orange-14',
@@ -60,7 +61,8 @@ export default defineComponent({
 
   setup() {
     return {
-      tagColor,
+      router: useRouter(),
+      TAG_COLOR,
     };
   },
 });
@@ -88,6 +90,10 @@ export default defineComponent({
   margin-top: 8px;
   font-weight: 400;
   font-size: 0.8rem;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
 }
 
 .icon {
