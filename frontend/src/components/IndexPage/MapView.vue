@@ -4,7 +4,7 @@
       <div class="col-5 column">
         <slide-in class="img-container row items-center justify-center">
           <router-link to="/about">
-            <img src="/img/japanmap.jpeg" alt="" class="image" />
+            <img src="/img/japanmap.webp" alt="" class="image" />
           </router-link>
         </slide-in>
       </div>

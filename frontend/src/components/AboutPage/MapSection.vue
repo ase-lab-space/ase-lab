@@ -1,7 +1,7 @@
 <template>
   <div class="row justify-between q-col-gutter-xl">
     <slide-in class="col-6 row justify-end">
-      <img src="/img/japanmap.jpeg" alt="Japan simple map" class="image" />
+      <img src="/img/japanmap.webp" alt="Japan simple map" class="image" />
     </slide-in>
 
     <div class="col-6 column">
@@ -28,7 +28,7 @@ import { defineComponent, onMounted, ref } from 'vue';
 import anime from 'animejs';
 import SlideIn from '../Common/Transition/SlideIn.vue';
 
-const participantNumber = 60;
+const participantNumber = 67;
 
 const univs: string[] = [
   '東京大学',

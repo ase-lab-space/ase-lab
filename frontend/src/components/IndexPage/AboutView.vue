@@ -40,7 +40,11 @@
 
         <div class="img-container row items-center justify-center">
           <router-link to="/about">
-            <img src="/img/slides/slide4.jpg" alt="" class="image" />
+            <img
+              src="/img/teaching_max.webp"
+              alt="Teaching MAX"
+              class="image"
+            />
           </router-link>
         </div>
       </div>

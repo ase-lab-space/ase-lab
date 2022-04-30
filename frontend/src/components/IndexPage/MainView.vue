@@ -6,7 +6,7 @@
       <div class="col column reverse">
         <div class="title-underline" />
         <div class="row items-center">
-          <img src="/img/logo.png" alt="ASE-Lab. Logo" class="logo" />
+          <img src="/img/logo.webp" alt="ASE-Lab. Logo" class="logo" />
           <h1 class="title col">ASE-Lab.</h1>
         </div>
       </div>

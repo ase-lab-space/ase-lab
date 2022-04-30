@@ -20,36 +20,7 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from 'vue';
-
-export type StatusType = 'wanted' | 'preparing' | 'in-progress' | 'finished';
-
-const STATUS: {
-  [key in StatusType]: string;
-} = {
-  wanted: '募集中',
-  preparing: '準備中',
-  'in-progress': '進行中',
-  finished: '終了済',
-} as const;
-
-type StyleType = 'zoom' | 'hybrid' | 'face-to-face';
-
-const STYLE: {
-  [key in StyleType]: string;
-} = {
-  zoom: 'オンライン（Zoom）',
-  hybrid: 'ハイブリッド',
-  'face-to-face': '対面',
-};
-
-export interface ISeminar {
-  name: string;
-  description?: string;
-  status: keyof typeof STATUS;
-  url: string;
-  span: string;
-  style: keyof typeof STYLE;
-}
+import { ISeminar, STATUS } from 'src/models/seminars';
 
 export default defineComponent({
   props: {

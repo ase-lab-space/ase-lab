@@ -41,9 +41,8 @@ import { defineComponent } from 'vue';
 import SingleLineLink from '../Common/Button/SingleLineLink.vue';
 import SlideIn from '../Common/Transition/SlideIn.vue';
 import SeminarCard, { ITag, TAG_COLOR } from './Seminar/SeminarCard.vue';
-import { seminars as _seminars } from '../ActivitiesPage/Seminar/SeminarsView.vue';
-import { StatusType } from '../ActivitiesPage/Seminar/SeminarCard.vue';
 import { hash } from 'src/utils/HashUtil';
+import { seminars as _seminars, StatusType } from 'src/models/seminars';
 
 export interface ISeminar {
   title: string;
