@@ -1,9 +1,9 @@
 <template>
   <slide-in>
-    <h2 class="title">{{ title }}</h2>
+    <h2 class="title">{{ data.title }}</h2>
   </slide-in>
   <div class="paragraph">
-    <slide-in v-for="paragraph in paragraphs" :key="paragraph">
+    <slide-in v-for="paragraph in data.body" :key="paragraph">
       <p>{{ paragraph }}</p>
     </slide-in>
   </div>
@@ -12,18 +12,15 @@
 <script lang="ts">
 import { defineComponent, PropType } from 'vue';
 import SlideIn from '../Common/Transition/SlideIn.vue';
+import { AboutSection } from 'src/models/about';
 
 export default defineComponent({
   components: {
     SlideIn,
   },
   props: {
-    title: {
-      type: String,
-      required: true,
-    },
-    paragraphs: {
-      type: Array as PropType<string[]>,
+    data: {
+      type: Object as PropType<AboutSection>,
       required: true,
     },
   },
@@ -40,11 +37,13 @@ export default defineComponent({
 }
 .paragraph {
   max-width: 750px;
-}
-p {
-  font-size: 1rem;
-  letter-spacing: 3px;
-  line-height: 2rem;
-  margin-bottom: 32px;
+
+  p {
+    font-size: 1rem;
+    letter-spacing: 3px;
+    line-height: 2rem;
+    margin-bottom: 32px;
+    white-space: pre-line;
+  }
 }
 </style>
