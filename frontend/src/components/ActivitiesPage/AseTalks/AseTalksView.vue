@@ -10,10 +10,10 @@
 
     <div class="row">
       <slide-in class="img-container col-6">
-        <img src="/img/2.png" alt="" />
+        <img src="/img/ase-talks.webp" alt="" />
       </slide-in>
       <slide-in class="img-container col-6" :delay="300">
-        <img src="/img/2.png" alt="" />
+        <img src="/img/meetup.webp" alt="" />
       </slide-in>
     </div>
 
@@ -42,6 +42,7 @@ export default defineComponent({
 .img-container {
   > img {
     width: 100%;
+    height: 100%;
     padding: 32px;
   }
 }
