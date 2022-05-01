@@ -119,6 +119,8 @@ export const seminars: ISeminar[] = [
   },
   {
     name: '画像処理2nd',
+    description:
+      '皆さんお待ちかね、画像処理ゼミ2周目です。楽しく勉強しましょう。',
     status: 'preparing',
     url: 'https://images-na.ssl-images-amazon.com/images/I/41FCF736uWL._SX352_BO1,204,203,200_.jpg',
     span: '未定',
