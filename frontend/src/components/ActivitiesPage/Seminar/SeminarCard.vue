@@ -43,7 +43,7 @@ export default defineComponent({
 }
 .book-image {
   max-width: 100%;
-  height: 170px;
+  height: 200px;
   object-fit: contain;
 }
 .name {

@@ -17,7 +17,7 @@ export const STYLE: {
   zoom: 'オンライン（Zoom）',
   hybrid: 'ハイブリッド',
   'face-to-face': '対面',
-};
+} as const;
 
 export interface ISeminar {
   name: string;

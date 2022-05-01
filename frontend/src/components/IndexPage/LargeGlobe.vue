@@ -87,7 +87,7 @@ class GlobeManager implements IStartable, ITickable {
   private _initScene() {
     this._scene = new THREE.Scene();
     this._scene.add(this._globe);
-    this._scene.add(new THREE.AmbientLight(0xbbbbbb));
+    this._scene.add(new THREE.AmbientLight(0xdddddd));
     this._scene.add(new THREE.DirectionalLight(0xffffff, 0.3));
   }
 
