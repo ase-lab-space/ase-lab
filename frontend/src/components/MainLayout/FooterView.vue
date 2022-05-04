@@ -11,6 +11,13 @@
     >
       <q-btn icon="mdi-facebook" flat round />
     </a>
+    <a
+      href="https://github.com/ase-lab-space/ase-lab"
+      target="_blank"
+      class="icon"
+    >
+      <q-btn icon="mdi-github" flat round />
+    </a>
     <div class="text-center text-body2 copyright">
       &copy; {{ new Date().getFullYear() }} – ASE-Lab.
     </div>
