@@ -48,6 +48,8 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+@import 'assets/mq.scss';
+
 .v-enter-active,
 .v-leave-active {
   transition: opacity 0.3s;
@@ -60,6 +62,10 @@ export default defineComponent({
 .frame-container {
   margin: 0 40px;
   overflow: hidden;
+
+  @include mq(sm) {
+    margin: 0 15px;
+  }
 }
 
 .frame-container-top {
