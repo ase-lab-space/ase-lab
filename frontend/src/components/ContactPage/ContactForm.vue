@@ -32,7 +32,7 @@
               v-else
               v-model="status"
               :options="Object.keys(STATUS_TYPE)"
-              label="Standard"
+              label="職業"
               dense
             />
           </div>
