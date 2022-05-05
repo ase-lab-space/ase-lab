@@ -8,39 +8,48 @@
 import anime from 'animejs';
 import { defineComponent, onMounted, ref } from 'vue';
 
+const animate = (target: HTMLElement | undefined, delay: number) => {
+  anime({
+    targets: target,
+    duration: 1500,
+    translateY: [40, 0],
+    opacity: 1,
+    easing: 'easeOutExpo',
+    delay: delay,
+  });
+};
+
 export default defineComponent({
   props: {
     delay: {
       type: Number,
       default: 0,
     },
+    force: Boolean,
   },
   setup(props) {
     let eased = false;
     const target = ref<HTMLElement>();
 
     onMounted(() => {
-      const options: IntersectionObserverInit = {
-        rootMargin: '-100px',
-      };
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !eased) {
-            anime({
-              targets: target.value,
-              duration: 1500,
-              translateY: [40, 0],
-              opacity: 1,
-              easing: 'easeOutExpo',
-              delay: props.delay,
-            });
-            eased = true;
-          }
-        });
-      }, options);
+      if (props.force) {
+        animate(target.value, props.delay);
+      } else {
+        const options: IntersectionObserverInit = {
+          rootMargin: '-100px',
+        };
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && !eased) {
+              animate(target.value, props.delay);
+              eased = true;
+            }
+          });
+        }, options);
 
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-      observer.observe(target.value!);
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+        observer.observe(target.value!);
+      }
     });
 
     return {
