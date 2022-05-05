@@ -73,6 +73,10 @@ export default defineComponent({
   margin: 40px 0;
   padding: 40px;
   border-radius: 25px;
+
+  @include mq(sm) {
+    padding: 25px;
+  }
 }
 
 .layout-background {
