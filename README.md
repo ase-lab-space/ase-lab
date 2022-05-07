@@ -25,3 +25,50 @@ ASE-Lab. メンバーがこのリポジトリを使う用途としては，以�
 > [SHOULD] ブランチ名に関しては，変更内容がわかりやすいケバブケースであると良いです．例えば，`modify-bla-bla-seminar` や `add-bla-bla-article`などのようにです．
 
 そのままプルリクエストを作り，必要事項を埋め，@Damin3927 に Reviewer を設定しメンションを飛ばしてください．レビューして，問題なければマージして必要なデプロイ作業を行います．
+
+## 環境構築
+
+現在は`/backend`配下は使っておらず，`/frontend`しか使っていないので，frontend のみの環境構築手順を提示します．
+
+まず，この repository を clone します．
+
+```sh
+cd /path/to/your/directory
+git clone git@github.com:ase-lab-space/ase-lab.git
+cd ase-lab
+```
+
+ローカル環境に`npm`をインストールしていない場合はインストールします．
+
+```sh
+curl -qL https://www.npmjs.com/install.sh | sh
+```
+
+必要なパッケージをインストールします．
+
+```sh
+cd frontend
+npm i
+```
+
+### ローカルで開発する
+
+開発をする場合は，このコマンドを打つことで開発を進めることができます．
+
+```sh
+cd /path/to/your/directory
+cd ase-lab/frontend
+npm run dev
+```
+
+開発する際は適当な名前でブランチを main から切り，push してください．main への direct push は禁止されています．
+
+```sh
+git checkout -b create-hoge-feature
+# 何か機能を追加する
+git add .
+git commit -m "Implement hoge"
+git push -u origin create-hoge-feature
+```
+
+push した後は，Pull Request を出して他の人からレビューをもらってください．その後 main に merge され，デプロイされます．
