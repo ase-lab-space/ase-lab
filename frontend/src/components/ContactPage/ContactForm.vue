@@ -8,21 +8,32 @@
             type="text"
             label="名前"
             :rules="[rules.required]"
+            :dense="q.screen.lt.sm"
           />
           <q-input
             v-model="email"
             type="email"
             label="E-mail"
             :rules="[rules.required]"
+            :dense="q.screen.lt.sm"
           />
           <div class="q-gutter-sm">
-            <q-radio
-              v-for="(color, s) in STATUS_TYPE"
-              :key="s"
+            <div v-if="q.screen.gt.xs">
+              <q-radio
+                v-for="(color, s) in STATUS_TYPE"
+                :key="s"
+                v-model="status"
+                :val="s"
+                :label="s"
+                :color="color"
+              />
+            </div>
+            <q-select
+              v-else
               v-model="status"
-              :val="s"
-              :label="s"
-              :color="color"
+              :options="Object.keys(STATUS_TYPE)"
+              label="職業"
+              dense
             />
           </div>
           <q-input
@@ -30,6 +41,7 @@
             type="textarea"
             label="内容"
             :rules="[rules.required]"
+            :dense="q.screen.lt.sm"
           />
           <div class="row justify-end">
             <q-btn
@@ -72,6 +84,7 @@ export default defineComponent({
 
     return {
       form,
+      q,
 
       name,
       email,
@@ -123,7 +136,7 @@ export default defineComponent({
   margin: 0 auto;
 }
 .form {
-  * {
+  > * {
     margin-bottom: 12px;
   }
 }

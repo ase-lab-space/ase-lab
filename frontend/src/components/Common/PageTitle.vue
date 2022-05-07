@@ -30,6 +30,9 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+// $
+@import 'assets/mq.scss';
+
 .title-container {
   color: rgb(63, 63, 63);
 }
@@ -39,6 +42,10 @@ export default defineComponent({
   margin-top: 40px;
   margin-bottom: 10px;
   letter-spacing: 4px;
+
+  @include mq(md) {
+    font-size: 2.1rem !important;
+  }
 }
 
 .description {

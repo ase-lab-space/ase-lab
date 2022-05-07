@@ -7,11 +7,21 @@
             <router-link to="/?no-ovl=t">ASE-Lab.</router-link>
           </h2>
 
-          <nav class="navbar row items-center">
-            <nav-link text="About Us" path="/about" />
-            <nav-link text="Activities" path="/activities" />
-            <nav-link text="Articles" path="/articles" />
-            <nav-link text="Contact" path="/contact" />
+          <nav class="navbar row items-center" v-if="q.screen.gt.sm">
+            <nav-link
+              v-for="link in links"
+              :text="link.text"
+              :path="link.path"
+              :key="link.path"
+            />
+          </nav>
+          <nav v-else>
+            <hamberger-icon @click="onHambergerClicked" ref="hambergerIcon" />
+            <link-overlay
+              v-if="linkOverlayActive"
+              ref="linkOverlay"
+              @link-clicked="onLinkClicked"
+            />
           </nav>
         </header>
 
@@ -29,9 +39,42 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue';
+import { useQuasar } from 'quasar';
+import { sleep } from 'src/utils/PromiseUtil';
 import NavLink from 'src/components/MainLayout/NavLink.vue';
 import FooterView from 'src/components/MainLayout/FooterView.vue';
+import HambergerIcon from 'src/components/MainLayout/HambergerIcon.vue';
+import LinkOverlay from 'src/components/MainLayout/LinkOverlay.vue';
+
+interface ILink {
+  text: string;
+  path: string;
+  description: string;
+}
+
+export const links: ILink[] = [
+  {
+    text: 'About Us',
+    path: '/about',
+    description: '私たちについて',
+  },
+  {
+    text: 'Activities',
+    path: '/activities',
+    description: '私たちの活動',
+  },
+  {
+    text: 'Articles',
+    path: '/articles',
+    description: '私たちの記事',
+  },
+  {
+    text: 'Contact',
+    path: '/contact',
+    description: '私たちへのお問合わせ',
+  },
+];
 
 export default defineComponent({
   name: 'MainLayout',
@@ -39,15 +82,48 @@ export default defineComponent({
   components: {
     NavLink,
     FooterView,
+    HambergerIcon,
+    LinkOverlay,
   },
 
   setup() {
-    return;
+    const q = useQuasar();
+    const linkOverlayActive = ref(false);
+    const linkOverlay = ref<InstanceType<typeof LinkOverlay>>();
+    const hambergerIcon = ref<InstanceType<typeof HambergerIcon>>();
+
+    return {
+      q,
+      linkOverlayActive,
+      linkOverlay,
+      hambergerIcon,
+
+      links,
+    };
+  },
+  methods: {
+    async onHambergerClicked() {
+      if (this.linkOverlayActive) {
+        this.linkOverlay?.disable();
+        await sleep(300);
+        this.linkOverlayActive = false;
+      } else {
+        this.linkOverlayActive = true;
+      }
+    },
+    async onLinkClicked() {
+      this.hambergerIcon?.toggle();
+      this.linkOverlay?.disable();
+      await sleep(300);
+      this.linkOverlayActive = false;
+    },
   },
 });
 </script>
 
 <style lang="scss">
+@import 'assets/mq.scss';
+
 .v-enter-active,
 .v-leave-active {
   transition: opacity 0.3s;
@@ -60,6 +136,10 @@ export default defineComponent({
 .frame-container {
   margin: 0 40px;
   overflow: hidden;
+
+  @include mq(sm) {
+    margin: 0 15px;
+  }
 }
 
 .frame-container-top {
@@ -67,6 +147,10 @@ export default defineComponent({
   margin: 40px 0;
   padding: 40px;
   border-radius: 25px;
+
+  @include mq(sm) {
+    padding: 25px;
+  }
 }
 
 .layout-background {
