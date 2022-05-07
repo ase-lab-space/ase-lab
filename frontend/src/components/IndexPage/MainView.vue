@@ -81,6 +81,7 @@ export default defineComponent({
   }
   @include mq(sm) {
     position: inherit;
+    margin-bottom: 100px;
   }
 }
 

@@ -1,10 +1,15 @@
 <template>
-  <router-link :to="to" class="link label tilt-on-hover">
+  <router-link
+    :to="to"
+    class="link label tilt-on-hover"
+    :class="force || q.screen.lt.md ? ['label__force'] : []"
+  >
     {{ label }}
   </router-link>
 </template>
 
 <script lang="ts">
+import { useQuasar } from 'quasar';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
@@ -17,6 +22,13 @@ export default defineComponent({
       type: String,
       required: true,
     },
+    force: Boolean,
+  },
+  setup() {
+    const q = useQuasar();
+    return {
+      q,
+    };
   },
 });
 </script>
@@ -59,6 +71,10 @@ export default defineComponent({
 
   &:hover::before {
     width: 100%;
+  }
+  &__force {
+    border-bottom: 1px $primary solid;
+    border-top: 1px $primary solid;
   }
 }
 </style>

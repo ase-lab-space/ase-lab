@@ -1,7 +1,7 @@
 <template>
-  <section class="section-container section-full-size column items-center">
+  <section class="section-container section-full-size">
     <div class="content-container row justify-between">
-      <div class="col-5 column">
+      <div class="col-xs-12 col-md-5 column items-center">
         <slide-in class="img-container row items-center justify-center">
           <router-link to="/about">
             <img src="/img/japanmap.webp" alt="" class="image" />
@@ -9,7 +9,7 @@
         </slide-in>
       </div>
 
-      <div class="col-6 column justify-start">
+      <div class="col-xs-12 col-md-6 column justify-start">
         <div class="col-9">
           <slide-in>
             <h3 class="section-catch-phrase">
@@ -36,7 +36,7 @@
       </div>
     </div>
 
-    <slide-in>
+    <slide-in class="row justify-center">
       <border-button
         to="https://docs.google.com/forms/d/1F3E-cEGQr9geMDtjl_xRRLTiMPqgbR5kOUU5-EBzW_I"
         label="参加はコチラから"
@@ -62,16 +62,19 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+// $
+@import 'assets/mq.scss';
+
 .section-catch-phrase {
   margin-bottom: 48px;
 }
 
-.section-full-size {
-  height: 100vh;
-}
-
 .content-container {
   margin: 0 100px;
+
+  @include mq(md) {
+    margin: 100px 0 0 0;
+  }
 }
 
 .link {
