@@ -1,10 +1,17 @@
 <template>
-  <section class="row section-container q-col-gutter-xl">
-    <div class="col-6 column">
+  <section
+    class="row section-container"
+    :class="q.screen.gt.sm ? ['q-col-gutter-xl'] : []"
+  >
+    <div class="col-xs-12 col-md-6 column">
       <div class="col row justify-between items-end section-title-container">
         <h4 class="section-title">実施中のゼミ</h4>
 
-        <single-line-link to="/activities" label="ゼミをもっと見る →" />
+        <single-line-link
+          to="/activities"
+          label="もっと見る →"
+          class="single-line-link"
+        />
       </div>
 
       <slide-in v-for="seminar in inProgressSeminars" :key="seminar.title">
@@ -17,11 +24,15 @@
       </slide-in>
     </div>
 
-    <div class="col-6 column justify-start">
+    <div class="col-xs-12 col-md-6 column justify-start preparing-container">
       <div class="col row justify-between items-end section-title-container">
-        <h4 class="section-title">メンバーが企画中のゼミ</h4>
+        <h4 class="section-title">企画中のゼミ</h4>
 
-        <single-line-link to="/activities" label="ゼミをもっと見る →" />
+        <single-line-link
+          to="/activities"
+          label="もっと見る →"
+          class="single-line-link"
+        />
       </div>
 
       <slide-in v-for="seminar in preparingSeminars" :key="seminar.title">
@@ -43,6 +54,7 @@ import SlideIn from '../Common/Transition/SlideIn.vue';
 import SeminarCard, { ITag, TAG_COLOR } from './Seminar/SeminarCard.vue';
 import { hash } from 'src/utils/HashUtil';
 import { seminars as _seminars, StatusType } from 'src/models/seminars';
+import { useQuasar } from 'quasar';
 
 export interface ISeminar {
   title: string;
@@ -66,6 +78,8 @@ export default defineComponent({
     SlideIn,
   },
   setup() {
+    const q = useQuasar();
+
     const seminars: ISeminar[] = _seminars
       .filter((seminar) => seminar.description !== undefined)
       .map((seminar) => {
@@ -88,6 +102,7 @@ export default defineComponent({
       });
 
     return {
+      q,
       inProgressSeminars: seminars
         .filter((seminar) => seminar.status === 'in-progress')
         .slice(0, 3),
@@ -101,6 +116,9 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+// $
+@import 'assets/mq.scss';
+
 .section-title {
   font-size: 1.5rem;
   text-decoration: underline;
@@ -113,6 +131,13 @@ export default defineComponent({
 
 .seminar-card {
   margin-bottom: 16px;
-  width: 90% !important;
+}
+
+.single-line-link {
+  margin-bottom: 4px;
+}
+
+.preparing-container {
+  margin-top: 64px;
 }
 </style>
