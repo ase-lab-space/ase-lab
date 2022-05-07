@@ -30,7 +30,11 @@
           </slide-in>
 
           <slide-in>
-            <double-line-link class="link" to="/about" label="参加者の声 →" />
+            <double-line-link
+              class="link"
+              to="/articles"
+              label="参加者の声 →"
+            />
           </slide-in>
         </div>
       </div>
