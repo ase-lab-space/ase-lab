@@ -176,6 +176,10 @@ export default defineComponent({
     text-decoration: none;
     color: black;
   }
+
+  @include mq(sm) {
+    font-size: 2.8rem;
+  }
 }
 
 .navbar {

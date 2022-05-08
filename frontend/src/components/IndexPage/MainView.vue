@@ -1,8 +1,8 @@
 <template>
   <div class="row section-container">
-    <large-globe ref="largeGlobe" class="col col-7" />
+    <large-globe ref="largeGlobe" class="col col-md-7 col-xs-12 large-globe" />
 
-    <div class="col col-5 lp-main column">
+    <div class="col col-xs-12 col-md-5 lp-main column">
       <div class="col column reverse">
         <div class="title-underline" />
         <div class="row items-center">
@@ -36,6 +36,7 @@ import { defineComponent, ref } from 'vue';
 import LargeGlobe from './LargeGlobe.vue';
 import BorderButton from '../Common/Button/BorderButton.vue';
 import anime from 'animejs';
+import { useQuasar } from 'quasar';
 
 export default defineComponent({
   components: {
@@ -45,9 +46,11 @@ export default defineComponent({
 
   setup() {
     const largeGlobe = ref();
+    const q = useQuasar();
 
     return {
       largeGlobe,
+      q,
     };
   },
 
@@ -68,8 +71,28 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+// $
+@import 'assets/mq.scss';
+
 .lp-main {
   height: 70vh !important;
+  @include mq(md) {
+    position: absolute;
+  }
+  @include mq(sm) {
+    position: inherit;
+    margin-bottom: 100px;
+  }
+}
+
+.large-globe {
+  @include mq(md) {
+    opacity: 0.5;
+    filter: blur(3px);
+  }
+  @include mq(sm) {
+    display: none;
+  }
 }
 
 .title {
@@ -78,6 +101,10 @@ export default defineComponent({
   font-size: 4rem;
   line-height: 4rem;
   margin-bottom: -6px;
+
+  @include mq(sm) {
+    font-size: 3.5rem;
+  }
 }
 
 .logo {

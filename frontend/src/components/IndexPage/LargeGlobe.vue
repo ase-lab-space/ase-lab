@@ -145,6 +145,11 @@ class GlobeManager implements IStartable, ITickable {
 
     this._globe.position.setX(-150 * this._scaleMultiplier);
     this._globe.position.setY(35 * this._scaleMultiplier);
+    if (window.innerWidth <= 1023.98) {
+      // md-maxの値
+      this._globe.position.x += 80 - 13000 / window.innerWidth;
+      this._globe.position.y += 30;
+    }
 
     this._renderer.render(this._scene, this._camera);
   }

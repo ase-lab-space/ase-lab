@@ -62,6 +62,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .seminars-view {
+  margin-top: 100px;
   margin-bottom: 64px;
 }
 

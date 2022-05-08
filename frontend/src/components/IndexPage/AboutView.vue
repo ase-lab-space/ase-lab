@@ -1,8 +1,24 @@
 <template>
   <section class="section-container section-full-size">
-    <div class="content-container row justify-between">
-      <div class="col-6 column justify-start">
-        <div class="col-3"></div>
+    <div class="content-container row justify-between reverse">
+      <div class="col-xs-12 col-md-5 column">
+        <h2 class="section-title row items-end">
+          <div class="title">About</div>
+          <div class="subtitle">ー 私たちについて</div>
+        </h2>
+
+        <div class="img-container row items-center justify-center">
+          <router-link to="/about" class="row justify-center">
+            <img
+              src="/img/teaching_max.webp"
+              alt="Teaching MAX"
+              class="image"
+            />
+          </router-link>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-6 column justify-start">
+        <div class="col-3" v-if="q.screen.gt.sm" />
         <div class="col-9">
           <slide-in>
             <h3 class="section-catch-phrase">
@@ -31,28 +47,12 @@
           </slide-in>
         </div>
       </div>
-
-      <div class="col-5 column">
-        <h2 class="section-title row items-end">
-          <div class="title">About</div>
-          <div class="subtitle">ー 私たちについて</div>
-        </h2>
-
-        <div class="img-container row items-center justify-center">
-          <router-link to="/about">
-            <img
-              src="/img/teaching_max.webp"
-              alt="Teaching MAX"
-              class="image"
-            />
-          </router-link>
-        </div>
-      </div>
     </div>
   </section>
 </template>
 
 <script lang="ts">
+import { useQuasar } from 'quasar';
 import { defineComponent } from 'vue';
 import DoubleLineLink from '../Common/Button/DoubleLineLink.vue';
 import SlideIn from '../Common/Transition/SlideIn.vue';
@@ -62,20 +62,29 @@ export default defineComponent({
     DoubleLineLink,
     SlideIn,
   },
+  setup() {
+    const q = useQuasar();
+    return {
+      q,
+    };
+  },
 });
 </script>
 
 <style lang="scss" scoped>
+// $
+@import 'assets/mq.scss';
+
 .section-catch-phrase {
   margin-bottom: 48px;
 }
 
-.section-full-size {
-  height: 100vh;
-}
-
 .content-container {
   margin: 0 100px;
+
+  @include mq(md) {
+    margin: 0;
+  }
 }
 
 .link {
@@ -84,7 +93,7 @@ export default defineComponent({
 
 .img-container {
   width: 400px;
-  min-height: 400px;
+  height: 380px;
   position: relative;
 
   .image {
@@ -92,8 +101,19 @@ export default defineComponent({
     width: 80%;
     transition: all 0.3s;
     cursor: pointer;
-
     filter: saturate(1.3) drop-shadow(12px 12px 0px #bababa) brightness(1.1);
+
+    @include mq(sm) {
+      margin: auto;
+    }
+  }
+
+  @include mq(md) {
+    margin: auto;
+  }
+
+  @include mq(sm) {
+    width: 100%;
   }
 }
 </style>
