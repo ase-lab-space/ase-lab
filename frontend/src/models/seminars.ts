@@ -46,15 +46,6 @@ export const seminars: ISeminar[] = [
     style: 'zoom',
   },
   {
-    name: '天文学',
-    description:
-      '隔週ずつのゼミとなります。2週間の2コマのうち、チャンネルでのアンケートで関心が深い方の内容をピックアップしてお届けします。内容によってはディスカッションや調査などを行い、積極的な学びの場を作っていきたいと思っています。 まだゼミに参加できていないという方も予習なしで気楽に参加できるゼミとなっています！どうぞご参加ください！ ',
-    status: 'in-progress',
-    url: '/img/seminars/astronomy.webp',
-    span: '4月下旬~',
-    style: 'zoom',
-  },
-  {
     name: '物理数学',
     description:
       'もう履修済みの内容も直観的な理解がなければ、いつか忘れてしまいます。しかし、数式や法則を直観的に捉えることができれば、常識として認識できるため、体に染みつけることができます。早いうちに完全な理解と知識の構築を行い、次の学年に生かしていきましょう。',
@@ -62,6 +53,15 @@ export const seminars: ISeminar[] = [
     url: 'https://images-na.ssl-images-amazon.com/images/I/51oYFb4Ri4L._SX321_BO1,204,203,200_.jpg',
     span: '12月~5月',
     style: 'hybrid',
+  },
+  {
+    name: '天文学',
+    description:
+      '隔週ずつのゼミとなります。2週間の2コマのうち、チャンネルでのアンケートで関心が深い方の内容をピックアップしてお届けします。内容によってはディスカッションや調査などを行い、積極的な学びの場を作っていきたいと思っています。 まだゼミに参加できていないという方も予習なしで気楽に参加できるゼミとなっています！どうぞご参加ください！ ',
+    status: 'in-progress',
+    url: '/img/seminars/astronomy.webp',
+    span: '4月下旬~',
+    style: 'zoom',
   },
   {
     name: '宇宙の物理',
