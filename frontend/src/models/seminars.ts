@@ -31,7 +31,7 @@ export interface ISeminar {
 export const seminars: ISeminar[] = [
   {
     name: '衛星データ解析',
-    status: 'wanted',
+    status: 'in-progress',
     url: 'https://www.tellusxdp.com/cmn/img/ogp.jpg',
     span: '4月下旬~',
     style: 'zoom',
