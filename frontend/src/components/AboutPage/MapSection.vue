@@ -1,10 +1,14 @@
 <template>
   <div class="row justify-between q-col-gutter-xl">
-    <slide-in class="col-6 row justify-end">
+    <slide-in class="col-xs-12 col-md-6 row justify-end gt-sm">
       <img src="/img/japanmap.webp" alt="Japan simple map" class="image" />
     </slide-in>
 
-    <div class="col-6 column">
+    <slide-in class="col-xs-12 col-md-6 row justify-center lt-md">
+      <img src="/img/japanmap.webp" alt="Japan simple map" class="image" />
+    </slide-in>
+
+    <div class="col-xs-12 col-md-6 column">
       <slide-in>
         <h3>参加人数</h3>
       </slide-in>
@@ -55,7 +59,8 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .image {
-  height: 400px;
+  max-height: 400px;
+  max-width: 100%;
   filter: saturate(1.5) sepia(0.2);
 }
 
