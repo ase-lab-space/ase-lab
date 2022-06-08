@@ -15,4 +15,12 @@ export const articles: IArticleProps[] = [
     date: '2022/04/23',
     url: 'https://note.com/ase_lab_/n/nb899b1739d39',
   },
+  {
+    img: 'https://assets.st-note.com/production/uploads/images/80067536/rectangle_large_type_2_fe2fcccac357a2fbe53ca3aa8183e129.jpeg',
+    title: '〜地方メンバーの声　#2（佐藤玲佳さん　編）〜',
+    bodyDigest:
+      '国際教養大学の2年生の佐藤玲佳です。あまり知られてないかもしれないのですが、国際教養大学って学部が国際教養学部しかないんです。その中で領域が三年時...',
+    date: '2022/06/05',
+    url: 'https://note.com/ase_lab_/n/nd873fcb66048',
+  },
 ];
