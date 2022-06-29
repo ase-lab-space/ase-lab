@@ -9,10 +9,10 @@
     </slide-in>
 
     <div class="row">
-      <slide-in class="img-container col-6">
+      <slide-in class="img-container col-sm-12 col-md-6">
         <img src="/img/ase-talks.webp" alt="" />
       </slide-in>
-      <slide-in class="img-container col-6" :delay="300">
+      <slide-in class="img-container col-sm-12 col-md-6" :delay="300">
         <img src="/img/meetup.webp" alt="" />
       </slide-in>
     </div>
@@ -39,11 +39,18 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+// $
+@import "assets/mq.scss";
+
 .img-container {
   > img {
     width: 100%;
     height: 100%;
     padding: 32px;
+
+    @include mq(sm) {
+      padding: 0 0 12px;
+    }
   }
 }
 .caption {

@@ -8,11 +8,11 @@
         class="heading"
       />
     </slide-in>
-    <div class="row q-col-gutter-lg">
+    <div class="row q-col-gutter-lg justify-center">
       <slide-in
         v-for="(seminar, index) in filteredSeminars"
         :key="index"
-        class="col-3"
+        class="col-3 seminar-card-container"
       >
         <seminar-card :seminar="seminar" class="seminar-card" />
       </slide-in>
@@ -66,5 +66,8 @@ export default defineComponent({
 }
 .seminar-card {
   margin-bottom: 32px;
+}
+.seminar-card-container {
+  min-width: 220px;
 }
 </style>
