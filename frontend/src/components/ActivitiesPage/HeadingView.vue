@@ -1,8 +1,8 @@
 <template>
   <div class="column items-start container">
-    <div class="row">
+    <div class="row" :class="[$q.screen.gt.sm ? '': 'justify-center']">
       <h2 class="title">- {{ title }} -</h2>
-      <div class="subtitle column justify-center">
+      <div class="subtitle column justify-center gt-sm">
         {{ subtitle }}
       </div>
 
