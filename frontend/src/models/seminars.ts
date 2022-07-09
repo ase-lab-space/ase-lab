@@ -29,39 +29,39 @@ export interface ISeminar {
 }
 
 export const seminars: ISeminar[] = [
-  {
-    name: '衛星データ解析',
-    status: 'wanted',
-    url: 'https://www.tellusxdp.com/cmn/img/ogp.jpg',
-    span: '4月下旬~',
-    style: 'zoom',
-  },
-  {
-    name: '宇宙工学入門',
-    description:
-      '初学者向けの教材を使い，宇宙空間からロケット・衛星について幅広く学んでいきます！幅広い分野の入門的内容を扱っていく予定です．',
-    status: 'in-progress',
-    url: 'https://images-na.ssl-images-amazon.com/images/I/51rZrV0V8IL._SX357_BO1,204,203,200_.jpg',
-    span: '4月中旬~',
-    style: 'zoom',
-  },
-  {
+    {
     name: '天文検定',
     description:
       '天文宇宙検定の対策をする予定です。星空宇宙天文検定(星検)も視野に入れています！事前知識は不要で、検定を受ける受けないも自由です。 天文系の検定、一緒にチャレンジしませんか？興味のある方はぜひ！',
-    status: 'in-progress',
+    status: 'wanted',
     url: '/img/seminars/tenmon-uchu-kentei.webp',
-    span: '6月上旬~',
+    span: '調整中',
     style: 'zoom',
   },
   {
-    name: '物理数学',
+    name: 'space-english 2nd',
     description:
-      'もう履修済みの内容も直観的な理解がなければ、いつか忘れてしまいます。しかし、数式や法則を直観的に捉えることができれば、常識として認識できるため、体に染みつけることができます。早いうちに完全な理解と知識の構築を行い、次の学年に生かしていきましょう。',
+      "We decided to make the second seminar of Space-English. Everyone's welcome! I am looking forward to your participation!",
+    status: 'preparing',
+    url: 'https://image.freepik.com/free-vector/colorful-galaxy-background-with-astronaut_52683-307.jpg',
+    span: 'Adjusting',
+    style: 'zoom',
+  },
+  {
+    name: '宇宙工学入門 -[体験版]-',
+    description:
+      '宇宙工学入門ゼミから3回分を抜粋した体験版です！',
     status: 'in-progress',
-    url: 'https://images-na.ssl-images-amazon.com/images/I/51oYFb4Ri4L._SX321_BO1,204,203,200_.jpg',
-    span: '12月~5月',
-    style: 'hybrid',
+    url: 'https://images-na.ssl-images-amazon.com/images/I/51rZrV0V8IL._SX357_BO1,204,203,200_.jpg',
+    span: '6月中旬~',
+    style: 'zoom',
+  },
+  {
+    name: '衛星データ解析',
+    status: 'in-progress',
+    url: 'https://www.tellusxdp.com/cmn/img/ogp.jpg',
+    span: '4月下旬~',
+    style: 'zoom',
   },
   {
     name: '天文学',
@@ -78,17 +78,8 @@ export const seminars: ISeminar[] = [
       'このゼミでは、地球に最も近い恒星、太陽から、ブラックホールや遠方の銀河まで、宇宙に浮かぶ様々な天体や現象について数式や物理を用いて学習していきます。天文学の基礎となる様々な法則や理論を自分たちの手で分析することで、天文学というものの理解を深めていきましょう。',
     status: 'in-progress',
     url: 'https://images-na.ssl-images-amazon.com/images/I/81XAjp79rRL.jpg',
-    span: '1月~4月',
+    span: '1月~',
     style: 'hybrid',
-  },
-  {
-    name: 'space-english',
-    description:
-      "It may sometimes be specialized, but you can think of it as an opportunity to speak English! Everyone's welcome! I am looking forward to your participation!",
-    status: 'in-progress',
-    url: 'https://image.freepik.com/free-vector/colorful-galaxy-background-with-astronaut_52683-307.jpg',
-    span: 'April ~',
-    style: 'zoom',
   },
   {
     name: '軌道力学2nd',
@@ -97,15 +88,6 @@ export const seminars: ISeminar[] = [
     status: 'in-progress',
     url: '/img/seminars/kidorikigaku2.webp',
     span: '4月~7月',
-    style: 'zoom',
-  },
-  {
-    name: 'ゼロから始めるCAD',
-    description:
-      '前半は簡単な操作の説明や製作など、後半はロケットエンジンなど自分が興味あるものを作製、オプションでCFD(数値流体力学)を用いた解析をします。ゼロから始めるので好きなタイミングで参加していただいて大丈夫です！',
-    status: 'in-progress',
-    url: '/img/seminars/zerocad.webp',
-    span: '4月中旬~',
     style: 'zoom',
   },
   {
@@ -151,6 +133,42 @@ export const seminars: ISeminar[] = [
     status: 'finished',
     url: 'https://images-na.ssl-images-amazon.com/images/I/41FCF736uWL._SX352_BO1,204,203,200_.jpg',
     span: '1月~4月',
+    style: 'zoom',
+  },
+  {
+    name: '物理数学',
+    description:
+      'もう履修済みの内容も直観的な理解がなければ、いつか忘れてしまいます。しかし、数式や法則を直観的に捉えることができれば、常識として認識できるため、体に染みつけることができます。早いうちに完全な理解と知識の構築を行い、次の学年に生かしていきましょう。',
+    status: 'finished',
+    url: 'https://images-na.ssl-images-amazon.com/images/I/51oYFb4Ri4L._SX321_BO1,204,203,200_.jpg',
+    span: '12月~5月',
+    style: 'hybrid',
+  }
+  {
+    name: 'space-english',
+    description:
+      "It may sometimes be specialized, but you can think of it as an opportunity to speak English! Everyone's welcome! I am looking forward to your participation!",
+    status: 'finished',
+    url: 'https://image.freepik.com/free-vector/colorful-galaxy-background-with-astronaut_52683-307.jpg',
+    span: 'April ~June',
+    style: 'zoom',
+  },
+  {
+    name: '宇宙工学入門',
+    description:
+      '初学者向けの教材を使い，宇宙空間からロケット・衛星について幅広く学んでいきます！幅広い分野の入門的内容を扱っていく予定です．',
+    status: 'finished',
+    url: 'https://images-na.ssl-images-amazon.com/images/I/51rZrV0V8IL._SX357_BO1,204,203,200_.jpg',
+    span: '4月中旬~',
+    style: 'zoom',
+  },
+  {
+    name: 'ゼロから始めるCAD',
+    description:
+      '前半は簡単な操作の説明や製作など、後半はロケットエンジンなど自分が興味あるものを作製、オプションでCFD(数値流体力学)を用いた解析をします。ゼロから始めるので好きなタイミングで参加していただいて大丈夫です！',
+    status: 'finished',
+    url: '/img/seminars/zerocad.webp',
+    span: '4月中旬~6月',
     style: 'zoom',
   },
 ];
