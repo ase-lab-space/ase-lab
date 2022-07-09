@@ -23,4 +23,12 @@ export const articles: IArticleProps[] = [
     date: '2022/06/05',
     url: 'https://note.com/ase_lab_/n/nd873fcb66048',
   },
+  {
+    img: 'https://assets.st-note.com/production/uploads/images/82287733/rectangle_large_type_2_0ff0e012818c4ca826bbd090d4f2355d.jpeg',
+    title: '〜海外メンバーの声　(神田芽生さん編）〜',
+    bodyDigest:
+      '時差もあって、TELSTARもそうですけど、ASE-Lab.に入った当初は活動時間やどういう形態で行われてるのか分からなくて。リアルタイムで出なきゃいけないと勝手に思い込んでいました...',
+    date: '2022/07/09',
+    url: 'https://note.com/ase_lab_/n/nb85dc1be333f',
+  },
 ];
