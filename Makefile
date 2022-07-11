@@ -2,7 +2,7 @@
 
 .PHONY: build
 build:
-	docker build --no-cache -t ase-lab-frontend . 
+	docker build --no-cache -t ase-lab-frontend .
 
 .PHONY: run
 up: build
