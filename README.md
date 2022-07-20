@@ -14,9 +14,9 @@ ASE-Lab. メンバーがこのリポジトリを使う用途としては，以�
 
 まず，GitHub 上で以下のいずれかのファイルを編集します．（ローカルで clone して push も可）
 
-- [articles.ts](https://github.com/ase-lab-space/ase-lab/blob/main/frontend/src/models/articles.ts)
-- [seminars.ts](https://github.com/ase-lab-space/ase-lab/blob/main/frontend/src/models/seminars.ts)
-- [meta.ts](https://github.com/ase-lab-space/ase-lab/blob/main/frontend/src/models/meta.ts)
+- [articles.ts](https://github.com/ase-lab-space/ase-lab/blob/main/src/models/articles.ts)
+- [seminars.ts](https://github.com/ase-lab-space/ase-lab/blob/main/src/models/seminars.ts)
+- [meta.ts](https://github.com/ase-lab-space/ase-lab/blob/main/src/models/meta.ts)
 
 右上の鉛筆マークをクリックすると，編集モードに入ることができます．
 
@@ -28,42 +28,40 @@ ASE-Lab. メンバーがこのリポジトリを使う用途としては，以�
 
 ## 環境構築
 
-現在は`/backend`配下は使っておらず，`/frontend`しか使っていないので，frontend のみの環境構築手順を提示します．
-
 まず，この repository を clone します．
 
-```sh
+```bash
 cd /path/to/your/directory
 git clone git@github.com:ase-lab-space/ase-lab.git
 cd ase-lab
 ```
 
-ローカル環境に`npm`をインストールしていない場合はインストールします．
+ローカル環境に`npm`と`yarn`をインストールしていない場合はインストールします．
 
-```sh
+```bash
 curl -qL https://www.npmjs.com/install.sh | sh
+npm i -g yarn
 ```
 
 必要なパッケージをインストールします．
 
-```sh
-cd frontend
-npm i
+```bash
+yarn
 ```
 
 ### ローカルで開発する
 
 開発をする場合は，このコマンドを打つことで開発を進めることができます．
 
-```sh
+```bash
 cd /path/to/your/directory
-cd ase-lab/frontend
-npm run dev
+cd ase-lab
+yarn dev
 ```
 
 開発する際は適当な名前でブランチを main から切り，push してください．main への direct push は禁止されています．
 
-```sh
+```bash
 git checkout -b create-hoge-feature
 # 何か機能を追加する
 git add .
