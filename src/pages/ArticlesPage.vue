@@ -42,7 +42,7 @@ export default defineComponent({
     });
 
     return {
-      articles: articles.concat(articles),
+      articles,
       delay,
     };
   },
