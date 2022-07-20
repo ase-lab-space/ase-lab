@@ -4,7 +4,8 @@ WORKDIR /app
 COPY . /app
 
 EXPOSE 8080
-RUN yarn build \
+RUN yarn install \
+  && yarn build \
   && yarn global add @quasar/cli \
   # smoke test
   && quasar --version
