@@ -143,7 +143,7 @@ export const seminars: ISeminar[] = [
     url: 'https://images-na.ssl-images-amazon.com/images/I/51oYFb4Ri4L._SX321_BO1,204,203,200_.jpg',
     span: '12月~5月',
     style: 'hybrid',
-  }
+  },
   {
     name: 'space-english',
     description:
