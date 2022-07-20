@@ -5,12 +5,12 @@
       description="ASE-Lab. やASE-Lab. メンバーに関するnote記事を書いています。続々更新中なのでお楽しみに。"
       class="title-container"
     />
-    <div class="row justify-start q-col-gutter-xl">
+    <div class="row justify-center q-col-gutter-lg">
       <slide-in
         v-for="article in articles"
         :key="article.title"
         :delay="delay"
-        class="col-3"
+        class="col-3 article-container"
       >
         <article-card :article="article" />
       </slide-in>
@@ -55,6 +55,9 @@ export default defineComponent({
     width: 100%;
     max-width: 1100px;
   }
+}
+.article-container {
+  min-width: 260px;
 }
 .title-container {
   margin-bottom: 60px;
