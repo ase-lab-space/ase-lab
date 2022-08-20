@@ -95,7 +95,7 @@ export const seminars: ISeminar[] = [
     description:
       '宇宙工学に絡む流体力学に関して、めちゃめちゃ範囲が広いです。ぶっちゃけ、最初の基礎のとことか理解してなくてもCFDは扱えます。なので、基礎からやりたい人も、CFDのシミュレーションだけやりたい人でも参加できるようにします！ 前半は、基礎と圧縮性流体を扱い、後半はCFD使いながら解析していこうと思っていて、こちらはCAD講座と連携して、CADで作ったものを解析することにする予定です。',
     status: 'in-progress',
-    url: 'https://shop38-makeshop.akamaized.net/shopimages/jsmebooks/0000000000352.jpg',
+    url: 'https://images-na.ssl-images-amazon.com/images/I/5178936V07L._SX353_BO1,204,203,200_.jpg',
     span: '4月中旬~',
     style: 'zoom',
   },
