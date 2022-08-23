@@ -156,7 +156,7 @@ export const seminars: ISeminar[] = [
   {
     name: '宇宙工学入門',
     description:
-      '初学者向けの教材を使い，宇宙空間からロケット・衛星について幅広く学んでいきます！幅広い分野の入門的内容を扱っていく予定です．',
+      '初学者向けの教材を使い、宇宙空間からロケット・衛星について幅広く学んでいきます！幅広い分野の入門的内容を扱っていく予定です。',
     status: 'finished',
     url: 'https://images-na.ssl-images-amazon.com/images/I/51rZrV0V8IL._SX357_BO1,204,203,200_.jpg',
     span: '4月中旬~',
