@@ -72,13 +72,6 @@ const STATUS_TYPE = {
   その他: 'cyan',
 };
 
-type TemplateParams = {
-  name: string;
-  email: string;
-  status: keyof typeof STATUS_TYPE;
-  body: string;
-};
-
 export default defineComponent({
   setup() {
     const form = ref<QForm>();
@@ -110,7 +103,7 @@ export default defineComponent({
       async send() {
         loading.value = true;
 
-        const params: TemplateParams = {
+        const params = {
           name: name.value,
           email: email.value,
           status: status.value,
