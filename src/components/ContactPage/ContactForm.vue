@@ -62,13 +62,21 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 import { QForm, useQuasar } from 'quasar';
-import { send } from '@emailjs/browser';
+import { SlackRepository } from 'src/repositories/slack_repository';
+import { EmailJSRepository } from 'src/repositories/emailjs_repository';
 
 const STATUS_TYPE = {
   高校生: 'teal',
   大学生: 'orange',
   社会人: 'red',
   その他: 'cyan',
+};
+
+type TemplateParams = {
+  name: string;
+  email: string;
+  status: keyof typeof STATUS_TYPE;
+  body: string;
 };
 
 export default defineComponent({
@@ -102,27 +110,30 @@ export default defineComponent({
       async send() {
         loading.value = true;
 
-        try {
-          await send(
-            'service_l6niwy4',
-            'template_u36ny2r',
-            {
-              name: name.value,
-              email: email.value,
-              status: status.value,
-              body: body.value,
-            },
-            'user_UdBeQl08zUEhs9grdeS90'
-          );
+        const params: TemplateParams = {
+          name: name.value,
+          email: email.value,
+          status: status.value,
+          body: body.value,
+        };
 
-          q.notify('正常に送信されました。返信をお待ちください。');
+        const slackRepository = new SlackRepository();
+        const emailjsRepository = new EmailJSRepository();
+
+        try {
+          await Promise.all([
+            slackRepository.notifyContactForm(params),
+            emailjsRepository.notifyContactForm(params),
+          ]);
         } catch {
           q.notify(
             '何らかの理由で正常に送信できませんでした。時間を開けてもう一度送るか、ase.lab.academic@gmail.comへ直接ご連絡ください。'
           );
+          return;
+        } finally {
+          loading.value = false;
         }
-
-        loading.value = false;
+        q.notify('正常に送信されました。返信をお待ちください。');
       },
     };
   },
