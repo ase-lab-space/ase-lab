@@ -31,4 +31,13 @@ export const articles: IArticleProps[] = [
     date: '2022/07/09',
     url: 'https://note.com/ase_lab_/n/nb85dc1be333f',
   },
+  {
+    img: 'https://assets.st-note.com/production/uploads/images/86050214/rectangle_large_type_2_bd20eea8c3cdf1920ae5fa8034f5e80a.jpeg',
+    title: '〜地方メンバーの声　＃３(瀬戸晴登君　編）〜',
+    bodyDigest:
+      '僕自身モノづくりの中でも宇宙探索、宇宙開発系のロボットを作りたいなと思っていて、宇宙には元々凄い興味があったんですね。今年の春休みにビックサイトで国際宇宙産業展が...',
+    date: '2022/09/03',
+    url: 'https://note.com/ase_lab_/n/n257e02a41d76',
+  },
+    
 ];
