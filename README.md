@@ -24,7 +24,7 @@ ASE-Lab. メンバーがこのリポジトリを使う用途としては，以�
 
 > [SHOULD] ブランチ名に関しては，変更内容がわかりやすいケバブケースであると良いです．例えば，`modify-bla-bla-seminar` や `add-bla-bla-article`などのようにです．
 
-そのままプルリクエストを作り，必要事項を埋め，@Damin3927 に Reviewer を設定しメンションを飛ばしてください．レビューして，問題なければマージして必要なデプロイ作業を行います．
+そのままプルリクエストを作り，必要事項を埋め，@Damin3927 に Reviewer を設定しメンションを飛ばしてください．レビューして，問題なければマージされ自動でデプロイされます．
 
 ## 環境構築
 
@@ -69,4 +69,4 @@ git commit -m "Implement hoge"
 git push -u origin create-hoge-feature
 ```
 
-push した後は，Pull Request を出して他の人からレビューをもらってください．その後 main に merge され，デプロイされます．
+push した後は，Pull Request を出して他の人からレビューをもらってください．その後 main に merge され，自動でデプロイされます．
