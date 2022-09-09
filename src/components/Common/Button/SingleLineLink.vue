@@ -1,5 +1,13 @@
 <template>
+  <a
+    v-if="useAnchorTag"
+    :href="to"
+    class="link label tilt-on-hover"
+    :class="force || q.screen.lt.md ? ['label__force'] : []"
+    >{{ label }}</a
+  >
   <router-link
+    v-else
     :to="to"
     class="link label tilt-on-hover"
     :class="force || q.screen.lt.md ? ['label__force'] : []"
@@ -23,6 +31,7 @@ export default defineComponent({
       required: true,
     },
     force: Boolean,
+    useAnchorTag: Boolean,
   },
   setup() {
     const q = useQuasar();
