@@ -26,6 +26,34 @@
         color="primary"
       />
     </div>
+
+    <slide-in class="row justify-center items-center guide-book-section">
+      <div class="col-xs-12 col-md-6">
+        <div class="guide-book-section-title">ASE-Lab. ゼミガイドブック</div>
+        <p>
+          ASE-Lab.では既存のゼミに参加するだけでなく、自分で新しくゼミを開催することもできます。
+          また、ASE-Lab.のゼミは、ゼミに所属するすべてのメンバーの主体性にゆだねられています。
+        </p>
+        <p>
+          しかし、最初は開催するにもやり方がわからないこともあると思います。そのような方々のために、ASE-Lab.はこの「ASE-Lab.
+          ゼミガイドブック」を作成し公開しています。
+          ゼミの開催と参加を担うメンバーの方々がゼミを立てる際の指針となることを目的としています。是非ご一読ください。
+        </p>
+        <single-line-link
+          target="_blank"
+          :useAnchorTag="true"
+          label="ガイドブックを見る"
+          to="/pdf/ASE-Lab. ガイドブック.pdf"
+        />
+      </div>
+      <a href="/pdf/ASE-Lab. ガイドブック.pdf" target="_blank">
+        <img
+          src="/img/seminar-guide-book-thumbnail.webp"
+          class="book-thumbnail shadow-2"
+          alt=""
+        />
+      </a>
+    </slide-in>
   </section>
 </template>
 
@@ -35,12 +63,14 @@ import HeadingView from '../HeadingView.vue';
 import SeminarCard from './SeminarCard.vue';
 import SlideIn from '../../Common/Transition/SlideIn.vue';
 import { seminars, ISeminar } from 'src/models/seminars';
+import SingleLineLink from '../../Common/Button/SingleLineLink.vue';
 
 export default defineComponent({
   components: {
     HeadingView,
     SeminarCard,
     SlideIn,
+    SingleLineLink,
   },
 
   setup() {
@@ -61,6 +91,9 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+// $
+@import 'assets/mq.scss';
+
 .heading {
   margin-bottom: 64px;
 }
@@ -69,5 +102,22 @@ export default defineComponent({
 }
 .seminar-card-container {
   min-width: 220px;
+}
+.book-thumbnail {
+  height: 250px;
+  margin-left: 30px;
+
+  @include mq(md) {
+    margin-left: 0;
+    margin-top: 30px;
+  }
+}
+.guide-book-section {
+  margin-top: 64px;
+  &-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
 }
 </style>

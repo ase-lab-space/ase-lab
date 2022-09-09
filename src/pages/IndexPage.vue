@@ -5,6 +5,7 @@
       @finish-animation="mainView?.startAnimation()"
     />
     <main-view ref="mainView" />
+    <news-view class="news-view" />
     <about-view />
     <map-view />
     <seminars-view class="seminars-view" />
@@ -28,6 +29,7 @@ import SeminarsView from 'src/components/IndexPage/SeminarsView.vue';
 import ArticlesView from 'src/components/IndexPage/ArticlesView.vue';
 import BorderButton from 'src/components/Common/Button/BorderButton.vue';
 import { sleep } from 'src/utils/PromiseUtil';
+import NewsView from 'src/components/IndexPage/NewsView.vue';
 
 export default defineComponent({
   name: 'IndexPage',
@@ -39,6 +41,7 @@ export default defineComponent({
     SeminarsView,
     ArticlesView,
     BorderButton,
+    NewsView,
   },
 
   setup() {
@@ -68,5 +71,9 @@ export default defineComponent({
 
 .entry-button {
   margin-top: 64px;
+}
+
+.news-view {
+  margin-bottom: 100px;
 }
 </style>
