@@ -43,7 +43,7 @@ export const seminars: ISeminar[] = [
     description:
       '電磁気学入門ということで、大学で電磁気学をまだ履修してない方でも参加できるような内容にしたいと考えています！',
     status: 'wanted',
-    url: 'https://twitter.com/ASE_lab_/status/1557705893545799682/photo/1',
+    url: 'https://pbs.twimg.com/media/FZyTs1iaAAAjgYV?format=jpg&name=large',
     span: '8月下旬～',
     style: 'zoom',
   },
@@ -61,7 +61,7 @@ export const seminars: ISeminar[] = [
     description:
       '宇宙ビジネスに興味はあるが、自分で時間を作ってそれらを追うのは難しいという方も週に1度ゼミで時間をとって仲間とニュース記事を読みませんか？',
     status: 'wanted',
-    url: 'https://twitter.com/ASE_lab_/status/1554804273749250049/photo/1',
+    url: 'https://pbs.twimg.com/media/FZKGoZ0UcAE7HRh?format=jpg&name=large',
     span: '8月下旬～',
     style: 'zoom',
   },
