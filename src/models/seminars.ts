@@ -29,47 +29,58 @@ export interface ISeminar {
 }
 
 export const seminars: ISeminar[] = [
-    {
+  {
+    name: 'CanSatゼミ',
+    description:
+      '宇宙技術の教育を目的として始まったCanSat、この本では全ての系について基本を理解することができます！何でもできるようになりたい！というアツい方は特に飛び込んで見て欲しいです！',
+    status: 'in-progress',
+    url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdHemaPwNiQ7bEQu6z_VywbmiyExFgTl08Pg&usqp=CAU',
+    span: '9月上旬頃～',
+    style: 'zoom',
+  },
+  {
+    name: '電磁気学入門',
+    description:
+      '電磁気学入門ということで、大学で電磁気学をまだ履修してない方でも参加できるような内容にしたいと考えています！',
+    status: 'in-progress',
+    url: 'https://pbs.twimg.com/media/FZyTs1iaAAAjgYV?format=jpg&name=large',
+    span: '8月下旬～',
+    style: 'zoom',
+  },
+  {
+    name: '電子回路設計',
+    description:
+      '電子回路とは、動かすためのプログラムと実際に動く構造系の架け橋になる重要な分野です。制作をされている方はもちろんそうでない方も大歓迎です！',
+    status: 'in-progress',
+    url: 'https://images-na.ssl-images-amazon.com/images/I/71dO80D6gcL.jpg',
+    span: '8月下旬～',
+    style: 'zoom',
+  },
+  {
+    name: '宇宙ビジネス',
+    description:
+      '宇宙ビジネスに興味はあるが、自分で時間を作ってそれらを追うのは難しいという方も週に1度ゼミで時間をとって仲間とニュース記事を読みませんか？',
+    status: 'in-progress',
+    url: 'https://pbs.twimg.com/media/FZKGoZ0UcAE7HRh?format=jpg&name=large',
+    span: '8月下旬～',
+    style: 'zoom',
+  },
+  {
+    name: '宇宙法 入門',
+    description:
+      '教材を中心に宇宙法の理解を深めます。また、今後自分たちで学習を進めるための足がかりとなるゼミ内容にしたいです。予備知識の有無は問いません！',
+    status: 'in-progress',
+    url: 'https://images-na.ssl-images-amazon.com/images/I/81QQOTHOiSL.jpg',
+    span: '8月中旬～',
+    style: 'zoom',
+  },  
+  {
     name: '天文検定',
     description:
       '天文宇宙検定の対策をする予定です。星空宇宙天文検定(星検)も視野に入れています！事前知識は不要で、検定を受ける受けないも自由です。 天文系の検定、一緒にチャレンジしませんか？興味のある方はぜひ！',
-    status: 'wanted',
+    status: 'in-progress',
     url: '/img/seminars/tenmon-uchu-kentei.webp',
-    span: '調整中',
-    style: 'zoom',
-  },
-  {
-    name: 'space-english 2nd',
-    description:
-      "We decided to make the second seminar of Space-English. Everyone's welcome! I am looking forward to your participation!",
-    status: 'preparing',
-    url: 'https://image.freepik.com/free-vector/colorful-galaxy-background-with-astronaut_52683-307.jpg',
-    span: 'Adjusting',
-    style: 'zoom',
-  },
-  {
-    name: '宇宙工学入門 -[体験版]-',
-    description:
-      '宇宙工学入門ゼミから3回分を抜粋した体験版です！',
-    status: 'in-progress',
-    url: 'https://images-na.ssl-images-amazon.com/images/I/51rZrV0V8IL._SX357_BO1,204,203,200_.jpg',
-    span: '6月中旬~',
-    style: 'zoom',
-  },
-  {
-    name: '衛星データ解析',
-    status: 'in-progress',
-    url: 'https://www.tellusxdp.com/cmn/img/ogp.jpg',
-    span: '4月下旬~',
-    style: 'zoom',
-  },
-  {
-    name: '天文学',
-    description:
-      '隔週ずつのゼミとなります。2週間の2コマのうち、チャンネルでのアンケートで関心が深い方の内容をピックアップしてお届けします。内容によってはディスカッションや調査などを行い、積極的な学びの場を作っていきたいと思っています。 まだゼミに参加できていないという方も予習なしで気楽に参加できるゼミとなっています！どうぞご参加ください！ ',
-    status: 'in-progress',
-    url: '/img/seminars/astronomy.webp',
-    span: '4月下旬~',
+    span: '8月中旬～',
     style: 'zoom',
   },
   {
@@ -80,15 +91,6 @@ export const seminars: ISeminar[] = [
     url: 'https://images-na.ssl-images-amazon.com/images/I/81XAjp79rRL.jpg',
     span: '1月~',
     style: 'hybrid',
-  },
-  {
-    name: '軌道力学2nd',
-    description:
-      '皆さんお待ちかね、軌道力学2周目がいよいよ始まります。まず写真の本を買ってみましょう。とにかく面白いです。書いてある内容は複雑で面白いのに、使っている数学のハードルが低いので、とても理解しやすい！この良書を使って、授業・ディスカッション・質問タイムなどを通して基礎の基礎から軌道力学を学んでいきます。軌道力学は私も初心者なので恐れることなかれ。ゆくゆくは、皆さん、軌道計算マスターになることでしょう。',
-    status: 'in-progress',
-    url: '/img/seminars/kidorikigaku2.webp',
-    span: '4月~7月',
-    style: 'zoom',
   },
   {
     name: '流体力学',
@@ -115,6 +117,31 @@ export const seminars: ISeminar[] = [
     status: 'preparing',
     url: 'https://images-na.ssl-images-amazon.com/images/I/41FCF736uWL._SX352_BO1,204,203,200_.jpg',
     span: '未定',
+    style: 'zoom',
+  },
+  {
+    name: '天文学',
+    description:
+      '隔週ずつのゼミとなります。2週間の2コマのうち、チャンネルでのアンケートで関心が深い方の内容をピックアップしてお届けします。内容によってはディスカッションや調査などを行い、積極的な学びの場を作っていきたいと思っています。 まだゼミに参加できていないという方も予習なしで気楽に参加できるゼミとなっています！どうぞご参加ください！ ',
+    status: 'finished',
+    url: '/img/seminars/astronomy.webp',
+    span: '4月下旬~',
+    style: 'zoom',
+  },
+  {
+    name: '衛星データ解析',
+    status: 'finished',
+    url: 'https://www.tellusxdp.com/cmn/img/ogp.jpg',
+    span: '4月下旬~',
+    style: 'zoom',
+  },
+  {
+    name: '宇宙工学入門 -[体験版]-',
+    description:
+      '宇宙工学入門ゼミから3回分を抜粋した体験版です！',
+    status: 'finished',
+    url: 'https://images-na.ssl-images-amazon.com/images/I/51rZrV0V8IL._SX357_BO1,204,203,200_.jpg',
+    span: '6月中旬~',
     style: 'zoom',
   },
   {
@@ -169,6 +196,15 @@ export const seminars: ISeminar[] = [
     status: 'finished',
     url: '/img/seminars/zerocad.webp',
     span: '4月中旬~6月',
+    style: 'zoom',
+  },
+  {
+    name: '軌道力学2nd',
+    description:
+      '皆さんお待ちかね、軌道力学2周目がいよいよ始まります。まず写真の本を買ってみましょう。とにかく面白いです。書いてある内容は複雑で面白いのに、使っている数学のハードルが低いので、とても理解しやすい！この良書を使って、授業・ディスカッション・質問タイムなどを通して基礎の基礎から軌道力学を学んでいきます。軌道力学は私も初心者なので恐れることなかれ。ゆくゆくは、皆さん、軌道計算マスターになることでしょう。',
+    status: 'finished',
+    url: '/img/seminars/kidorikigaku2.webp',
+    span: '4月~7月',
     style: 'zoom',
   },
 ];
