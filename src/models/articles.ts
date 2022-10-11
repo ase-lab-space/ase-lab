@@ -39,5 +39,13 @@ export const articles: IArticleProps[] = [
     date: '2022/09/03',
     url: 'https://note.com/ase_lab_/n/n257e02a41d76',
   },
+  {
+    img: 'https://assets.st-note.com/production/uploads/images/88084122/rectangle_large_type_2_6e843800e75f869272214a4b9786cbbc.png?width=2000&height=2000&fit=bounds&quality=85',
+    title: '〜地方メンバーの声〜　＃４（安田伊吹君編）〜',
+    bodyDigest:
+      '小学校二年生の頃に、映画ドラえもんの『新・のび太の宇宙開拓史』という映画をみて、そこから宇宙に対して漠然とした憧れを抱きました。それを機に学校の図書館で宇宙の本を読んでみたり...',
+    date: '2022/10/09',
+    url: 'https://note.com/ase_lab_/n/n2f0c02416e3e',
+  },  
     
 ];
