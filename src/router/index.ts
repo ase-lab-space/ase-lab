@@ -35,5 +35,22 @@ export default route(function (/* { store, ssrContext } */) {
     ),
   });
 
+  Router.beforeEach((_to, _from, next) => {
+    // set locale to local storage
+    const userLocale = localStorage.getItem('user.locale');
+    if (userLocale) {
+      return next();
+    }
+
+    const browserLocale = navigator.language;
+    if (browserLocale.indexOf('ja') !== -1) {
+      localStorage.setItem('user.locale', 'ja');
+      return next();
+    }
+
+    localStorage.setItem('user.locale', 'en');
+    return next();
+  });
+
   return Router;
 });
