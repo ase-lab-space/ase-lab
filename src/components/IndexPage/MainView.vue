@@ -1,8 +1,14 @@
 <i18n lang="yaml">
 en:
   clickHere: Click here to Join
+  catchPhrase1: Lorem ipsum
+  catchPhrase2: hogehoge
+  catchCopy1: ASE-Lab. is like somthing.
 ja:
   clickHere: 参加はコチラから
+  catchPhrase1: 宇宙好きが集まり、
+  catchPhrase2: 思い思いの勉強会を。
+  catchCopy1: ASE-Lab.は宇宙が大好きな人が集まって、勉強会をするコミュニティです。
 </i18n>
 
 <template>
@@ -19,12 +25,12 @@ ja:
       </div>
       <div class="col-7">
         <h2 class="catch-phrase">
-          宇宙好きが集まり、<br />
-          思い思いの勉強会を。
+          {{ t('catchPhrase1') }}<br />
+          {{ t('catchPhrase2') }}
         </h2>
 
         <div class="description">
-          ASE-Lab.は宇宙が大好きな人が集まって、勉強会をするコミュニティです。<br />
+          {{ t('catchCopy1') }}<br />
           自分の好きな本や友達、時には実際に研究やビジネスをしている人たちから学ぶことも。
         </div>
 

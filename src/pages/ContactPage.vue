@@ -1,9 +1,13 @@
+<i18n lang="yaml">
+en:
+  askMe: Please ask me anything.
+ja:
+  askMe: 私たちへのご質問・ご意見、コラボレーションのお申し出など何でもお訊ねください。
+</i18n>
+
 <template>
   <q-page class="column items-center">
-    <page-title
-      title="Contact"
-      description="私たちへのご質問・ご意見、コラボレーションのお申し出など何でもお訊ねください。"
-    />
+    <page-title title="Contact" :description="t('askMe')" />
     <slide-in :delay="500" class="contact-form">
       <contact-form />
     </slide-in>
@@ -15,6 +19,7 @@ import { defineComponent } from 'vue';
 import ContactForm from 'src/components/ContactPage/ContactForm.vue';
 import PageTitle from 'src/components/Common/PageTitle.vue';
 import SlideIn from 'src/components/Common/Transition/SlideIn.vue';
+import { useI18n } from 'vue-i18n';
 
 export default defineComponent({
   components: {
@@ -23,7 +28,10 @@ export default defineComponent({
     SlideIn,
   },
   setup() {
-    return;
+    const { t } = useI18n();
+    return {
+      t,
+    };
   },
 });
 </script>
