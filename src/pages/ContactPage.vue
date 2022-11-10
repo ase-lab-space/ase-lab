@@ -1,9 +1,7 @@
 <template>
   <q-page class="column items-center">
     <page-title
-      title="Contact"
-      description="私たちへのご質問・ご意見、コラボレーションのお申し出など何でもお訊ねください。"
-    />
+      title="Contact" :description="$t('askMe')" />
     <slide-in :delay="500" class="contact-form">
       <contact-form />
     </slide-in>
