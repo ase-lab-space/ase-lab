@@ -46,6 +46,13 @@ export const articles: IArticleProps[] = [
       '小学校二年生の頃に、映画ドラえもんの『新・のび太の宇宙開拓史』という映画をみて、そこから宇宙に対して漠然とした憧れを抱きました。それを機に学校の図書館で宇宙の本を読んでみたり...',
     date: '2022/10/09',
     url: 'https://note.com/ase_lab_/n/n2f0c02416e3e',
-  },  
-    
+  },
+  {
+    img: 'https://assets.st-note.com/production/uploads/images/90685888/rectangle_large_type_2_49767739b162c9a3458f0f084623e60d.jpeg',
+    title: '〜地方メンバーの声〜#5（濵田莉来さん編）〜',
+    bodyDigest:
+      '大学二年生の濵田莉来と申します。岐阜大学の工学部、電気電子・情報工学科、応用物理コースに通っています。理学と工学の中間みたいな内容を勉強していて、電気電子コースなので電気回路...',
+    date: '2022/11/10',
+    url: 'https://note.com/ase_lab_/n/nc83a6bb0a31d',
+  },
 ];
