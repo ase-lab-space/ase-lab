@@ -1,3 +1,14 @@
+<i18n lang="yaml">
+  en:
+    name-label: name
+    content-label: message
+    submit-label: submit
+  ja:
+    name-label: 名前
+    content-label: 内容
+    submit-label: 送信
+</i18n>
+
 <template>
   <section class="form-container">
     <div class="row justify-end">
@@ -6,7 +17,7 @@
           <q-input
             v-model="name"
             type="text"
-            label="名前"
+            :label="t('name-label')"
             :rules="[rules.required]"
             :dense="q.screen.lt.sm"
           />
@@ -39,7 +50,7 @@
           <q-input
             v-model="body"
             type="textarea"
-            label="内容"
+            :label="t('content-label')"
             :rules="[rules.required]"
             :dense="q.screen.lt.sm"
           />
@@ -47,7 +58,7 @@
             <q-btn
               outline
               type="submit"
-              label="送信"
+              :label="t('submit-label')"
               :loading="loading"
               color="secondary"
               class="submit"
@@ -61,31 +72,37 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
+import { useI18n } from 'vue-i18n';
 import { QForm, useQuasar } from 'quasar';
 import { SlackRepository } from 'src/repositories/slack_repository';
 import { EmailJSRepository } from 'src/repositories/emailjs_repository';
+import { i18n } from 'boot/i18n';
+
+const { t: $t } = i18n.global;
 
 const STATUS_TYPE = {
-  高校生: 'teal',
-  大学生: 'orange',
-  社会人: 'red',
-  その他: 'cyan',
+[$t('common.highSchoolStudent')]: 'teal',
+[$t('common.undergraduate')]: 'orange',
+[$t('common.businessMan')]: 'red',
+[$t('common.others')]: 'cyan',
 };
 
 export default defineComponent({
   setup() {
     const form = ref<QForm>();
     const q = useQuasar();
+    const { t } = useI18n();
 
     const name = ref('');
     const email = ref('');
-    const status = ref<keyof typeof STATUS_TYPE>('大学生');
+    const status = ref('大学生');
     const body = ref('');
     const loading = ref(false);
 
     return {
       form,
       q,
+      t,
 
       name,
       email,
