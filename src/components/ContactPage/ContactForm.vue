@@ -3,10 +3,18 @@
     name-label: name
     content-label: message
     submit-label: submit
+    highSchool: High school student
+    universityStudent: University student
+    employee: Employee
+    others: Others
   ja:
     name-label: 名前
     content-label: 内容
     submit-label: 送信
+    highSchool: 高校生
+    universityStudent: 大学生
+    employee: 社会人
+    others: その他
 </i18n>
 
 <template>
@@ -35,14 +43,20 @@
                 :key="s"
                 v-model="status"
                 :val="s"
-                :label="s"
+                :label="t(s)"
                 :color="color"
+                :rules="[rules.required]"
               />
             </div>
             <q-select
               v-else
               v-model="status"
-              :options="Object.keys(STATUS_TYPE)"
+              :options="
+                Object.keys(STATUS_TYPE).map((key) => ({
+                  value: key,
+                  label: t(key)
+                }))
+              "
               label="職業"
               dense
             />
@@ -76,15 +90,13 @@ import { useI18n } from 'vue-i18n';
 import { QForm, useQuasar } from 'quasar';
 import { SlackRepository } from 'src/repositories/slack_repository';
 import { EmailJSRepository } from 'src/repositories/emailjs_repository';
-import { i18n } from 'boot/i18n';
 
-const { t: $t } = i18n.global;
 
 const STATUS_TYPE = {
-[$t('common.highSchoolStudent')]: 'teal',
-[$t('common.undergraduate')]: 'orange',
-[$t('common.businessMan')]: 'red',
-[$t('common.others')]: 'cyan',
+highSchool: 'teal',
+universityStudent: 'orange',
+employee: 'red',
+others: 'cyan',
 };
 
 export default defineComponent({
@@ -95,7 +107,7 @@ export default defineComponent({
 
     const name = ref('');
     const email = ref('');
-    const status = ref('大学生');
+    const status = ref<keyof typeof STATUS_TYPE>();
     const body = ref('');
     const loading = ref(false);
 
@@ -120,10 +132,15 @@ export default defineComponent({
       async send() {
         loading.value = true;
 
+        if (typeof status.value === 'undefined'){
+          loading.value = false;
+          return;
+        }
+
         const params = {
           name: name.value,
           email: email.value,
-          status: status.value,
+          status: t(status.value),
           body: body.value,
         };
 
