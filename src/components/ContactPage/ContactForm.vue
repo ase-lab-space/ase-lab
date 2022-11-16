@@ -1,7 +1,7 @@
 <i18n lang="yaml">
   en:
-    name-label: name
-    content-label: message
+    name-label: Name
+    content-label: Message
     submit-label: submit
     highSchool: High school student
     universityStudent: University student
