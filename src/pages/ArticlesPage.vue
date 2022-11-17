@@ -1,8 +1,15 @@
+<i18n lang="yaml">
+  en:
+    article: Our members and their activities inside and outside of ASE-Lab. are featured in these blog posts below. We are updating one after another, and stay tuned!
+  ja:
+    article: ASE-Lab. やASE-Lab. メンバーに関するnote記事を書いています。続々更新中なのでお楽しみに。
+</i18n>
+
 <template>
   <q-page class="column items-center articles-container">
     <page-title
       title="Articles"
-      description="ASE-Lab. やASE-Lab. メンバーに関するnote記事を書いています。続々更新中なのでお楽しみに。"
+      :description="t('article')"
       class="title-container"
     />
     <div class="row justify-center q-col-gutter-lg">
@@ -19,6 +26,7 @@
 </template>
 
 <script lang="ts">
+import { useI18n } from 'vue-i18n';
 import { defineComponent, onMounted, ref } from 'vue';
 import PageTitle from 'src/components/Common/PageTitle.vue';
 import SlideIn from 'src/components/Common/Transition/SlideIn.vue';
@@ -35,6 +43,7 @@ export default defineComponent({
 
   setup() {
     const delay = ref(500);
+    const { t } = useI18n();
 
     onMounted(async () => {
       await sleep(500);
@@ -44,6 +53,7 @@ export default defineComponent({
     return {
       articles,
       delay,
+      t,
     };
   },
 });
