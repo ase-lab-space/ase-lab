@@ -1,10 +1,42 @@
+<i18n lang="yaml">
+en:
+  heading:
+    subtitle: Self-Initiated Study Groups
+    description: Seminars are the main activity of ASE-Lab. These are organized by members who want to experience the deeper content of science and engineering, which we can’t learn in school education.
+  seminar:
+    show-all-seminars: Show all seminars
+    restore-the-display: Restore the display
+  guidebook:
+    title: ASE-Lab. Seminar Guidebook
+    description-1: In ASE-Lab., you can not only participate in existing seminars, but also organize new seminars by yourself. In other words, seminar management at ASE-Lab. is left to the initiative of all members.
+    description-2: However, we understand that at first it might be difficult to know how to hold such seminars. That is why we have created this "ASE-Lab. Seminar Guidebook". This book is intended to serve as a guideline for members who want to hold and participate in seminars when setting up a seminar. Please take a moment to read it.
+    view-guidebook: View Guide Book
+    url: /pdf/ASE_Seminar_Guidebook.pdf
+    thumbnail-url: /img/seminar-guide-book-thumbnail-en.webp
+
+ja:
+  heading:
+    subtitle: 自主ゼミ
+    description: ASE-Lab. のメイン活動。 学校で学ぶ教養だけでは物足りない。そんな理学や工学の一歩先を味わいたいメンバー同士で企画される、宇宙の勉強会です。
+  seminar:
+    show-all-seminars: 全てのゼミをみる
+    restore-the-display: 表示を元に戻す
+  guidebook:
+    title: ASE-Lab. ゼミガイドブック
+    description-1: ASE-Lab.では既存のゼミに参加するだけでなく、自分で新しくゼミを開催することもできます。 また、ASE-Lab.のゼミは、ゼミに所属するすべてのメンバーの主体性にゆだねられています。
+    description-2: しかし、最初は開催するにもやり方がわからないこともあると思います。そのような方々のために、ASE-Lab.はこの「ASE-Lab. ゼミガイドブック」を作成し公開しています。 ゼミの開催と参加を担うメンバーの方々がゼミを立てる際の指針となることを目的としています。是非ご一読ください。
+    view-guidebook: ガイドブックを見る
+    url: /pdf/ASE-Lab. ガイドブック.pdf
+    thumbnail-url: /img/seminar-guide-book-thumbnail-ja.webp
+</i18n>
+
 <template>
   <section>
     <slide-in :delay="500">
       <heading-view
         title="Seminars"
-        subtitle="自主ゼミ"
-        description="ASE-Lab. のメイン活動。 学校で学ぶ教養だけでは物足りない。そんな理学や工学の一歩先を味わいたいメンバー同士で企画される、宇宙の勉強会です。"
+        :subtitle="t('heading.subtitle')"
+        :description="t('heading.description')"
         class="heading"
       />
     </slide-in>
@@ -21,7 +53,11 @@
     <div class="row justify-end">
       <q-btn
         @click="showAllSeminars = !showAllSeminars"
-        :label="showAllSeminars ? '表示を元に戻す' : '全てのゼミをみる'"
+        :label="
+          showAllSeminars
+            ? t('seminar.restore-the-display')
+            : t('seminar.show-all-seminars')
+        "
         flat
         color="primary"
       />
@@ -29,28 +65,21 @@
 
     <slide-in class="row justify-center items-center guide-book-section">
       <div class="col-xs-12 col-md-6">
-        <div class="guide-book-section-title">ASE-Lab. ゼミガイドブック</div>
-        <p>
-          ASE-Lab.では既存のゼミに参加するだけでなく、自分で新しくゼミを開催することもできます。
-          また、ASE-Lab.のゼミは、ゼミに所属するすべてのメンバーの主体性にゆだねられています。
-        </p>
-        <p>
-          しかし、最初は開催するにもやり方がわからないこともあると思います。そのような方々のために、ASE-Lab.はこの「ASE-Lab.
-          ゼミガイドブック」を作成し公開しています。
-          ゼミの開催と参加を担うメンバーの方々がゼミを立てる際の指針となることを目的としています。是非ご一読ください。
-        </p>
+        <div class="guide-book-section-title">{{ t('guidebook.title') }}</div>
+        <p>{{ t('guidebook.description-1') }}</p>
+        <p>{{ t('guidebook.description-2') }}</p>
         <single-line-link
           target="_blank"
           :useAnchorTag="true"
-          label="ガイドブックを見る"
-          to="/pdf/ASE-Lab. ガイドブック.pdf"
+          :label="t('guidebook.view-guidebook')"
+          :to="t('guidebook.url')"
         />
       </div>
-      <a href="/pdf/ASE-Lab. ガイドブック.pdf" target="_blank">
+      <a :href="t('guidebook.url')" target="_blank">
         <img
-          src="/img/seminar-guide-book-thumbnail.webp"
+          :src="t('guidebook.thumbnail-url')"
           class="book-thumbnail shadow-2"
-          alt=""
+          alt="ASE-Lab. Seminar Guidebook"
         />
       </a>
     </slide-in>
@@ -64,6 +93,7 @@ import SeminarCard from './SeminarCard.vue';
 import SlideIn from '../../Common/Transition/SlideIn.vue';
 import { seminars, ISeminar } from 'src/models/seminars';
 import SingleLineLink from '../../Common/Button/SingleLineLink.vue';
+import { useI18n } from 'vue-i18n';
 
 export default defineComponent({
   components: {
@@ -75,10 +105,12 @@ export default defineComponent({
 
   setup() {
     const showAllSeminars = ref(false);
+    const { t } = useI18n();
 
     return {
       seminars,
       showAllSeminars,
+      t,
     };
   },
 
