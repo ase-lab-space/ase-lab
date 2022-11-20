@@ -40,7 +40,9 @@ export default defineComponent({
 
   setup() {
     return {
-      articles,
+      articles: articles.sort(
+        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+      ),
     };
   },
 });
