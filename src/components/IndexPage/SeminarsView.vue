@@ -53,7 +53,7 @@ import SingleLineLink from '../Common/Button/SingleLineLink.vue';
 import SlideIn from '../Common/Transition/SlideIn.vue';
 import SeminarCard, { ITag, TAG_COLOR } from './Seminar/SeminarCard.vue';
 import { hash } from 'src/utils/HashUtil';
-import { seminars as _seminars, StatusType } from 'src/models/seminars';
+import { StatusType, seminars as _seminars } from 'src/models/seminars';
 import { useQuasar } from 'quasar';
 
 export interface ISeminar {

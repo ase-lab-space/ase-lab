@@ -51,7 +51,6 @@ import FooterView from 'src/components/MainLayout/FooterView.vue';
 import HambergerIcon from 'src/components/MainLayout/HambergerIcon.vue';
 import LinkOverlay from 'src/components/MainLayout/LinkOverlay.vue';
 import LocaleButton from 'src/components/Common/Button/LocaleButton.vue';
-import { useI18n } from 'vue-i18n';
 
 interface ILink {
   text: string;
@@ -98,10 +97,6 @@ export default defineComponent({
     const linkOverlayActive = ref(false);
     const linkOverlay = ref<InstanceType<typeof LinkOverlay>>();
     const hambergerIcon = ref<InstanceType<typeof HambergerIcon>>();
-
-    // set up locale
-    const t = useI18n();
-    t.locale.value = localStorage.getItem('user.locale') ?? 'en';
 
     return {
       q,
