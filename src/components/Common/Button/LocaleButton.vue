@@ -52,7 +52,6 @@ const localeInfo = {
 
 export default defineComponent({
   setup() {
-    console.log(localStorage.getItem('user.locale'));
     const t = useI18n();
     const localeListRef = ref<HTMLDivElement>();
     return {
