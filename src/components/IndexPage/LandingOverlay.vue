@@ -15,6 +15,7 @@ import anime from 'animejs';
 import { sleep } from 'src/utils/PromiseUtil';
 
 export default defineComponent({
+  emits: ['finish-animation'],
   setup(_props, context) {
     onMounted(async () => {
       // Wrap every letter in a span
@@ -22,7 +23,7 @@ export default defineComponent({
       var textWrapper = document.querySelector('.ml11 .letters')!;
       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       textWrapper.innerHTML = textWrapper.textContent!.replace(
-        /([^\x00-\x80]|\w|.|-)/g,
+        /([^\x00-\x80]|\w|.|-)/g, // eslint-disable-line no-control-regex
         "<span class='letter'>$&</span>"
       );
 

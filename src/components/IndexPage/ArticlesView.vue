@@ -14,9 +14,9 @@
       <q-scroll-area class="scroll-area">
         <div class="row no-wrap q-gutter-md">
           <article-card
-            :article="article"
             v-for="article in articles"
             :key="article.title"
+            :article="article"
           />
         </div>
       </q-scroll-area>

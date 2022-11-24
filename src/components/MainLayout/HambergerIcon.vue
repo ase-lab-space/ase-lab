@@ -1,5 +1,5 @@
 <template>
-  <div class="openbtn2" @click="toggle" ref="openbtn">
+  <div ref="openbtn" class="openbtn2" @click="toggle">
     <span></span><span></span>
   </div>
 </template>

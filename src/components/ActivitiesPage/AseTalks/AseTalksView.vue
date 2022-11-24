@@ -40,7 +40,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 // $
-@import "assets/mq.scss";
+@import 'assets/mq.scss';
 
 .img-container {
   > img {

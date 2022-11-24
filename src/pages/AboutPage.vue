@@ -9,7 +9,7 @@
     <about-section :data="aboutSection2" />
 
     <slide-in class="signature row justify-end">
-      ASE-Lab. 代表　 阿部 舞哉
+      ASE-Lab. 代表 阿部 舞哉
     </slide-in>
 
     <slide-in class="use-case-section">

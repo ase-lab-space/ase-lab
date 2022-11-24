@@ -20,10 +20,10 @@
 
     <div class="row justify-end">
       <q-btn
-        @click="showAllSeminars = !showAllSeminars"
         :label="showAllSeminars ? '表示を元に戻す' : '全てのゼミをみる'"
         flat
         color="primary"
+        @click="showAllSeminars = !showAllSeminars"
       />
     </div>
 
@@ -41,7 +41,7 @@
         </p>
         <single-line-link
           target="_blank"
-          :useAnchorTag="true"
+          :use-anchor-tag="true"
           label="ガイドブックを見る"
           to="/pdf/ASE-Lab. ガイドブック.pdf"
         />
