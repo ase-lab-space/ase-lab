@@ -8,7 +8,7 @@ export default {
 
   person2: {
     title: 'Voices from members #2 (Sato Reika)',
-    digest: 'She   has   made   great contribution to the community’s activity by founding the “Space-English” seminar, which',
+    digest: 'She has made great contribution to the community’s activity by founding the “Space-English” seminar, which',
   },
 
   person3: {
