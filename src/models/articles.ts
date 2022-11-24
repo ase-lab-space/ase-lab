@@ -55,4 +55,13 @@ export const articles: IArticleProps[] = [
     date: '2022/11/10',
     url: 'https://note.com/ase_lab_/n/nc83a6bb0a31d',
   },
+  {
+    img: 'https://assets.st-note.com/production/uploads/images/91860062/rectangle_large_type_2_725b7582c151bdc4d92d2b2aa541eb1a.jpeg',
+    title:
+      '【宇宙ビジネス×大学生】インターン生って何するの？　#1 ～輸送システム編～',
+    bodyDigest:
+      '阿部：それでは早速、皆さんがインターンを始めたきっかけとか、インターンでの経験とか、将来どうしていきたいかとか、宇宙開発に対する期待や思いを聞いていきたいと思います。 では、...',
+    date: '2022/11/24',
+    url: 'https://note.com/ase_lab_/n/n25b330c5ff46',
+  },
 ];
