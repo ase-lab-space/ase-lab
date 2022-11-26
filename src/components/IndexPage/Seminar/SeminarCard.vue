@@ -56,6 +56,9 @@ export default defineComponent({
     tags: {
       type: Array as PropType<ITag[]>,
       required: false,
+      default() {
+        return [];
+      },
     },
   },
 

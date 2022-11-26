@@ -2,7 +2,7 @@
   <section class="form-container">
     <div class="row justify-end">
       <div class="col-12">
-        <q-form class="contact-form q-mx-auto form" @submit="send" greedy>
+        <q-form class="contact-form q-mx-auto form" greedy @submit="send">
           <q-input
             v-model="name"
             type="text"

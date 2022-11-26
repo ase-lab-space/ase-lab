@@ -24,6 +24,7 @@ export default defineComponent({
     },
     description: {
       type: String,
+      default: '',
     },
   },
 });

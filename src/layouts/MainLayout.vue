@@ -7,16 +7,16 @@
             <router-link to="/?no-ovl=t">ASE-Lab.</router-link>
           </h2>
 
-          <nav class="navbar row items-center" v-if="q.screen.gt.sm">
+          <nav v-if="q.screen.gt.sm" class="navbar row items-center">
             <nav-link
               v-for="link in links"
+              :key="link.path"
               :text="link.text"
               :path="link.path"
-              :key="link.path"
             />
           </nav>
           <nav v-else>
-            <hamberger-icon @click="onHambergerClicked" ref="hambergerIcon" />
+            <hamberger-icon ref="hambergerIcon" @click="onHambergerClicked" />
             <link-overlay
               v-if="linkOverlayActive"
               ref="linkOverlay"

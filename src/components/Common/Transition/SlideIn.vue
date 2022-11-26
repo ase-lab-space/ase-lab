@@ -35,7 +35,7 @@ export default defineComponent({
       if (props.force) {
         animate(target.value, props.delay);
       } else {
-        const options: IntersectionObserverInit = {
+        const options = {
           rootMargin: '-100px',
         };
         const observer = new IntersectionObserver((entries) => {

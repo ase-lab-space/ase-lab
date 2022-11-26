@@ -18,7 +18,7 @@
         </div>
       </slide-in>
       <slide-in :delay="500" class="univ-container row q-gutter-sm">
-        <div class="univ" v-for="univ in univs" :key="univ">
+        <div v-for="univ in univs" :key="univ" class="univ">
           {{ univ }}
         </div>
         <div>etc.</div>

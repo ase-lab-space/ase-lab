@@ -1,5 +1,5 @@
 <template>
-  <div class="overlay" ref="overlay">
+  <div ref="overlay" class="overlay">
     <slide-in
       v-for="(link, i) in links"
       :key="link.path"
@@ -8,7 +8,7 @@
       class="link-slide-in"
       :class="`link-slide-in-${i}`"
     >
-      <router-link @click="$emit('link-clicked')" :to="link.path" class="text">
+      <router-link :to="link.path" class="text" @click="$emit('link-clicked')">
         <span>
           {{ link.text }}
         </span>
@@ -36,6 +36,7 @@ export default defineComponent({
   components: {
     SlideIn,
   },
+  emits: ['link-clicked'],
   setup() {
     const overlay = ref<HTMLElement>();
 
