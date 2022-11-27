@@ -1,27 +1,27 @@
 <i18n lang="yaml">
-  en:
-    name-label: Name
-    content-label: Message
-    submit-label: submit
-    highSchool: High school student
-    universityStudent: University student
-    employee: Employee
-    others: Others
-  ja:
-    name-label: 名前
-    content-label: 内容
-    submit-label: 送信
-    highSchool: 高校生
-    universityStudent: 大学生
-    employee: 社会人
-    others: その他
+en:
+  name-label: Name
+  content-label: Message
+  submit-label: submit
+  highSchool: High school student
+  universityStudent: University student
+  employee: Employee
+  others: Others
+ja:
+  name-label: 名前
+  content-label: 内容
+  submit-label: 送信
+  highSchool: 高校生
+  universityStudent: 大学生
+  employee: 社会人
+  others: その他
 </i18n>
 
 <template>
   <section class="form-container">
     <div class="row justify-end">
       <div class="col-12">
-        <q-form class="contact-form q-mx-auto form" @submit="send" greedy>
+        <q-form class="contact-form q-mx-auto form" greedy @submit="send">
           <q-input
             v-model="name"
             type="text"
@@ -54,7 +54,7 @@
               :options="
                 Object.keys(STATUS_TYPE).map((key) => ({
                   value: key,
-                  label: t(key)
+                  label: t(key),
                 }))
               "
               label="職業"
@@ -91,12 +91,11 @@ import { QForm, useQuasar } from 'quasar';
 import { SlackRepository } from 'src/repositories/slack_repository';
 import { EmailJSRepository } from 'src/repositories/emailjs_repository';
 
-
 const STATUS_TYPE = {
-highSchool: 'teal',
-universityStudent: 'orange',
-employee: 'red',
-others: 'cyan',
+  highSchool: 'teal',
+  universityStudent: 'orange',
+  employee: 'red',
+  others: 'cyan',
 };
 
 export default defineComponent({
@@ -132,7 +131,7 @@ export default defineComponent({
       async send() {
         loading.value = true;
 
-        if (typeof status.value === 'undefined'){
+        if (typeof status.value === 'undefined') {
           loading.value = false;
           return;
         }

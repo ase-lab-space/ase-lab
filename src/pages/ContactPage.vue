@@ -1,14 +1,13 @@
 <i18n lang="yaml">
-  en:
-    askMe: Write to us any questions, opinions cooperation offers. We will get back to you as soon as possible.
-  ja:
-    askMe: 私たちへのご質問・ご意見、コラボレーションのお申し出など何でもお訊ねください。
+en:
+  askMe: Write to us any questions, opinions cooperation offers. We will get back to you as soon as possible.
+ja:
+  askMe: 私たちへのご質問・ご意見、コラボレーションのお申し出など何でもお訊ねください。
 </i18n>
 
 <template>
   <q-page class="column items-center">
-    <page-title
-      title="Contact" :description="t('askMe')" />
+    <page-title title="Contact" :description="t('askMe')" />
     <slide-in :delay="500" class="contact-form">
       <contact-form />
     </slide-in>

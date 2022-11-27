@@ -12,10 +12,10 @@
     <div ref="localeListRef" class="locale-list-container">
       <q-list bordered separator class="locale-list">
         <q-item
-          clickable
-          v-ripple
           v-for="[key, locale] in Object.entries(localeInfo)"
           :key="key"
+          v-ripple
+          clickable
           @click="changeLocale(key)"
         >
           <div class="row grey-6 no-wrap justify-center items-center">

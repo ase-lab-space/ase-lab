@@ -1,8 +1,8 @@
 <i18n lang="yaml">
-  en:
-    article: Our members and their activities inside and outside of ASE-Lab. are featured in these blog posts below. We are updating one after another, and stay tuned!
-  ja:
-    article: ASE-Lab. やASE-Lab. メンバーに関するnote記事を書いています。続々更新中なのでお楽しみに。
+en:
+  article: Our members and their activities inside and outside of ASE-Lab. are featured in these blog posts below. We are updating one after another, and stay tuned!
+ja:
+  article: ASE-Lab. やASE-Lab. メンバーに関するnote記事を書いています。続々更新中なのでお楽しみに。
 </i18n>
 
 <template>
@@ -51,7 +51,9 @@ export default defineComponent({
     });
 
     return {
-      articles,
+      articles: articles.sort(
+        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+      ),
       delay,
       t,
     };

@@ -4,9 +4,9 @@
       <h2 class="section-title">News</h2>
 
       <div
-        class="row justify-start news-content items-center"
         v-for="(item, i) in news"
         :key="i"
+        class="row justify-start news-content items-center"
       >
         <div class="date">
           {{ item.date }}
@@ -22,7 +22,7 @@
         </div>
 
         <div class="news-title">
-          <a :href="item.url" target="_blank" v-if="item.url">{{
+          <a v-if="item.url" :href="item.url" target="_blank">{{
             item.title
           }}</a>
           <div v-else>
@@ -30,7 +30,7 @@
           </div>
         </div>
 
-        <div class="divider" v-if="i !== news.length - 1" />
+        <div v-if="i !== news.length - 1" class="divider" />
       </div>
     </div>
   </section>

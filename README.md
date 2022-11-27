@@ -38,10 +38,10 @@ cd ase-lab
 ```
 
 ローカル環境に`npm`と`yarn`をインストールしていない場合はインストールします．
+node のバージョン管理には `nodenv` をお勧めします。
 
 ```bash
-curl -qL https://www.npmjs.com/install.sh | sh
-npm i -g yarn
+corepack enable
 ```
 
 必要なパッケージをインストールします．

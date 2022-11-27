@@ -7,10 +7,7 @@ ja:
 
 <template>
   <q-page class="column items-center activities-container">
-    <page-title
-      title="Activities"
-      :description="t('page-title')"
-    />
+    <page-title title="Activities" :description="t('page-title')" />
     <seminars-view class="activity" />
     <ase-talk-view class="activity" />
   </q-page>

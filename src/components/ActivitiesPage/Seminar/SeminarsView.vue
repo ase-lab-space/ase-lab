@@ -52,7 +52,6 @@ ja:
 
     <div class="row justify-end">
       <q-btn
-        @click="showAllSeminars = !showAllSeminars"
         :label="
           showAllSeminars
             ? t('seminar.restore-the-display')
@@ -60,6 +59,7 @@ ja:
         "
         flat
         color="primary"
+        @click="showAllSeminars = !showAllSeminars"
       />
     </div>
 
@@ -70,7 +70,7 @@ ja:
         <p>{{ t('guidebook.description-2') }}</p>
         <single-line-link
           target="_blank"
-          :useAnchorTag="true"
+          :use-anchor-tag="true"
           :label="t('guidebook.view-guidebook')"
           :to="t('guidebook.url')"
         />

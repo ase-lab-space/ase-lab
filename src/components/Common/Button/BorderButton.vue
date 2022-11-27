@@ -1,10 +1,10 @@
 <template>
-  <router-link :to="to" class="link" v-if="to.startsWith('/')">
+  <router-link v-if="to.startsWith('/')" :to="to" class="link">
     <div class="link-text">
       {{ label }}
     </div>
   </router-link>
-  <a target="_blank" :href="to" class="link" v-else>
+  <a v-else target="_blank" :href="to" class="link">
     <div class="link-text">
       {{ label }}
     </div>

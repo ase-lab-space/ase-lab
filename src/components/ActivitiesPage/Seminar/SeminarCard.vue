@@ -52,7 +52,7 @@ export default defineComponent({
 }
 .badge {
   position: absolute;
-  bottom: 63px;
+  top: 190px;
   right: 20px;
   border-radius: 10px !important;
   color: white;

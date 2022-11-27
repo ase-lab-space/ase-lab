@@ -18,7 +18,7 @@
         </div>
       </div>
       <div class="col-xs-12 col-md-6 column justify-start">
-        <div class="col-3" v-if="q.screen.gt.sm" />
+        <div v-if="q.screen.gt.sm" class="col-3" />
         <div class="col-9">
           <slide-in>
             <h3 class="section-catch-phrase">
