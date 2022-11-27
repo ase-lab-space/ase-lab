@@ -1,3 +1,10 @@
+<i18n lang="yaml">
+en:
+  clickHere: Click here to Join
+ja:
+  clickHere: 参加はコチラから
+</i18n>
+
 <template>
   <div class="row section-container">
     <large-globe ref="largeGlobe" class="col col-md-7 col-xs-12 large-globe" />
@@ -23,7 +30,7 @@
 
         <border-button
           to="https://docs.google.com/forms/d/1F3E-cEGQr9geMDtjl_xRRLTiMPqgbR5kOUU5-EBzW_I"
-          label="参加はコチラから"
+          :label="t('clickHere')"
           class="entry-button tilt-on-hover"
         />
       </div>
@@ -37,6 +44,7 @@ import LargeGlobe from './LargeGlobe.vue';
 import BorderButton from '../Common/Button/BorderButton.vue';
 import anime from 'animejs';
 import { useQuasar } from 'quasar';
+import { useI18n } from 'vue-i18n';
 
 export default defineComponent({
   components: {
@@ -46,11 +54,13 @@ export default defineComponent({
 
   setup() {
     const largeGlobe = ref();
+    const { t } = useI18n();
     const q = useQuasar();
 
     return {
       largeGlobe,
       q,
+      t,
     };
   },
 

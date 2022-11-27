@@ -64,7 +64,7 @@ export default defineComponent({
   &-wanted {
     background-color: rgb(255, 62, 23);
   }
-  &-preparing {
+  &-in-preparation {
     background-color: rgb(89, 89, 89);
   }
   &-in-progress {
