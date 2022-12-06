@@ -1,3 +1,16 @@
+<i18n lang="yaml">
+en:
+  section-catch-phrase1: Wherever you are in the world,
+  section-catch-phrase2: you can find friends
+  label1: Comments from participants
+  label2: Click here to Join
+ja:
+  section-catch-phrase1: 全国どこにいたって、
+  section-catch-phrase2: 仲間は見つかる。
+  label1: 参加者の声 →
+  label2: 参加はコチラから
+</i18n>
+
 <template>
   <section class="section-container section-full-size">
     <div class="content-container row justify-between">
@@ -13,8 +26,8 @@
         <div class="col-9">
           <slide-in>
             <h3 class="section-catch-phrase">
-              全国どこにいたって、<br />
-              仲間は見つかる。
+              {{t('section-catch-phrase1')}}<br />
+              {{t('section-catch-phrase2')}}
             </h3>
           </slide-in>
 
@@ -33,7 +46,7 @@
             <double-line-link
               class="link"
               to="/articles"
-              label="参加者の声 →"
+              :label="t('label1')"
             />
           </slide-in>
         </div>
@@ -43,7 +56,7 @@
     <slide-in class="row justify-center">
       <border-button
         to="https://docs.google.com/forms/d/1F3E-cEGQr9geMDtjl_xRRLTiMPqgbR5kOUU5-EBzW_I"
-        label="参加はコチラから"
+        :label="t('label2')"
         class="entry-button tilt-on-hover"
       />
     </slide-in>
@@ -55,6 +68,7 @@ import { defineComponent } from 'vue';
 import DoubleLineLink from '../Common/Button/DoubleLineLink.vue';
 import SlideIn from '../Common/Transition/SlideIn.vue';
 import BorderButton from '../Common/Button/BorderButton.vue';
+import { useI18n }from 'vue-i18n';
 
 export default defineComponent({
   components: {
@@ -62,6 +76,12 @@ export default defineComponent({
     SlideIn,
     BorderButton,
   },
+  setup() {
+    const { t } = useI18n();
+    return {
+      t,
+    }
+  }
 });
 </script>
 

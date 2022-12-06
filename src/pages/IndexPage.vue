@@ -1,3 +1,10 @@
+<i18n lang="yaml">
+en:
+  label: Click here to Join
+ja:
+  label: 参加はコチラから
+</i18n>
+
 <template>
   <q-page class="row items-center justify-evenly">
     <landing-overlay
@@ -12,7 +19,7 @@
     <articles-view />
     <border-button
       to="https://docs.google.com/forms/d/1F3E-cEGQr9geMDtjl_xRRLTiMPqgbR5kOUU5-EBzW_I"
-      label="参加はコチラから"
+      :label="t('label')"
       class="entry-button tilt-on-hover"
     />
   </q-page>
@@ -30,6 +37,7 @@ import ArticlesView from 'src/components/IndexPage/ArticlesView.vue';
 import BorderButton from 'src/components/Common/Button/BorderButton.vue';
 import { sleep } from 'src/utils/PromiseUtil';
 import NewsView from 'src/components/IndexPage/NewsView.vue';
+import { useI18n } from 'vue-i18n';
 
 export default defineComponent({
   name: 'IndexPage',
@@ -47,6 +55,7 @@ export default defineComponent({
   setup() {
     const route = useRoute();
     const mainView = ref();
+    const { t } = useI18n();
     onMounted(async () => {
       if (route.query['no-ovl'] === 't') {
         // onMountedのタイミングで少し待たないといけない
@@ -58,6 +67,7 @@ export default defineComponent({
     return {
       route,
       mainView,
+      t,
     };
   },
 });

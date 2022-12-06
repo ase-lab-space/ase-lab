@@ -1,11 +1,20 @@
+<i18n lang="yaml">
+en:
+  section-title: Articles about our members
+  label: Show more articles →
+ja:
+  section-title: メンバーに関する記事
+  label: 記事をもっと見る →
+</i18n>
+
 <template>
   <section class="column section-container">
     <div class="col row justify-between section-title-container">
-      <h4 class="section-title">メンバーに関する記事</h4>
+      <h4 class="section-title">{{t('section-title')}}</h4>
 
       <single-line-link
         to="/articles"
-        label="記事をもっと見る →"
+        :label="t('label')"
         class="single-line-link"
       />
     </div>
@@ -30,6 +39,7 @@ import SingleLineLink from '../Common/Button/SingleLineLink.vue';
 import SlideIn from '../Common/Transition/SlideIn.vue';
 import ArticleCard from './Article/ArticleCard.vue';
 import { articles } from 'src/models/articles';
+import { useI18n } from 'vue-i18n';
 
 export default defineComponent({
   components: {
@@ -39,10 +49,12 @@ export default defineComponent({
   },
 
   setup() {
+    const { t } = useI18n();
     return {
       articles: articles.sort(
         (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
       ),
+      t,
     };
   },
 });

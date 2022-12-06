@@ -1,3 +1,14 @@
+<i18n lang="yaml">
+en:
+  section-title1: Seminars in progress
+  section-title2: Seminars in preparation
+  label: Show more seminars  →
+ja:
+  section-title1: 実施中のゼミ
+  section-title2: 企画中のゼミ
+  label: もっと見る →
+</i18n>
+
 <template>
   <section
     class="row section-container"
@@ -5,11 +16,11 @@
   >
     <div class="col-xs-12 col-md-6 column">
       <div class="col row justify-between items-end section-title-container">
-        <h4 class="section-title">実施中のゼミ</h4>
+        <h4 class="section-title">{{t('section-title1')}}</h4>
 
         <single-line-link
           to="/activities"
-          label="もっと見る →"
+          :label="t('label')"
           class="single-line-link"
         />
       </div>
@@ -26,11 +37,11 @@
 
     <div class="col-xs-12 col-md-6 column justify-start preparing-container">
       <div class="col row justify-between items-end section-title-container">
-        <h4 class="section-title">企画中のゼミ</h4>
+        <h4 class="section-title">{{t('section-title2')}}</h4>
 
         <single-line-link
           to="/activities"
-          label="もっと見る →"
+          :label="t('label')"
           class="single-line-link"
         />
       </div>
@@ -55,6 +66,7 @@ import SeminarCard, { ITag, TAG_COLOR } from './Seminar/SeminarCard.vue';
 import { hash } from 'src/utils/HashUtil';
 import { StatusType, seminars as _seminars } from 'src/models/seminars';
 import { useQuasar } from 'quasar';
+import { useI18n } from 'vue-i18n';
 
 export interface ISeminar {
   title: string;
@@ -79,6 +91,7 @@ export default defineComponent({
   },
   setup() {
     const q = useQuasar();
+    const { t } = useI18n();
 
     const seminars: ISeminar[] = _seminars
       .filter((seminar) => seminar.description !== undefined)
@@ -110,6 +123,7 @@ export default defineComponent({
         // .filter((seminar) => seminar.status in ['preparing', 'wanted'])
         .filter((seminar) => seminar.status === 'in-progress')
         .slice(3, 6),
+      t,
     };
   },
 });
