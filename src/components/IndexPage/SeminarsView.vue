@@ -16,7 +16,7 @@ ja:
   >
     <div class="col-xs-12 col-md-6 column">
       <div class="col row justify-between items-end section-title-container">
-        <h4 class="section-title">{{t('section-title1')}}</h4>
+        <h4 class="section-title">{{ t('section-title1') }}</h4>
 
         <single-line-link
           to="/activities"
@@ -37,7 +37,7 @@ ja:
 
     <div class="col-xs-12 col-md-6 column justify-start preparing-container">
       <div class="col row justify-between items-end section-title-container">
-        <h4 class="section-title">{{t('section-title2')}}</h4>
+        <h4 class="section-title">{{ t('section-title2') }}</h4>
 
         <single-line-link
           to="/activities"

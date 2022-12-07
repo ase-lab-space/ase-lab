@@ -27,13 +27,13 @@ ja:
       </div>
       <div class="col-7">
         <h2 class="catch-phrase">
-          {{t('catch-phrase1')}}<br />
-          {{t('catch-phrase2')}}
+          {{ t('catch-phrase1') }}<br />
+          {{ t('catch-phrase2') }}
         </h2>
 
         <div class="description">
-          {{t('description1')}}<br />
-          {{t('description2')}}
+          {{ t('description1') }}<br />
+          {{ t('description2') }}
         </div>
 
         <border-button

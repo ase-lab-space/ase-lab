@@ -10,7 +10,7 @@ ja:
 <template>
   <section class="column section-container">
     <div class="col row justify-between section-title-container">
-      <h4 class="section-title">{{t('section-title')}}</h4>
+      <h4 class="section-title">{{ t('section-title') }}</h4>
 
       <single-line-link
         to="/articles"

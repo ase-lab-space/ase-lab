@@ -26,8 +26,8 @@ ja:
         <div class="col-9">
           <slide-in>
             <h3 class="section-catch-phrase">
-              {{t('section-catch-phrase1')}}<br />
-              {{t('section-catch-phrase2')}}
+              {{ t('section-catch-phrase1') }}<br />
+              {{ t('section-catch-phrase2') }}
             </h3>
           </slide-in>
 
@@ -68,7 +68,7 @@ import { defineComponent } from 'vue';
 import DoubleLineLink from '../Common/Button/DoubleLineLink.vue';
 import SlideIn from '../Common/Transition/SlideIn.vue';
 import BorderButton from '../Common/Button/BorderButton.vue';
-import { useI18n }from 'vue-i18n';
+import { useI18n } from 'vue-i18n';
 
 export default defineComponent({
   components: {
@@ -80,8 +80,8 @@ export default defineComponent({
     const { t } = useI18n();
     return {
       t,
-    }
-  }
+    };
+  },
 });
 </script>
 

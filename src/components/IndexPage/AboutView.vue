@@ -22,7 +22,7 @@ ja:
       <div class="col-xs-12 col-md-5 column">
         <h2 class="section-title row items-end">
           <div class="title">About</div>
-          <div class="subtitle">{{t('subtitle')}}</div>
+          <div class="subtitle">{{ t('subtitle') }}</div>
         </h2>
 
         <div class="img-container row items-center justify-center">
@@ -40,25 +40,21 @@ ja:
         <div class="col-9">
           <slide-in>
             <h3 class="section-catch-phrase">
-              {{t('section-catch-phrase1')}}<br />
-              {{t('section-catch-phrase2')}}
+              {{ t('section-catch-phrase1') }}<br />
+              {{ t('section-catch-phrase2') }}
             </h3>
           </slide-in>
 
           <slide-in>
             <p>
-              {{t('description1')}}
+              {{ t('description1') }}
             </p>
 
-            <p>{{t('description2')}}</p>
+            <p>{{ t('description2') }}</p>
           </slide-in>
 
           <slide-in>
-            <double-line-link
-              class="link"
-              to="/about"
-              :label="t('label')"
-            />
+            <double-line-link class="link" to="/about" :label="t('label')" />
           </slide-in>
         </div>
       </div>
