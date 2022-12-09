@@ -19,6 +19,7 @@
             text-color="white"
             :color="NEWS_TAG_COLOR[item.tag]"
           />
+          {{ STATUS[seminar.tag] }}
         </div>
 
         <div class="news-title">
@@ -38,7 +39,7 @@
 
 <script>
 import { defineComponent } from 'vue';
-import { news, NEWS_TAG_COLOR } from 'src/models/news';
+import { NEWS_TAG_COLOR, news } from 'src/models/news';
 
 export default defineComponent({
   setup() {
