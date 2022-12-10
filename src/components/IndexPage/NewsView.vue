@@ -19,7 +19,6 @@
             text-color="white"
             :color="NEWS_TAG_COLOR[item.tag]"
           />
-          {{ STATUS[seminar.tag] }}
         </div>
 
         <div class="news-title">

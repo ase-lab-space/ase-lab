@@ -2,11 +2,6 @@ import { $t } from 'src/boot/i18n';
 
 export type NewsTagType = 'お知らせ';
 
-export const STATUS: {
-  [key in NewsTagType]: string;
-} = {
-  お知らせ: $t('news.news1.tag'),
-} as const;
 
 export const NEWS_TAG_COLOR: {
   [key in NewsTagType]: string;
