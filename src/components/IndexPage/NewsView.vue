@@ -14,7 +14,7 @@
 
         <div class="tag">
           <q-chip
-            :label="item.tag"
+            :label="TAG[item.tag]"
             size="sm"
             text-color="white"
             :color="NEWS_TAG_COLOR[item.tag]"
@@ -38,13 +38,14 @@
 
 <script>
 import { defineComponent } from 'vue';
-import { NEWS_TAG_COLOR, news } from 'src/models/news';
+import { NEWS_TAG_COLOR, news, TAG } from 'src/models/news';
 
 export default defineComponent({
   setup() {
     return {
       news,
       NEWS_TAG_COLOR,
+      TAG,
     };
   },
 });
