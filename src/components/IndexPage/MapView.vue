@@ -2,11 +2,15 @@
 en:
   section-catch-phrase1: Wherever you are in the world,
   section-catch-phrase2: you can find friends
+  description1: Currently, there are study groups with educational materials such as space science and space engineering, study groups on mathematics and physics that serve as the basis for these materials, and on liberal arts that are more easily attended.
+  description2: ASE-Lab. is open to everyone; science and engineering students, as well as liberal arts students. If you have a desire to deepen your study of space, your title is irrelevant.
   label1: Comments from participants
   label2: Click here to Join
 ja:
   section-catch-phrase1: 全国どこにいたって、
   section-catch-phrase2: 仲間は見つかる。
+  description1: 現在は、宇宙理学や宇宙工学についての教材に取り組む勉強会、その基礎となる数学や物理学に関する勉強会、より気楽に参加できる教養のような勉強会などが企画されています。
+  description2: ASE-Lab.には、理学部の学生も工学部の学生も、文系の学生もいます。宇宙への学びを深めたいという思いがあれば、肩書は関係ありません。
   label1: 参加者の声 →
   label2: 参加はコチラから
 </i18n>
@@ -32,14 +36,9 @@ ja:
           </slide-in>
 
           <slide-in>
-            <p>
-              現在は、宇宙理学や宇宙工学についての教材に取り組む勉強会、その基礎となる数学や物理学に関する勉強会、より気楽に参加できる教養のような勉強会などが企画されています。
-            </p>
+            <p>{{ t('description1') }}</p>
 
-            <p>
-              ASE-Lab.には、理学部の学生も工学部の学生も、文系の学生もいます。
-              宇宙への学びを深めたいという思いがあれば、肩書は関係ありません。
-            </p>
+            <p>{{ t('description2') }}</p>
           </slide-in>
 
           <slide-in>

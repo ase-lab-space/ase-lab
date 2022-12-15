@@ -1,8 +1,8 @@
 <i18n lang="yaml">
 en:
   clickHere: Click here to Join
-  catch-phrase1: The place for space enthusiasts to get together,
-  catch-phrase2: study as much as they want.
+  catch-phrase1: Learn universe together,
+  catch-phrase2: with space enthusiasts.
   description1: ASE-Lab. is a community of space enthusiasts who learn from each other by holding independent seminars related to their interests and knowledge.
   description2: We sometimes hold study events with people who are active in the front lines of space business and research, and social gatherings among ASE-Lab. members.
 ja:
