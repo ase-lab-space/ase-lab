@@ -13,7 +13,7 @@ export class SlackRepository extends BaseRepository {
     body: string;
   }): Promise<void> {
     return this.api.post(
-      'https://a5osgbixql5fz7bznby76py3iy0hguya.lambda-url.ap-northeast-1.on.aws/',
+      'https://xgmflq3mfb.execute-api.ap-northeast-1.amazonaws.com/default/notifyContactFormSubmission',
       {
         name,
         email,
