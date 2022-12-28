@@ -12,11 +12,14 @@ export class SlackRepository extends BaseRepository {
     status: string;
     body: string;
   }): Promise<void> {
-    return this.api.post('https://api.ase-lab.space/slack/contact', {
-      name,
-      email,
-      status,
-      body,
-    });
+    return this.api.post(
+      'https://a5osgbixql5fz7bznby76py3iy0hguya.lambda-url.ap-northeast-1.on.aws/',
+      {
+        name,
+        email,
+        status,
+        body,
+      }
+    );
   }
 }
