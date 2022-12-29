@@ -31,7 +31,7 @@ ja:
           {{ t('catch-phrase2') }}
         </h2>
 
-        <div class="description">
+        <div :class="{ ja: $i18n.locale === 'ja', en: $i18n.locale === 'en' }">
           {{ t('description1') }}<br />
           {{ t('description2') }}
         </div>
@@ -69,6 +69,9 @@ export default defineComponent({
       largeGlobe,
       q,
       t,
+      date:{
+        ja: true
+      }
     };
   },
 
@@ -147,11 +150,18 @@ export default defineComponent({
 
 .description {
   margin-top: 16px;
-  font-weight: 700;
   font-size: 0.85rem;
 }
 
 .entry-button {
   margin-top: 16px;
+}
+
+.ja {
+  font-weight: 700px;
+}
+
+.en {
+  font-weight: 500px;
 }
 </style>
