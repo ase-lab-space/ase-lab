@@ -69,9 +69,7 @@ export default defineComponent({
       largeGlobe,
       q,
       t,
-      date: {
         ja: true,
-      },
     };
   },
 
