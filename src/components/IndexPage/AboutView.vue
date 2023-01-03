@@ -1,6 +1,5 @@
 <i18n lang="yaml">
 en:
-  subtitle: About us
   section-catch-phrase1: Space×Science, Engineering
   section-catch-phrase2: A Place for Academic Learning
   description1: Currently, there are study groups with educational materials such as space science and space engineering, study groups on mathematics and physics that serve as the basis for these materials, and on liberal arts that are more easily attended.
@@ -8,7 +7,6 @@ en:
   label: Find out more about us →
 
 ja:
-  subtitle: ー 私たちについて
   section-catch-phrase1: 宇宙×理学・工学
   section-catch-phrase2: アカデミックな学びの場
   description1: 現在は、宇宙理学や宇宙工学についての教材に取り組む勉強会、その基礎となる数学や物理学に関する勉強会、より気楽に参加できる教養のような勉強会などが企画されています。
@@ -22,7 +20,6 @@ ja:
       <div class="col-xs-12 col-md-5 column">
         <h2 class="section-title row items-end">
           <div class="title">About</div>
-          <div class="subtitle">{{ t('subtitle') }}</div>
         </h2>
 
         <div class="img-container row items-center justify-center">
