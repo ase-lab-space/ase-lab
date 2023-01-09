@@ -60,4 +60,12 @@ export const articles: IArticleProps[] = [
     date: '2022/11/24',
     url: 'https://note.com/ase_lab_/n/n25b330c5ff46',
   },
+  {
+    img: 'https://assets.st-note.com/production/uploads/images/93835557/rectangle_large_type_2_715c2a5daefb1ee101653f678547b6a5.jpeg',
+    title: '〜地方メンバーの声　#6(塩田恭平君編)〜',
+    bodyDigest:
+      '九州大学工学部の量子物理工学科[1]というところに所属してます、学部二年の塩田恭平と申します。大学で勉強していることについてですが、自分たちの大学は二年の後期から学科...',
+    date: '2022/12/23',
+    url: 'https://note.com/ase_lab_/n/n5937a4acb783',
+  },
 ];
