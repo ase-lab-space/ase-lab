@@ -37,7 +37,7 @@ export const articles: IArticleProps[] = [
     url: 'https://note.com/ase_lab_/n/n257e02a41d76',
   },
   {
-    img: 'https://assets.st-note.com/production/uploads/images/88084122/rectangle_large_type_2_6e843800e75f869272214a4b9786cbbc.png?width=2000&height=2000&fit=bounds&quality=85',
+    img: 'https://assets.st-note.com/production/uploads/images/91650285/rectangle_large_type_2_5bc8804c6cc339be7f0066147f95f3d1.png',
     title: $t('articles.person5.title'),
     bodyDigest: $t('articles.person5.digest'),
     date: '2022/10/09',
