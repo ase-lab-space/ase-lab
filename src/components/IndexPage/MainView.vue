@@ -1,3 +1,18 @@
+<i18n lang="yaml">
+en:
+  clickHere: Click here to Join
+  catch-phrase1: Learn universe together,
+  catch-phrase2: with space enthusiasts.
+  description1: ASE-Lab. is a community of space enthusiasts who learn from each other by holding independent seminars related to their interests and knowledge.
+  description2: We sometimes hold study events with people who are active in the front lines of space business and research, and social gatherings among ASE-Lab. members.
+ja:
+  clickHere: 参加はコチラから
+  catch-phrase1: 宇宙好きが集まり、
+  catch-phrase2: 思い思いの勉強会を。
+  description1: ASE-Lab.は宇宙が大好きな人が集まって、勉強会をするコミュニティです。
+  description2: 自分の好きな本や友達、時には実際に研究やビジネスをしている人たちから学ぶことも。
+</i18n>
+
 <template>
   <div class="row section-container">
     <large-globe ref="largeGlobe" class="col col-md-7 col-xs-12 large-globe" />
@@ -12,18 +27,18 @@
       </div>
       <div class="col-7">
         <h2 class="catch-phrase">
-          宇宙好きが集まり、<br />
-          思い思いの勉強会を。
+          {{ t('catch-phrase1') }}<br />
+          {{ t('catch-phrase2') }}
         </h2>
 
-        <div class="description">
-          ASE-Lab.は宇宙が大好きな人が集まって、勉強会をするコミュニティです。<br />
-          自分の好きな本や友達、時には実際に研究やビジネスをしている人たちから学ぶことも。
+        <div :class="{ ja: $i18n.locale === 'ja', en: $i18n.locale === 'en' }">
+          {{ t('description1') }}<br />
+          {{ t('description2') }}
         </div>
 
         <border-button
           to="https://docs.google.com/forms/d/1F3E-cEGQr9geMDtjl_xRRLTiMPqgbR5kOUU5-EBzW_I"
-          label="参加はコチラから"
+          :label="t('clickHere')"
           class="entry-button tilt-on-hover"
         />
       </div>
@@ -37,6 +52,7 @@ import LargeGlobe from './LargeGlobe.vue';
 import BorderButton from '../Common/Button/BorderButton.vue';
 import anime from 'animejs';
 import { useQuasar } from 'quasar';
+import { useI18n } from 'vue-i18n';
 
 export default defineComponent({
   components: {
@@ -46,11 +62,13 @@ export default defineComponent({
 
   setup() {
     const largeGlobe = ref();
+    const { t } = useI18n();
     const q = useQuasar();
 
     return {
       largeGlobe,
       q,
+      t,
     };
   },
 
@@ -129,11 +147,18 @@ export default defineComponent({
 
 .description {
   margin-top: 16px;
-  font-weight: 700;
   font-size: 0.85rem;
 }
 
 .entry-button {
   margin-top: 16px;
+}
+
+.ja {
+  font-weight: 700px;
+}
+
+.en {
+  font-weight: 500px;
 }
 </style>

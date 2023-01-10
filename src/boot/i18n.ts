@@ -3,12 +3,32 @@ import { createI18n } from 'vue-i18n';
 
 import messages from 'src/i18n';
 
-export default boot(({ app }) => {
-  const i18n = createI18n({
-    locale: 'en-US',
-    messages,
-  });
+const DEFAULT_LOCALE = 'ja';
 
-  // Set i18n instance on app
+const initAndGetLocale = () => {
+  const userLocale = localStorage.getItem('user.locale');
+  if (userLocale) {
+    return userLocale;
+  }
+
+  const browserLocale = navigator.language;
+  if (browserLocale.indexOf('ja') !== -1) {
+    localStorage.setItem('user.locale', 'ja');
+    return browserLocale;
+  }
+
+  localStorage.setItem('user.locale', DEFAULT_LOCALE);
+  return DEFAULT_LOCALE;
+};
+
+export const i18n = createI18n({
+  locale: initAndGetLocale(),
+  legacy: false,
+  messages,
+});
+
+export const $t = i18n.global.t;
+
+export default boot(({ app }) => {
   app.use(i18n);
 });

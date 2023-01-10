@@ -14,9 +14,13 @@
               :text="link.text"
               :path="link.path"
             />
+            <locale-button />
           </nav>
           <nav v-else>
-            <hamberger-icon ref="hambergerIcon" @click="onHambergerClicked" />
+            <div class="row items-center">
+              <locale-button />
+              <hamberger-icon ref="hambergerIcon" @click="onHambergerClicked" />
+            </div>
             <link-overlay
               v-if="linkOverlayActive"
               ref="linkOverlay"
@@ -46,6 +50,7 @@ import NavLink from 'src/components/MainLayout/NavLink.vue';
 import FooterView from 'src/components/MainLayout/FooterView.vue';
 import HambergerIcon from 'src/components/MainLayout/HambergerIcon.vue';
 import LinkOverlay from 'src/components/MainLayout/LinkOverlay.vue';
+import LocaleButton from 'src/components/Common/Button/LocaleButton.vue';
 
 interface ILink {
   text: string;
@@ -84,6 +89,7 @@ export default defineComponent({
     FooterView,
     HambergerIcon,
     LinkOverlay,
+    LocaleButton,
   },
 
   setup() {
