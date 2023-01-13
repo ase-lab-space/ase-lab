@@ -39,7 +39,7 @@ ja:
         <border-button
           to="https://docs.google.com/forms/d/1F3E-cEGQr9geMDtjl_xRRLTiMPqgbR5kOUU5-EBzW_I"
           :label="t('clickHere')"
-          class="entry-button tilt-on-hover"
+          class="entry-button"
         />
       </div>
     </div>
