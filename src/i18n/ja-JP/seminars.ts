@@ -7,7 +7,7 @@ export default {
   },
 
   cansat: {
-    name: 'Cansatゼミ',
+    name: 'CanSatゼミ',
     span: '9月上旬〜',
   },
   'introduction-to-electromagnetism': {
