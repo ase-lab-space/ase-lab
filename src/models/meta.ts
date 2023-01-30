@@ -1,4 +1,4 @@
-export const participantNumber = 132;
+export const participantNumber = 145;
 
 export const univs: readonly string[] = [
   '東京大学',
@@ -28,4 +28,5 @@ export const univs: readonly string[] = [
   'コロンビア大学',
   'トロント大学',
   'テキサスA&M大学',
+  'スイス連邦工科大学',
 ];
