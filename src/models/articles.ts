@@ -68,4 +68,12 @@ export const articles: IArticleProps[] = [
     date: '2022/12/23',
     url: 'https://note.com/ase_lab_/n/n5937a4acb783',
   },
+  {
+    img: 'https://assets.st-note.com/production/uploads/images/97683299/rectangle_large_type_2_2c2e163bb20d20d330c1e9c56f84270c.png',
+    title: '団体創設一周年記念企画！　団体創設秘話　〜前編〜',
+    bodyDigest:
+      '海外や全国各地から宇宙好きメンバーが集うASE-Lab.。団体は先月の12日に無事一周年を迎えることができました！！そこで今回は、団体一周年を記念して特別企画！題して、「団体創立秘話」です！！！...',
+    date: '2023/02/12',
+    url: 'https://note.com/ase_lab_/n/ne64cc4cd347d',
+  },
 ];
