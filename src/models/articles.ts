@@ -76,4 +76,12 @@ export const articles: IArticleProps[] = [
     date: '2023/02/12',
     url: 'https://note.com/ase_lab_/n/ne64cc4cd347d',
   },
+  {
+    img: 'https://assets.st-note.com/production/uploads/images/98340947/rectangle_large_type_2_2dd63c9ff076a571ae8ee57c6121e3cd.png',
+    title: '団体創設一周年記念企画！　団体創設秘話　〜後編〜',
+    bodyDigest:
+      'そうだね。それで本田とかに、「あべま宇宙系のサークル入ってるんだから、そこの友達とか誘えば、来るんじゃない？」って言われて。今まではみんなで一緒のテーマに取り組んでいたけど、...',
+    date: '2023/02/19',
+    url: 'https://note.com/ase_lab_/n/neeaabf82815f',
+  },
 ];
