@@ -10,8 +10,8 @@ en:
     title: ASE-Lab. Seminar Guidebook
     description-1: In ASE-Lab., you can not only participate in existing seminars, but also organize new seminars by yourself. In other words, seminar management at ASE-Lab. is left to the initiative of all members.
     description-2: However, we understand that at first it might be difficult to know how to hold such seminars. That is why we have created this "ASE-Lab. Seminar Guidebook". This book is intended to serve as a guideline for members who want to hold and participate in seminars when setting up a seminar. Please take a moment to read it.
-    view-guidebook: View Guide Book
-    url: /pdf/ASE_Seminar_Guidebook.pdf
+    view-guidebook: View Guide Book (only available in Japanese)
+    url: /pdf/ASE-Lab. ガイドブック.pdf
     thumbnail-url: /img/seminar-guide-book-thumbnail-en.webp
 
 ja:
