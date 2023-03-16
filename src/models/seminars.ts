@@ -54,6 +54,15 @@ export const seminars: ISeminar[] = [
     style: 'zoom',
   },
   {
+    name: '宇宙飛行士を目指す会',
+    description:
+      '1人では続かない運動を、みんなでやることで継続させましょう！という会です。名前は仰々しいですが、健康な体を作りたい人、アスリート・宇宙飛行士を目指す人、どんなでもぜひいらしてください。',
+    status: 'wanted',
+    url: '/img/seminars/astronaut-seminar.webp',
+    span: '毎日（人数によって調整）',
+    style: 'zoom',
+  },
+  {
     name: '航空機構造力学ゼミ',
     description:
       '輪講形式で行おうと考えています。興味がある人はぜひご参加ください。',
