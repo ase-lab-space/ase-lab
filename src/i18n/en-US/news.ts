@@ -7,4 +7,8 @@ export default {
     title: 'Seminar Guidebook on ASE-Lab. Ver.2 is published.',
     tag: 'Notice',
   },
+  news3: {
+    title: 'We ASE-Lab. created our Instagram account.',
+    tag: 'Notice',
+  },
 };

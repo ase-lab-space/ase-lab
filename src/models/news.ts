@@ -33,4 +33,10 @@ export const news: INews[] = [
     date: '2023.02.24',
     url: '/pdf/ASE-Lab. ガイドブック.pdf',
   },
+  {
+    title: $t('news.news3.title'),
+    tag: 'お知らせ',
+    date: '2023.03.24',
+    url: 'https://www.instagram.com/ase__lab/',
+  },
 ];

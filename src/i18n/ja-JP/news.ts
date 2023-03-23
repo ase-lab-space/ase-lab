@@ -7,4 +7,8 @@ export default {
     title: 'ASE-Lab. ゼミガイドブックver2が公開されました。',
     tag: 'お知らせ',
   },
+  news3: {
+    title: 'ASE-Lab. 公式Instagramが開設されました。',
+    tag: 'お知らせ',
+  },
 };
