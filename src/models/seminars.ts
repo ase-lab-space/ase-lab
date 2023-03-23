@@ -36,6 +36,42 @@ export interface ISeminar {
 
 export const seminars: ISeminar[] = [
   {
+    name: '話題の本を輪読するゼミ',
+    description:
+      'あの話題の本です。ゲットしたので、どうせ読むなら輪読したらいいかなーと思ってます。',
+    status: 'wanted',
+    url: 'https://m.media-amazon.com/images/I/51ktoOozR-L._SX353_BO1,204,203,200_.jpg',
+    span: '4月1日',
+    style: 'zoom',
+  },
+  {
+    name: '哲学ゼミ',
+    description:
+      '毎回いくつか議題を持ち寄り、90分程度を目安にディスカッションをしたいと思っています。哲学的なことについて話したい！以外に何も決まっていないので、参加者で参加しやすい形式を模索していきたいと思っています！ぜひお気軽にご参加ください！',
+    status: 'wanted',
+    url: 'https://www.toyo.ac.jp/link-toyo/images/topics/7384/7384_1.jpg',
+    span: '3月末～4月上旬から',
+    style: 'zoom',
+  },
+  {
+    name: '統計力学ゼミ',
+    description:
+      '院試対策やりましょう！院試で使うけど学部で履修してない（開講してない）という方、履修したけど復習したい方など誰でも大歓迎！！（もちろん教えてくれる方も！）僕も大学で履修していない科目なので、1から一緒に頑張りましょう！',
+    status: 'wanted',
+    url: 'https://m.media-amazon.com/images/I/41bFrwVMbJL._SX340_BO1,204,203,200_.jpg',
+    span: '4月上旬',
+    style: 'zoom',
+  },
+  {
+    name: '宇宙農業ゼミ',
+    description:
+      '「宇宙×農業」と言っても、そのアプローチ方法は様々あるかと思います。私自身全くの素人なので、同じような分野に興味のある皆さんと一緒に、業界への理解を深めつつ、将来的には何らかのプロジェクト創りにつなげていきたいなと思います！最初の1カ月は週1で情報交換や調査をし、今後の講演や活動について協議できればなと思います。科目の特性上あらゆる領域の知見が必要となるので、多くの方のご参加をお待ちしております！',
+    status: 'wanted',
+    url: 'https://innoplex.org/wp-content/uploads/2019/06/space-indoorfarming000353.jpg',
+    span: '4月上～中旬',
+    style: 'zoom',
+  },
+  {
     name: '宇宙法入門演習ゼミ',
     description:
       '宇宙法に触れ始めるきっかけを改めて作りたい＆アウトプットや議論の機会を通して宇宙法のおもしろさを知ってもらいたい、という動機で企画しました。第一回でインプットを行い、第二～三回でテキストの問題を材料に演習のようなものを実施する予定です。数回完結なのでぜひぜひ気軽に参加していただき、もっと宇宙法に触れたいと思っていただけたら現行の宇宙法ゼミにも参加していただけたら嬉しいです！！主に国際的な側面から触れる演習の予定なので、既に現行の宇宙法ゼミに入っている方にも一味違った切り口から宇宙法を楽しんでもらえるかなと思います。',
@@ -45,37 +81,19 @@ export const seminars: ISeminar[] = [
     style: 'zoom',
   },
   {
-    name: '小型衛星ゼミ',
-    description:
-      '「衛星開発プロジェクト進行の流れ」「衛星のバスシステムについて」「開発の最前線について（ミッション系）」をテーマとし，1回1テーマで実施します．私自身も衛星について学び始めたばかりなので，一緒に勉強してくださるとうれしいです！',
-    status: 'wanted',
-    url: 'https://m.media-amazon.com/images/I/41H-DwB-xRL._SX353_BO1,204,203,200_.jpg',
-    span: '1月中旬~下旬',
-    style: 'zoom',
-  },
-  {
     name: '宇宙飛行士を目指す会',
     description:
       '1人では続かない運動を、みんなでやることで継続させましょう！という会です。名前は仰々しいですが、健康な体を作りたい人、アスリート・宇宙飛行士を目指す人、どんなでもぜひいらしてください。',
-    status: 'wanted',
+    status: 'in-progress',
     url: '/img/seminars/astronaut-seminar.webp',
     span: '毎日（人数によって調整）',
-    style: 'zoom',
-  },
-  {
-    name: '航空機構造力学ゼミ',
-    description:
-      '輪講形式で行おうと考えています。興味がある人はぜひご参加ください。',
-    status: 'wanted',
-    url: 'https://m.media-amazon.com/images/I/41dz182SGbL._SX335_BO1,204,203,200_.jpg',
-    span: '1月下旬~',
     style: 'zoom',
   },
   {
     name: '天体物理学実習ゼミ',
     description:
       '冬期短期集中ゼミとして開催します！習った物理学を使った実践的に天文学を勉強したいという方におすすめです！ゼミの中では、みんなと話し合いながら問題を解いていく形式なので、物理学が少し苦手という方も、周りの方と協力して問題に挑んでもらえると楽しめると思います！よろしくお願いします！',
-    status: 'in-progress',
+    status: 'finished',
     url: '/img/seminars/astronomy.webp',
     span: '12月~1月',
     style: 'zoom',
@@ -93,7 +111,7 @@ export const seminars: ISeminar[] = [
     name: $t('seminars.introduction-to-electromagnetism.name'),
     description:
       '電磁気学入門ということで、大学で電磁気学をまだ履修してない方でも参加できるような内容にしたいと考えています！',
-    status: 'in-progress',
+    status: 'finished',
     url: 'https://pbs.twimg.com/media/FZyTs1iaAAAjgYV?format=jpg&name=large',
     span: $t('seminars.introduction-to-electromagnetism.span'),
     style: 'zoom',
@@ -102,7 +120,7 @@ export const seminars: ISeminar[] = [
     name: $t('seminars.electronic-circuit-design.name'),
     description:
       '電子回路とは、動かすためのプログラムと実際に動く構造系の架け橋になる重要な分野です。制作をされている方はもちろんそうでない方も大歓迎です！',
-    status: 'in-progress',
+    status: 'finished',
     url: 'https://images-na.ssl-images-amazon.com/images/I/71dO80D6gcL.jpg',
     span: $t('seminars.electronic-circuit-design.span'),
     style: 'zoom',
@@ -120,7 +138,7 @@ export const seminars: ISeminar[] = [
     name: $t('seminars.introduction-to-space-law.name'),
     description:
       '教材を中心に宇宙法の理解を深めます。また、今後自分たちで学習を進めるための足がかりとなるゼミ内容にしたいです。予備知識の有無は問いません！',
-    status: 'in-progress',
+    status: 'finished',
     url: 'https://images-na.ssl-images-amazon.com/images/I/81QQOTHOiSL.jpg',
     span: $t('seminars.introduction-to-space-law.span'),
     style: 'zoom',
@@ -129,7 +147,7 @@ export const seminars: ISeminar[] = [
     name: $t('seminars.astronomy-certification.name'),
     description:
       '天文宇宙検定の対策をする予定です。星空宇宙天文検定(星検)も視野に入れています！事前知識は不要で、検定を受ける受けないも自由です。 天文系の検定、一緒にチャレンジしませんか？興味のある方はぜひ！',
-    status: 'in-progress',
+    status: 'finished',
     url: '/img/seminars/tenmon-uchu-kentei.webp',
     span: $t('seminars.astronomy-certification.span'),
     style: 'zoom',
@@ -138,7 +156,7 @@ export const seminars: ISeminar[] = [
     name: $t('seminars.physics-of-the-universe.name'),
     description:
       'このゼミでは、地球に最も近い恒星、太陽から、ブラックホールや遠方の銀河まで、宇宙に浮かぶ様々な天体や現象について数式や物理を用いて学習していきます。天文学の基礎となる様々な法則や理論を自分たちの手で分析することで、天文学というものの理解を深めていきましょう。',
-    status: 'in-progress',
+    status: 'finished',
     url: 'https://images-na.ssl-images-amazon.com/images/I/81XAjp79rRL.jpg',
     span: $t('seminars.physics-of-the-universe.span'),
     style: 'hybrid',
@@ -156,7 +174,7 @@ export const seminars: ISeminar[] = [
     name: $t('seminars.introduction-to-aerospace-engineering.name'),
     description:
       '使う教材が宇宙システムの初学者対象らしいので、内容は入門者向けになる気がします！（復習したい方もどうぞ！） 多分、間にテスト期間も挟むので、うまく調整しながら頑張りましょう！',
-    status: 'in-progress',
+    status: 'finished',
     url: 'https://images-na.ssl-images-amazon.com/images/I/41F1M118NXL._SX337_BO1,204,203,200_.jpg',
     span: $t('seminars.introduction-to-aerospace-engineering.span'),
     style: 'zoom',
