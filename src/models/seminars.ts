@@ -36,12 +36,12 @@ export interface ISeminar {
 
 export const seminars: ISeminar[] = [
   {
-    name: '話題の本を輪読するゼミ',
+    name: '小型衛星(UNISON連携)',
     description:
       'あの話題の本です。ゲットしたので、どうせ読むなら輪読したらいいかなーと思ってます。',
     status: 'wanted',
     url: 'https://m.media-amazon.com/images/I/51ktoOozR-L._SX353_BO1,204,203,200_.jpg',
-    span: '4月1日',
+    span: '4月1日以降開始予定',
     style: 'zoom',
   },
   {
@@ -54,7 +54,7 @@ export const seminars: ISeminar[] = [
     style: 'zoom',
   },
   {
-    name: '統計力学ゼミ',
+    name: '統計力学ゼミ(院試対策)',
     description:
       '院試対策やりましょう！院試で使うけど学部で履修してない（開講してない）という方、履修したけど復習したい方など誰でも大歓迎！！（もちろん教えてくれる方も！）僕も大学で履修していない科目なので、1から一緒に頑張りましょう！',
     status: 'wanted',
