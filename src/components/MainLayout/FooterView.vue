@@ -5,6 +5,15 @@
       <a href="https://twitter.com/ASE_lab_" target="_blank" class="icon">
         <q-btn icon="mdi-twitter" flat round />
       </a>
+
+      <a
+        href="https://www.instagram.com/ase__lab/"
+        target="_blank"
+        class="icon"
+      >
+        <q-btn icon="mdi-instagram" flat round />
+      </a>
+
       <a
         href="https://www.facebook.com/ASE.lab.community"
         target="_blank"
@@ -12,6 +21,7 @@
       >
         <q-btn icon="mdi-facebook" flat round />
       </a>
+
       <a
         href="https://github.com/ase-lab-space/ase-lab"
         target="_blank"
