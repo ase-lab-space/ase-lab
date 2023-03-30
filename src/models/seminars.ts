@@ -36,6 +36,15 @@ export interface ISeminar {
 
 export const seminars: ISeminar[] = [
   {
+    name: 'ビジネス実務法務検定試験2級',
+    description:
+      '別団体の仕事上の都合で、宇宙ビジネスについて詳しくならないといけないので、勉強の一環としてビジネス実務法務の資格を取ることにしました :火:この資格は3級スタートですが、僕は3級も何も持ってない初心者です！1人でやるとだらけちゃうので、もし興味ある人がいれば一緒に勉強してみたいです …！',
+    status: 'wanted',
+    url: 'https://m.media-amazon.com/images/I/51Oc2TrMX-L._SX350_BO1,204,203,200_.jpg',
+    span: '週1〜0.5回程度',
+    style: 'zoom',
+  },
+  {
     name: '小型衛星(UNISON連携)',
     description:
       'あの話題の本です。ゲットしたので、どうせ読むなら輪読したらいいかなーと思ってます。',
