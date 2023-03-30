@@ -22,10 +22,7 @@ export default {
     name: '宇宙ビジネス',
     span: '8月下旬～',
   },
-  'introduction-to-space-law': {
-    name: '宇宙法入門',
-    span: '8月中旬～',
-  },
+
   'astronomy-certification': {
     name: '天文検定',
     span: '8月中旬～',
