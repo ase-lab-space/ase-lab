@@ -92,4 +92,12 @@ export const articles: IArticleProps[] = [
     date: '2023/02/27',
     url: 'https://note.com/ase_lab_/n/nc91544ce6673',
   },
+  {
+    img: 'https://assets.st-note.com/production/uploads/images/101058499/rectangle_large_type_2_23ebd1d893c77efcacb8e47c69154b27.jpeg',
+    title: '〜地方メンバーの声　#7(山田琢登君編)〜',
+    bodyDigest:
+      '去年の4月・5月頃はまだ大学が完全オンラインで、暇だなーというか何かできないかなーと思って、Twitterで色々探していて見つけたのがASE-Lab.でした。...',
+    date: '2023/03/29',
+    url: 'https://note.com/ase_lab_/n/n3ae9e0c96b65',
+  },
 ];
