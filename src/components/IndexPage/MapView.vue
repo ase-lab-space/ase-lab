@@ -54,7 +54,7 @@ ja:
 
     <slide-in class="row justify-center">
       <border-button
-        to="https://docs.google.com/forms/d/1F3E-cEGQr9geMDtjl_xRRLTiMPqgbR5kOUU5-EBzW_I"
+        to="https://docs.google.com/forms/d/e/1FAIpQLSej-A3hZBeFTush1ZCb2uo4PyXELWvXFiqMKnOchCXNKkTobQ/viewform"
         :label="t('label2')"
         class="entry-button"
       />
