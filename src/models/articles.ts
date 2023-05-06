@@ -86,7 +86,7 @@ export const articles: IArticleProps[] = [
   },
   {
     img: 'https://assets.st-note.com/production/uploads/images/98902924/rectangle_large_type_2_91cbc9605e039b2c4e0b7c49d96db32d.png',
-    title: '～代表の声　#8 (阿部舞哉君編)～',
+    title: '～代表の声　(阿部舞哉君編)～',
     bodyDigest:
       '早稲田大学基幹理工学部機械科学・航空宇宙学科2年の阿部舞哉です。今は機械工学に近いことをやっています。学部2年で専門科目に入ったばっかりなので、基本的には四力（流体力学、...',
     date: '2023/02/27',
