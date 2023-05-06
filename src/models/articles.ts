@@ -100,4 +100,12 @@ export const articles: IArticleProps[] = [
     date: '2023/03/29',
     url: 'https://note.com/ase_lab_/n/n3ae9e0c96b65',
   },
+  {
+    img: 'https://assets.st-note.com/production/uploads/images/104413143/rectangle_large_type_2_c4fc975856ac6d31d9abe8693408b30f.jpeg',
+    title: '〜海外メンバーの声　#2(垣内啓邦君編）〜',
+    bodyDigest:
+    'Texas A&M大学の工学部１年生です。進振りのようなものが１年生の終わりにあるので、学科はまだ決定していないのですが、第１志望は航空宇宙工学科で第２志望は機械工学科です。...',
+    date: '2023/05/06',
+    url: 'https://note.com/ase_lab_/n/n02e3528a80a0',
+  },
 ];
