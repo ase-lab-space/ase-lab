@@ -54,7 +54,7 @@ export const seminars: ISeminar[] = [
     style: 'zoom',
   },
   {
-    name: '天文統計学',
+    name: '天文統計学ゼミ',
     description:
       '大学では習わない、天文データの処理に使われる統計を学んで自分で統計モデルを選択し、それが正しいのか評価できるようになることを目標にしています。将来天文学に関わりたい方におすすめです！',
     status: 'wanted',
