@@ -36,6 +36,24 @@ export interface ISeminar {
 
 export const seminars: ISeminar[] = [
   {
+    name: '線形代数ゼミ',
+    description:
+      '使用する教科書の問題を全部解けるようにします！一年生でまだ習ってなく先取りして予習したい方や復習したい方大歓迎です！工学系において重要な分野を共に学びませんか！',
+    status: 'wanted',
+    url: 'https://m.media-amazon.com/images/I/417t1C2QM3L._SY291_BO1,204,203,200_QL40_ML2_.jpg',
+    span: '週1回',
+    style: 'zoom',
+  },
+  {
+    name: '惑星科学ゼミ',
+    description:
+      '大阪大学大学院で宇宙惑星科学を専攻しているのでみなさんにこの分野の面白さを伝えると同時に一緒にワークショップなどを通して惑星から考える宇宙について考えたいと思っています！',
+    status: 'wanted',
+    url: 'https://m.media-amazon.com/images/I/41bWNtSZsYL._SY291_BO1,204,203,200_QL40_ML2_.jpg',
+    span: '2週に1回',
+    style: 'zoom',
+  },
+  {
     name: '宇宙論',
     description:
       '宇宙論ゼミでは宇宙を記述する数式を知ることで、宇宙とは何なのかどのような存在なのかを学ぶことができます。インフレーションやビッグバンなどの宇宙初期からダークマターやダークエネルギーなど現在の宇宙、更に将来の宇宙までを理論的に解き明かしていきます！現在の宇宙論は一般相対性理論が基本となっていますが今回は入門書を扱うので、一般相対性理論を理解していなくても、学部1年生からでも参加可能です！',
@@ -48,7 +66,7 @@ export const seminars: ISeminar[] = [
     name: 'ロケット工学入門ゼミ',
     description:
       'ロケットの原理を知ることを目的としています。ロケットのサークルに入っているけどロケットの仕組みがいまいちわかっていない方々！これを期に一緒に勉強しませんか？？',
-    status: 'wanted',
+    status: 'in-progress',
     url: 'https://m.media-amazon.com/images/I/51MnhZoNYfL._SX342_BO1,204,203,200_.jpg',
     span: '2週に1回',
     style: 'zoom',
@@ -57,7 +75,7 @@ export const seminars: ISeminar[] = [
     name: '天文統計学ゼミ',
     description:
       '大学では習わない、天文データの処理に使われる統計を学んで自分で統計モデルを選択し、それが正しいのか評価できるようになることを目標にしています。将来天文学に関わりたい方におすすめです！',
-    status: 'wanted',
+    status: 'in-progress',
     url: 'https://m.media-amazon.com/images/I/51hFfxT7hqL._SY291_BO1,204,203,200_QL40_ML2_.jpg',
     span: '0.5-1回/週',
     style: 'zoom',
