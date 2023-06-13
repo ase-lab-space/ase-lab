@@ -36,6 +36,15 @@ export interface ISeminar {
 
 export const seminars: ISeminar[] = [
   {
+    name: 'テンソル演習ゼミ',
+    description:
+    'テンソルはベクトルの概念の更に一般化したもので、解析力学･電磁気学･相対論を始めとする物理で使用します。将来相対性理論を扱う人、力学で急に説明をされず出てくる慣性モーメントテンソルに疑問を抱えてる人、リーマン幾何学に興味がある人、におすすめします！',
+    status: 'wanted',
+    url:'https://www.iwanami.co.jp//images/book/265520.jpg',
+    span: '週１回',
+    style: 'zoom',
+  },
+  {
     name: '線形代数ゼミ',
     description:
       '使用する教科書の問題を全部解けるようにします！一年生でまだ習ってなく先取りして予習したい方や復習したい方大歓迎です！工学系において重要な分野を共に学びませんか！',
