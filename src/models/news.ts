@@ -40,7 +40,7 @@ export const news: INews[] = [
     url: 'https://www.instagram.com/ase__lab/',
   },
   {
-    title: ('メンバー200名突破！'),
+    title: 'メンバー200名突破！',
     tag: 'お知らせ',
     date: '2023.07.09',
     url: 'https://twitter.com/ASE_lab_/status/1677996019756433411',
