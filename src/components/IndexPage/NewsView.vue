@@ -43,7 +43,7 @@ import { NEWS_TAG_COLOR, news, TAG } from 'src/models/news';
 export default defineComponent({
   setup() {
     return {
-      news: news.sort((a, b) => new Date(b.date) - new Date(a.date)),
+      news,
       NEWS_TAG_COLOR,
       TAG,
     };
