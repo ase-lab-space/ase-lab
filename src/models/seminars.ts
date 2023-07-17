@@ -36,6 +36,15 @@ export interface ISeminar {
 
 export const seminars: ISeminar[] = [
   {
+    name: '電子工作入門ゼミ',
+    description:
+      '電子工作は缶サット，人工衛星，ロケットの電装(たぶん)，ロボット(たぶん)などなどに必須の知識です．この機会に手を動かしながら学んでみませんか？？',
+    status: 'wanted',
+    url: 'https://m.media-amazon.com/images/I/81rS30jtYuL._SX522_.jpg',
+    span: '週１回',
+    style: 'zoom',
+  },
+  {
     name: 'テンソル演習ゼミ',
     description:
       'テンソルはベクトルの概念の更に一般化したもので、解析力学･電磁気学･相対論を始めとする物理で使用します。将来相対性理論を扱う人、力学で急に説明をされず出てくる慣性モーメントテンソルに疑問を抱えてる人、リーマン幾何学に興味がある人、におすすめします！',
@@ -57,7 +66,7 @@ export const seminars: ISeminar[] = [
     name: '惑星科学ゼミ',
     description:
       '大阪大学大学院で宇宙惑星科学を専攻しているのでみなさんにこの分野の面白さを伝えると同時に一緒にワークショップなどを通して惑星から考える宇宙について考えたいと思っています！',
-    status: 'wanted',
+    status: 'in-progress',
     url: 'https://m.media-amazon.com/images/I/41bWNtSZsYL._SY291_BO1,204,203,200_QL40_ML2_.jpg',
     span: '2週に1回',
     style: 'zoom',
