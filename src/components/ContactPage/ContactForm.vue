@@ -37,28 +37,14 @@ ja:
             :dense="q.screen.lt.sm"
           />
           <div class="q-gutter-sm">
-            <div v-if="q.screen.gt.xs">
-              <q-radio
-                v-for="(color, s) in STATUS_TYPE"
-                :key="s"
-                v-model="status"
-                :val="s"
-                :label="t(s)"
-                :color="color"
-                :rules="[rules.required]"
-              />
-            </div>
-            <q-select
-              v-else
+            <q-radio
+              v-for="(color, s) in STATUS_TYPE"
+              :key="s"
               v-model="status"
-              :options="
-                Object.keys(STATUS_TYPE).map((key) => ({
-                  value: key,
-                  label: t(key),
-                }))
-              "
-              label="職業"
-              dense
+              :val="s"
+              :label="t(s)"
+              :color="color"
+              :rules="[rules.required]"
             />
           </div>
           <q-input
