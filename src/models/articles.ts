@@ -108,4 +108,12 @@ export const articles: IArticleProps[] = [
     date: '2023/05/06',
     url: 'https://note.com/ase_lab_/n/n02e3528a80a0',
   },
+  {
+    img: 'https://assets.st-note.com/production/uploads/images/110534554/rectangle_large_type_2_ba2b07783f1ccc3c3b5ddce2bd93e276.jpeg',
+    title: '〜関東メンバーの声　#1(福地理史君編）〜',
+    bodyDigest:
+      '元々宇宙飛行士なりたい、宇宙エレベーター作りたいという形で宇宙に興味を持っていたのですが、それをやろうとしてる人は結構多いと気づきました。それとは別に並行して、スマート農業や植物工場など農業に関することにも興味がありました。...',
+    date: '2023/07/26',
+    url: 'https://note.com/ase_lab_/n/nfce2bdb8aa57',
+  },
 ];
