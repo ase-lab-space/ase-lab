@@ -45,4 +45,10 @@ export const news: INews[] = [
     date: '2023.07.09',
     url: 'https://twitter.com/ASE_lab_/status/1677996019756433411',
   },
+  {
+    title: 'note記事を更新しました。',
+    tag: 'お知らせ',
+    date: '2023.07.26',
+    url: 'https://note.com/ase_lab_/n/nfce2bdb8aa57',
+  },
 ];
