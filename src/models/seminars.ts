@@ -35,7 +35,7 @@ export interface ISeminar {
 }
 
 export const seminars: ISeminar[] = [
-   {
+  {
     name: '宇宙工学入門ゼミ',
     description:
       '今回のゼミの狙いは、「宇宙工学の基礎知識を身につけること」です。宇宙分野に興味がある人で、何から学べばいいのか迷っている人、学部１、２年生で基礎知識を身につけたい人など、ぜひご参加ください。',
