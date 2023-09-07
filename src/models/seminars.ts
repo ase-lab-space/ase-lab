@@ -36,7 +36,7 @@ export interface ISeminar {
 
 export const seminars: ISeminar[] = [
   {
-    name: '宇宙工学ビジネスゼミ',
+    name: '宇宙ビジネスゼミ',
     description:
       '宇宙業界の魅力に感興を覚えた就活生やその他に向けたソリューション的なもの（webサイト、図鑑）になれば良いなと思っています。',
     status: 'wanted',
