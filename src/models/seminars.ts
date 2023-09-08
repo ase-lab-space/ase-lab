@@ -36,6 +36,15 @@ export interface ISeminar {
 
 export const seminars: ISeminar[] = [
   {
+    name: '宇宙ビジネスゼミ',
+    description:
+      '宇宙業界の魅力に感興を覚えた就活生やその他に向けたソリューション的なもの（webサイト、図鑑）になれば良いなと思っています。',
+    status: 'wanted',
+    url: 'https://m.media-amazon.com/images/I/41FMzu-YkEL._SX302_BO1,204,203,200_.jpg',
+    span: '週１回',
+    style: 'zoom',
+  },
+  {
     name: '宇宙工学入門ゼミ',
     description:
       '今回のゼミの狙いは、「宇宙工学の基礎知識を身につけること」です。宇宙分野に興味がある人で、何から学べばいいのか迷っている人、学部１、２年生で基礎知識を身につけたい人など、ぜひご参加ください。',
@@ -48,7 +57,7 @@ export const seminars: ISeminar[] = [
     name: '電子工作入門ゼミ',
     description:
       '電子工作は缶サット，人工衛星，ロケットの電装(たぶん)，ロボット(たぶん)などなどに必須の知識です．この機会に手を動かしながら学んでみませんか？？',
-    status: 'wanted',
+    status: 'in-progress',
     url: 'https://m.media-amazon.com/images/I/81rS30jtYuL._SX522_.jpg',
     span: '週１回',
     style: 'zoom',
@@ -102,7 +111,7 @@ export const seminars: ISeminar[] = [
     name: '天文統計学ゼミ',
     description:
       '大学では習わない、天文データの処理に使われる統計を学んで自分で統計モデルを選択し、それが正しいのか評価できるようになることを目標にしています。将来天文学に関わりたい方におすすめです！',
-    status: 'in-progress',
+    status: 'finished',
     url: 'https://m.media-amazon.com/images/I/51hFfxT7hqL._SY291_BO1,204,203,200_QL40_ML2_.jpg',
     span: '0.5-1回/週',
     style: 'zoom',
@@ -111,7 +120,7 @@ export const seminars: ISeminar[] = [
     name: 'ビジネス実務法務検定試験2級',
     description:
       '別団体の仕事上の都合で、宇宙ビジネスについて詳しくならないといけないので、勉強の一環としてビジネス実務法務の資格を取ることにしました :火:この資格は3級スタートですが、僕は3級も何も持ってない初心者です！1人でやるとだらけちゃうので、もし興味ある人がいれば一緒に勉強してみたいです …！',
-    status: 'in-progress',
+    status: 'finished',
     url: 'https://m.media-amazon.com/images/I/51Oc2TrMX-L._SX350_BO1,204,203,200_.jpg',
     span: '週1〜0.5回程度',
     style: 'zoom',
@@ -129,7 +138,7 @@ export const seminars: ISeminar[] = [
     name: '哲学ゼミ',
     description:
       '毎回いくつか議題を持ち寄り、90分程度を目安にディスカッションをしたいと思っています。哲学的なことについて話したい！以外に何も決まっていないので、参加者で参加しやすい形式を模索していきたいと思っています！ぜひお気軽にご参加ください！',
-    status: 'in-progress',
+    status: 'finished',
     url: 'https://www.toyo.ac.jp/link-toyo/images/topics/7384/7384_1.jpg',
     span: '3月末～4月上旬から',
     style: 'zoom',
@@ -219,7 +228,7 @@ export const seminars: ISeminar[] = [
     name: $t('seminars.astronomy-certification.name'),
     description:
       '天文宇宙検定の対策をする予定です。星空宇宙天文検定(星検)も視野に入れています！事前知識は不要で、検定を受ける受けないも自由です。 天文系の検定、一緒にチャレンジしませんか？興味のある方はぜひ！',
-    status: 'in-progress',
+    status: 'finished',
     url: '/img/seminars/tenmon-uchu-kentei.webp',
     span: $t('seminars.astronomy-certification.span'),
     style: 'zoom',
