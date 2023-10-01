@@ -36,6 +36,24 @@ export interface ISeminar {
 
 export const seminars: ISeminar[] = [
   {
+    name: '組み込みOSゼミ',
+    description:
+      'みなさん、CanSatやCubeSatに搭載するマイコンの上でOS動かしたくなる時、ありますよね？そんなあなたに、このゼミをお勧めします！ぜひ一緒にマイコン上で動くOSを作って行きましょー！「ラスパイPico」という比較的安価なマイコンでものづくりができるので、未経験者～有識者まで大歓迎です！',
+    status: 'wanted',
+    url: 'https://interface.cqpub.co.jp/wp-content/uploads/MIF2020307-1088x1536.jpg',
+    span: '週1回',
+    style: 'zoom',
+  },
+  {
+    name: 'Linuxゼミ',
+    description:
+      '団体代表，阿部舞哉です！う見えて自分がゼミを企画するのはASE-Lab.を立ち上げた軌道力学ゼミ以来です．結構この団体では学部1，2年生が中心となるような学部レベルのゼミが多いですが，ぜひこのゼミは学部後半～修士の方にも参加して満足してもらえればと思います！（もちろん高校生・学部1/2年生大歓迎です 多分ついて来れる）',
+    status: 'in-progress',
+    url: 'https://image.gihyo.co.jp/assets/images/gdp/2022/978-4-297-13149-4.jpg',
+    span: '1日2章：６日間連続',
+    style: 'zoom',
+  },
+  {
     name: '宇宙ビジネスゼミ',
     description:
       '宇宙業界の魅力に感興を覚えた就活生やその他に向けたソリューション的なもの（webサイト、図鑑）になれば良いなと思っています。',
