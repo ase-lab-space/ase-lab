@@ -36,6 +36,15 @@ export interface ISeminar {
 
 export const seminars: ISeminar[] = [
   {
+    name: '航空宇宙機の飛行力学',
+    description:
+      '古典力学を駆使する業界では必須の知識で、就活の面接で「姿勢系について、難しいと思いますがどこで学んだんですか？」と聞かれました。知らなきゃ無理だろ思う分野だと思うので、面接で「ASE-Lab.で勉強しました」と言ってくれる人が出るのを目指そうと思っています。実際のプロジェクトの話とかをしながら、楽しくすすめていきます!',
+    status: 'wanted',
+    url: 'https://www.morikita.co.jp/storage/images/cvr/069122cvr.jpg',
+    span: '週1回',
+    style: 'zoom',
+  },
+  {
     name: '組み込みOSゼミ',
     description:
       'みなさん、CanSatやCubeSatに搭載するマイコンの上でOS動かしたくなる時、ありますよね？そんなあなたに、このゼミをお勧めします！ぜひ一緒にマイコン上で動くOSを作って行きましょー！「ラスパイPico」という比較的安価なマイコンでものづくりができるので、未経験者～有識者まで大歓迎です！',
@@ -48,7 +57,7 @@ export const seminars: ISeminar[] = [
     name: 'Linuxゼミ',
     description:
       '団体代表，阿部舞哉です！う見えて自分がゼミを企画するのはASE-Lab.を立ち上げた軌道力学ゼミ以来です．結構この団体では学部1，2年生が中心となるような学部レベルのゼミが多いですが，ぜひこのゼミは学部後半～修士の方にも参加して満足してもらえればと思います！（もちろん高校生・学部1/2年生大歓迎です 多分ついて来れる）',
-    status: 'in-progress',
+    status: 'finished',
     url: 'https://image.gihyo.co.jp/assets/images/gdp/2022/978-4-297-13149-4.jpg',
     span: '1日2章：６日間連続',
     style: 'zoom',
@@ -81,24 +90,6 @@ export const seminars: ISeminar[] = [
     style: 'zoom',
   },
   {
-    name: 'テンソル演習ゼミ',
-    description:
-      'テンソルはベクトルの概念の更に一般化したもので、解析力学･電磁気学･相対論を始めとする物理で使用します。将来相対性理論を扱う人、力学で急に説明をされず出てくる慣性モーメントテンソルに疑問を抱えてる人、リーマン幾何学に興味がある人、におすすめします！',
-    status: 'wanted',
-    url: 'https://www.iwanami.co.jp//images/book/265520.jpg',
-    span: '週１回',
-    style: 'zoom',
-  },
-  {
-    name: '線形代数ゼミ',
-    description:
-      '使用する教科書の問題を全部解けるようにします！一年生でまだ習ってなく先取りして予習したい方や復習したい方大歓迎です！工学系において重要な分野を共に学びませんか！',
-    status: 'wanted',
-    url: 'https://m.media-amazon.com/images/I/417t1C2QM3L._SY291_BO1,204,203,200_QL40_ML2_.jpg',
-    span: '週1回',
-    style: 'zoom',
-  },
-  {
     name: '惑星科学ゼミ',
     description:
       '大阪大学大学院で宇宙惑星科学を専攻しているのでみなさんにこの分野の面白さを伝えると同時に一緒にワークショップなどを通して惑星から考える宇宙について考えたいと思っています！',
@@ -111,7 +102,7 @@ export const seminars: ISeminar[] = [
     name: '宇宙論',
     description:
       '宇宙論ゼミでは宇宙を記述する数式を知ることで、宇宙とは何なのかどのような存在なのかを学ぶことができます。インフレーションやビッグバンなどの宇宙初期からダークマターやダークエネルギーなど現在の宇宙、更に将来の宇宙までを理論的に解き明かしていきます！現在の宇宙論は一般相対性理論が基本となっていますが今回は入門書を扱うので、一般相対性理論を理解していなくても、学部1年生からでも参加可能です！',
-    status: 'wanted',
+    status: 'in-progress',
     url: 'https://m.media-amazon.com/images/I/51Th42pBs4L._SY291_BO1,204,203,200_QL40_ML2_.jpg',
     span: '週1回',
     style: 'zoom',
