@@ -138,7 +138,7 @@ export const seminars: ISeminar[] = [
     name: '小型衛星(UNISON連携)',
     description:
       'あの話題の本です。ゲットしたので、どうせ読むなら輪読したらいいかなーと思ってます。',
-    status: 'in-progress',
+    status: 'finished',
     url: 'https://m.media-amazon.com/images/I/51ktoOozR-L._SX353_BO1,204,203,200_.jpg',
     span: '4月1日以降開始予定',
     style: 'zoom',
@@ -219,7 +219,7 @@ export const seminars: ISeminar[] = [
     name: $t('seminars.space-businesses.name'),
     description:
       '宇宙ビジネスに興味はあるが、自分で時間を作ってそれらを追うのは難しいという方も週に1度ゼミで時間をとって仲間とニュース記事を読みませんか？',
-    status: 'in-progress',
+    status: 'finished',
     url: 'https://pbs.twimg.com/media/FZKGoZ0UcAE7HRh?format=jpg&name=large',
     span: $t('seminars.space-businesses.span'),
     style: 'zoom',
