@@ -61,4 +61,11 @@ export const news: INews[] = [
     date: '2023.10.28',
     url: 'https://note.com/ase_lab_/n/n3c4b6983b07f',
   },
+  {
+    title:
+      '「ASE-Lab.オープンスクール STEAM-Sat&衛星データ解析体験会 -後編-」を公開しました。',
+    tag: 'note更新',
+    date: '2023.10.29',
+    url: 'https://note.com/ase_lab_/n/nd871348dc8aa',
+  },
 ];
