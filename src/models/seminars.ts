@@ -39,7 +39,7 @@ export const seminars: ISeminar[] = [
     name: '航空宇宙機の飛行力学',
     description:
       '古典力学を駆使する業界では必須の知識で、就活の面接で「姿勢系について、難しいと思いますがどこで学んだんですか？」と聞かれました。知らなきゃ無理だろ思う分野だと思うので、面接で「ASE-Lab.で勉強しました」と言ってくれる人が出るのを目指そうと思っています。実際のプロジェクトの話とかをしながら、楽しくすすめていきます!',
-    status: 'wanted',
+    status: 'in-progress',
     url: 'https://www.morikita.co.jp/storage/images/cvr/069122cvr.jpg',
     span: '週1回',
     style: 'zoom',
@@ -48,7 +48,7 @@ export const seminars: ISeminar[] = [
     name: '組み込みOSゼミ',
     description:
       'みなさん、CanSatやCubeSatに搭載するマイコンの上でOS動かしたくなる時、ありますよね？そんなあなたに、このゼミをお勧めします！ぜひ一緒にマイコン上で動くOSを作って行きましょー！「ラスパイPico」という比較的安価なマイコンでものづくりができるので、未経験者～有識者まで大歓迎です！',
-    status: 'wanted',
+    status: 'in-progress',
     url: 'https://interface.cqpub.co.jp/wp-content/uploads/MIF2020307-1088x1536.jpg',
     span: '週1回',
     style: 'zoom',
@@ -66,7 +66,7 @@ export const seminars: ISeminar[] = [
     name: '宇宙ビジネスゼミ',
     description:
       '宇宙業界の魅力に感興を覚えた就活生やその他に向けたソリューション的なもの（webサイト、図鑑）になれば良いなと思っています。',
-    status: 'wanted',
+    status: 'in-progress',
     url: 'https://m.media-amazon.com/images/I/41FMzu-YkEL._SX302_BO1,204,203,200_.jpg',
     span: '週１回',
     style: 'zoom',
@@ -75,7 +75,7 @@ export const seminars: ISeminar[] = [
     name: '宇宙工学入門ゼミ',
     description:
       '今回のゼミの狙いは、「宇宙工学の基礎知識を身につけること」です。宇宙分野に興味がある人で、何から学べばいいのか迷っている人、学部１、２年生で基礎知識を身につけたい人など、ぜひご参加ください。',
-    status: 'wanted',
+    status: 'in-progress',
     url: 'https://www.morikita.co.jp/storage/images/cvr/069071cvr.jpg',
     span: '週１回',
     style: 'zoom',
