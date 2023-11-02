@@ -128,7 +128,7 @@ export const articles: IArticleProps[] = [
     img: 'https://assets.st-note.com/production/uploads/images/120148919/rectangle_large_type_2_d1fe5db1bce2009132d41ba6b581015d.jpeg',
     title: 'STEAM-Sat&衛星データ解析体験会 -後編-',
     bodyDigest:
-      '今回実施したのは人工衛星の組立て・運用を体験するSTEAM-Sat開発体験会と，人工衛星から得られたデータを解析する衛星データ解析を前後編に分けて実施しました！...',
+      '解析に使うデータを送ってくれる人工衛星はたくさんあり、解析結果を何に利用したいかによってデータを選ぶ必要があります。そこでまずは人工衛星ごとに違う、「センサ」「高度」「観測幅」「回帰日数」「地上分解能」がどういうものかを説明しました。...',
     date: '2023/10/29',
     url: 'https://note.com/ase_lab_/n/nd871348dc8aa',
   },
