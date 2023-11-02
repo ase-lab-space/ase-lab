@@ -36,6 +36,15 @@ export interface ISeminar {
 
 export const seminars: ISeminar[] = [
   {
+    name: '宇宙建築学ゼミ',
+    description:
+      '現状の宇宙建築から将来の宇宙建築計画まで幅広く調査し学習します。場所や建築様式、宇宙環境、宇宙用材料などいくつかのテーマに分け、希望のテーマを1人or複数人が担当して調査→発表という形で進めます。',
+    status: 'wanted',
+    url: '/img/seminars/space-architecture.webp',
+    span: '2週に週1回',
+    style: 'zoom',
+  },
+  {
     name: '航空宇宙機の飛行力学',
     description:
       '古典力学を駆使する業界では必須の知識で、就活の面接で「姿勢系について、難しいと思いますがどこで学んだんですか？」と聞かれました。知らなきゃ無理だろ思う分野だと思うので、面接で「ASE-Lab.で勉強しました」と言ってくれる人が出るのを目指そうと思っています。実際のプロジェクトの話とかをしながら、楽しくすすめていきます!',
@@ -48,7 +57,7 @@ export const seminars: ISeminar[] = [
     name: '組み込みOSゼミ',
     description:
       'みなさん、CanSatやCubeSatに搭載するマイコンの上でOS動かしたくなる時、ありますよね？そんなあなたに、このゼミをお勧めします！ぜひ一緒にマイコン上で動くOSを作って行きましょー！「ラスパイPico」という比較的安価なマイコンでものづくりができるので、未経験者～有識者まで大歓迎です！',
-    status: 'in-progress',
+    status: 'wanted',
     url: 'https://interface.cqpub.co.jp/wp-content/uploads/MIF2020307-1088x1536.jpg',
     span: '週1回',
     style: 'zoom',
@@ -66,7 +75,7 @@ export const seminars: ISeminar[] = [
     name: '宇宙ビジネスゼミ',
     description:
       '宇宙業界の魅力に感興を覚えた就活生やその他に向けたソリューション的なもの（webサイト、図鑑）になれば良いなと思っています。',
-    status: 'in-progress',
+    status: 'wanted',
     url: 'https://m.media-amazon.com/images/I/41FMzu-YkEL._SX302_BO1,204,203,200_.jpg',
     span: '週１回',
     style: 'zoom',
