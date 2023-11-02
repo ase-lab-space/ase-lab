@@ -124,7 +124,7 @@ export const articles: IArticleProps[] = [
     date: '2023/10/28',
     url: 'https://note.com/ase_lab_/n/n3c4b6983b07f',
   },
-   {
+  {
     img: 'https://assets.st-note.com/production/uploads/images/120148919/rectangle_large_type_2_d1fe5db1bce2009132d41ba6b581015d.jpeg',
     title: 'STEAM-Sat&衛星データ解析体験会 -後編-',
     bodyDigest:
