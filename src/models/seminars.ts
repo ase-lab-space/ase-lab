@@ -36,10 +36,19 @@ export interface ISeminar {
 
 export const seminars: ISeminar[] = [
   {
+    name: '宇宙建築学ゼミ',
+    description:
+      '現状の宇宙建築から将来の宇宙建築計画まで幅広く調査し学習します。場所や建築様式、宇宙環境、宇宙用材料などいくつかのテーマに分け、希望のテーマを1人or複数人が担当して調査→発表という形で進めます。',
+    status: 'wanted',
+    url: '/img/seminars/space-architecture.webp',
+    span: '2週に週1回',
+    style: 'zoom',
+  },
+  {
     name: '航空宇宙機の飛行力学',
     description:
       '古典力学を駆使する業界では必須の知識で、就活の面接で「姿勢系について、難しいと思いますがどこで学んだんですか？」と聞かれました。知らなきゃ無理だろ思う分野だと思うので、面接で「ASE-Lab.で勉強しました」と言ってくれる人が出るのを目指そうと思っています。実際のプロジェクトの話とかをしながら、楽しくすすめていきます!',
-    status: 'wanted',
+    status: 'in-progress',
     url: 'https://www.morikita.co.jp/storage/images/cvr/069122cvr.jpg',
     span: '週1回',
     style: 'zoom',
@@ -75,7 +84,7 @@ export const seminars: ISeminar[] = [
     name: '宇宙工学入門ゼミ',
     description:
       '今回のゼミの狙いは、「宇宙工学の基礎知識を身につけること」です。宇宙分野に興味がある人で、何から学べばいいのか迷っている人、学部１、２年生で基礎知識を身につけたい人など、ぜひご参加ください。',
-    status: 'wanted',
+    status: 'in-progress',
     url: 'https://www.morikita.co.jp/storage/images/cvr/069071cvr.jpg',
     span: '週１回',
     style: 'zoom',
