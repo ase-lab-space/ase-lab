@@ -36,6 +36,15 @@ export interface ISeminar {
 
 export const seminars: ISeminar[] = [
   {
+    name: '制御MATLABゼミ',
+    description:
+      'これまでありそうで無かった、制御工学の分野のゼミです！学問としての制御工学を学ぶだけでなく、実用に向けてMATLABのスキルを習得することまでを目標とします。',
+    status: 'wanted',
+    url: 'https://www.tdupress.jp//images/book/349377.jpg',
+    span: '週1回',
+    style: 'zoom',
+  },
+  {
     name: '宇宙建築学ゼミ',
     description:
       '現状の宇宙建築から将来の宇宙建築計画まで幅広く調査し学習します。場所や建築様式、宇宙環境、宇宙用材料などいくつかのテーマに分け、希望のテーマを1人or複数人が担当して調査→発表という形で進めます。',
@@ -57,7 +66,7 @@ export const seminars: ISeminar[] = [
     name: '組み込みOSゼミ',
     description:
       'みなさん、CanSatやCubeSatに搭載するマイコンの上でOS動かしたくなる時、ありますよね？そんなあなたに、このゼミをお勧めします！ぜひ一緒にマイコン上で動くOSを作って行きましょー！「ラスパイPico」という比較的安価なマイコンでものづくりができるので、未経験者～有識者まで大歓迎です！',
-    status: 'wanted',
+    status: 'in-progress',
     url: 'https://interface.cqpub.co.jp/wp-content/uploads/MIF2020307-1088x1536.jpg',
     span: '週1回',
     style: 'zoom',
