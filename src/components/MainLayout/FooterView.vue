@@ -58,6 +58,6 @@
 .icon-x {
   padding-bottom: 8px;
   text-decoration: none;
-  color : #525252;
+  color: #525252;
 }
 </style>
