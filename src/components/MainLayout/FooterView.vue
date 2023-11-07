@@ -3,7 +3,7 @@
   <footer class="footer">
     <div class="row items-center justify-center q-gutter-md">
       <a href="https://twitter.com/ASE_lab_" target="_blank" class="icon">
-        <q-btn icon="mdi-twitter" flat round />
+        <q-btn icon="𝕏" flat round />
       </a>
 
       <a
