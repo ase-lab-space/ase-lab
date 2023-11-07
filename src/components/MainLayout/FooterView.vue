@@ -2,7 +2,7 @@
   <div class="hr" />
   <footer class="footer">
     <div class="row items-center justify-center q-gutter-md">
-      <a href="https://twitter.com/ASE_lab_" target="_blank" class="icon">
+      <a href="https://twitter.com/ASE_lab_" target="_blank" class="icon-x">
         <q-btn icon="𝕏" flat round />
       </a>
 
@@ -53,5 +53,11 @@
   height: 1px;
   width: 100%;
   background-color: #e7e7e7;
+}
+
+.icon-x {
+  padding-bottom: 8px;
+  text-decoration: none;
+  color : #525252;
 }
 </style>
