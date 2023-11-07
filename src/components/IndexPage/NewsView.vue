@@ -1,3 +1,10 @@
+<i18n lang="yaml">
+en:
+  label: View list →
+ja:
+  label: 一覧を見る →
+</i18n>
+
 <template>
   <section class="section-container">
     <div class="content-container column justify-between news-container">
@@ -33,19 +40,32 @@
         <div v-if="i !== news.length - 1" class="divider" />
       </div>
     </div>
+    <single-line-link
+          to="/news"
+          :label="t('label')"
+          class="single-line-link"
+    />
   </section>
 </template>
 
 <script>
 import { defineComponent } from 'vue';
+import SingleLineLink from '../Common/Button/SingleLineLink.vue';
 import { NEWS_TAG_COLOR, news, TAG } from 'src/models/news';
+import { useI18n } from 'vue-i18n';
 
 export default defineComponent({
+  components: {
+    SingleLineLink,
+  },
+
   setup() {
+    const { t } = useI18n();
     return {
       news,
       NEWS_TAG_COLOR,
       TAG,
+      t,
     };
   },
 });
@@ -114,5 +134,13 @@ export default defineComponent({
   height: 1px;
   width: 100%;
   margin: 7px 0;
+}
+
+.single-line-link {
+  margin-top: 10px;
+  margin-left: 910px;
+  @include mq(sm) {
+    display: none;
+  }
 }
 </style>
