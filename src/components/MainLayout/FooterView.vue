@@ -2,7 +2,7 @@
   <div class="hr" />
   <footer class="footer">
     <div class="row items-center justify-center q-gutter-md">
-      <a href="https://twitter.com/ASE_lab_" target="_blank" class="icon-x">
+      <a href="https://x.com/ASE_lab_" target="_blank" class="icon-x">
         <q-btn icon="𝕏" flat round />
       </a>
 
