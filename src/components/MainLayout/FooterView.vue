@@ -60,5 +60,4 @@
   text-decoration: none;
   color: #525252;
 }
-
 </style>
