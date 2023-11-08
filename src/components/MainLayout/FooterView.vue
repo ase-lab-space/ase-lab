@@ -55,9 +55,10 @@
   background-color: #e7e7e7;
 }
 
-.icon-x {
+.icon-x .q-btn {
   padding-bottom: 8px;
   text-decoration: none;
   color: #525252;
 }
+
 </style>
