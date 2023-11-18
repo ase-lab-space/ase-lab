@@ -84,7 +84,7 @@ export const seminars: ISeminar[] = [
     name: '宇宙ビジネスゼミ',
     description:
       '宇宙業界の魅力に感興を覚えた就活生やその他に向けたソリューション的なもの（webサイト、図鑑）になれば良いなと思っています。',
-    status: 'wanted',
+    status: 'in-progress',
     url: 'https://m.media-amazon.com/images/I/41FMzu-YkEL._SX302_BO1,204,203,200_.jpg',
     span: '週１回',
     style: 'zoom',
@@ -120,16 +120,16 @@ export const seminars: ISeminar[] = [
     name: '宇宙論',
     description:
       '宇宙論ゼミでは宇宙を記述する数式を知ることで、宇宙とは何なのかどのような存在なのかを学ぶことができます。インフレーションやビッグバンなどの宇宙初期からダークマターやダークエネルギーなど現在の宇宙、更に将来の宇宙までを理論的に解き明かしていきます！現在の宇宙論は一般相対性理論が基本となっていますが今回は入門書を扱うので、一般相対性理論を理解していなくても、学部1年生からでも参加可能です！',
-    status: 'in-progress',
+    status: 'wanted',
     url: 'https://m.media-amazon.com/images/I/51Th42pBs4L._SY291_BO1,204,203,200_QL40_ML2_.jpg',
-    span: '週1回',
+    span: '隔週金曜、22:00〜',
     style: 'zoom',
   },
   {
     name: 'ロケット工学入門ゼミ',
     description:
       'ロケットの原理を知ることを目的としています。ロケットのサークルに入っているけどロケットの仕組みがいまいちわかっていない方々！これを期に一緒に勉強しませんか？？',
-    status: 'in-progress',
+    status: 'finished',
     url: 'https://m.media-amazon.com/images/I/51MnhZoNYfL._SX342_BO1,204,203,200_.jpg',
     span: '2週に1回',
     style: 'zoom',
