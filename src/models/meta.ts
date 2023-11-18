@@ -1,4 +1,4 @@
-export const participantNumber = 242;
+export const participantNumber = 273;
 
 export const univs: readonly string[] = [
   '東京大学',
