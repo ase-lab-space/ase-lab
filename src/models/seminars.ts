@@ -36,6 +36,15 @@ export interface ISeminar {
 
 export const seminars: ISeminar[] = [
   {
+    name: '宇宙論',
+    description:
+      '宇宙論ゼミでは宇宙を記述する数式を知ることで、宇宙とは何なのかどのような存在なのかを学ぶことができます。インフレーションやビッグバンなどの宇宙初期からダークマターやダークエネルギーなど現在の宇宙、更に将来の宇宙までを理論的に解き明かしていきます！現在の宇宙論は一般相対性理論が基本となっていますが今回は入門書を扱うので、一般相対性理論を理解していなくても、学部1年生からでも参加可能です！',
+    status: 'wanted',
+    url: 'https://m.media-amazon.com/images/I/51Th42pBs4L._SY291_BO1,204,203,200_QL40_ML2_.jpg',
+    span: '週1回',
+    style: 'zoom',
+  },
+  {
     name: '航空宇宙機の飛行力学',
     description:
       '古典力学を駆使する業界では必須の知識で、就活の面接で「姿勢系について、難しいと思いますがどこで学んだんですか？」と聞かれました。知らなきゃ無理だろ思う分野だと思うので、面接で「ASE-Lab.で勉強しました」と言ってくれる人が出るのを目指そうと思っています。実際のプロジェクトの話とかをしながら、楽しくすすめていきます!',
@@ -66,7 +75,7 @@ export const seminars: ISeminar[] = [
     name: '宇宙ビジネスゼミ',
     description:
       '宇宙業界の魅力に感興を覚えた就活生やその他に向けたソリューション的なもの（webサイト、図鑑）になれば良いなと思っています。',
-    status: 'wanted',
+    status: 'in-progress',
     url: 'https://m.media-amazon.com/images/I/41FMzu-YkEL._SX302_BO1,204,203,200_.jpg',
     span: '週１回',
     style: 'zoom',
@@ -99,19 +108,10 @@ export const seminars: ISeminar[] = [
     style: 'zoom',
   },
   {
-    name: '宇宙論',
-    description:
-      '宇宙論ゼミでは宇宙を記述する数式を知ることで、宇宙とは何なのかどのような存在なのかを学ぶことができます。インフレーションやビッグバンなどの宇宙初期からダークマターやダークエネルギーなど現在の宇宙、更に将来の宇宙までを理論的に解き明かしていきます！現在の宇宙論は一般相対性理論が基本となっていますが今回は入門書を扱うので、一般相対性理論を理解していなくても、学部1年生からでも参加可能です！',
-    status: 'in-progress',
-    url: 'https://m.media-amazon.com/images/I/51Th42pBs4L._SY291_BO1,204,203,200_QL40_ML2_.jpg',
-    span: '週1回',
-    style: 'zoom',
-  },
-  {
     name: 'ロケット工学入門ゼミ',
     description:
       'ロケットの原理を知ることを目的としています。ロケットのサークルに入っているけどロケットの仕組みがいまいちわかっていない方々！これを期に一緒に勉強しませんか？？',
-    status: 'in-progress',
+    status: 'finished',
     url: 'https://m.media-amazon.com/images/I/51MnhZoNYfL._SX342_BO1,204,203,200_.jpg',
     span: '2週に1回',
     style: 'zoom',
