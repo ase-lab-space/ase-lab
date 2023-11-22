@@ -2,8 +2,8 @@
   <div class="hr" />
   <footer class="footer">
     <div class="row items-center justify-center q-gutter-md">
-      <a href="https://twitter.com/ASE_lab_" target="_blank" class="icon">
-        <q-btn icon="mdi-twitter" flat round />
+      <a href="https://x.com/ASE_lab_" target="_blank" class="icon-x">
+        <q-btn icon="𝕏" flat round class="q-btn__x-icon" />
       </a>
 
       <a
@@ -53,5 +53,11 @@
   height: 1px;
   width: 100%;
   background-color: #e7e7e7;
+}
+
+.icon-x .q-btn__x-icon {
+  padding-bottom: 8px;
+  text-decoration: none;
+  color: #525252;
 }
 </style>
