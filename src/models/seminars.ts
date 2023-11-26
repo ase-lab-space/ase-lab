@@ -36,6 +36,15 @@ export interface ISeminar {
 
 export const seminars: ISeminar[] = [
   {
+    name: '宇宙論',
+    description:
+      '宇宙論ゼミでは宇宙を記述する数式を知ることで、宇宙とは何なのかどのような存在なのかを学ぶことができます。インフレーションやビッグバンなどの宇宙初期からダークマターやダークエネルギーなど現在の宇宙、更に将来の宇宙までを理論的に解き明かしていきます！現在の宇宙論は一般相対性理論が基本となっていますが今回は入門書を扱うので、一般相対性理論を理解していなくても、学部1年生からでも参加可能です！',
+    status: 'wanted',
+    url: 'https://m.media-amazon.com/images/I/51Th42pBs4L._SY291_BO1,204,203,200_QL40_ML2_.jpg',
+    span: '2週に1解',
+    style: 'zoom',
+  },
+  {
     name: '制御MATLABゼミ',
     description:
       'これまでありそうで無かった、制御工学の分野のゼミです！学問としての制御工学を学ぶだけでなく、実用に向けてMATLABのスキルを習得することまでを目標とします。',
@@ -84,7 +93,7 @@ export const seminars: ISeminar[] = [
     name: '宇宙ビジネスゼミ',
     description:
       '宇宙業界の魅力に感興を覚えた就活生やその他に向けたソリューション的なもの（webサイト、図鑑）になれば良いなと思っています。',
-    status: 'wanted',
+    status: 'in-progress',
     url: 'https://m.media-amazon.com/images/I/41FMzu-YkEL._SX302_BO1,204,203,200_.jpg',
     span: '週１回',
     style: 'zoom',
@@ -117,19 +126,10 @@ export const seminars: ISeminar[] = [
     style: 'zoom',
   },
   {
-    name: '宇宙論',
-    description:
-      '宇宙論ゼミでは宇宙を記述する数式を知ることで、宇宙とは何なのかどのような存在なのかを学ぶことができます。インフレーションやビッグバンなどの宇宙初期からダークマターやダークエネルギーなど現在の宇宙、更に将来の宇宙までを理論的に解き明かしていきます！現在の宇宙論は一般相対性理論が基本となっていますが今回は入門書を扱うので、一般相対性理論を理解していなくても、学部1年生からでも参加可能です！',
-    status: 'in-progress',
-    url: 'https://m.media-amazon.com/images/I/51Th42pBs4L._SY291_BO1,204,203,200_QL40_ML2_.jpg',
-    span: '週1回',
-    style: 'zoom',
-  },
-  {
     name: 'ロケット工学入門ゼミ',
     description:
       'ロケットの原理を知ることを目的としています。ロケットのサークルに入っているけどロケットの仕組みがいまいちわかっていない方々！これを期に一緒に勉強しませんか？？',
-    status: 'in-progress',
+    status: 'finished',
     url: 'https://m.media-amazon.com/images/I/51MnhZoNYfL._SX342_BO1,204,203,200_.jpg',
     span: '2週に1回',
     style: 'zoom',
@@ -183,7 +183,7 @@ export const seminars: ISeminar[] = [
     name: '宇宙農業ゼミ',
     description:
       '「宇宙×農業」と言っても、そのアプローチ方法は様々あるかと思います。私自身全くの素人なので、同じような分野に興味のある皆さんと一緒に、業界への理解を深めつつ、将来的には何らかのプロジェクト創りにつなげていきたいなと思います！最初の1カ月は週1で情報交換や調査をし、今後の講演や活動について協議できればなと思います。科目の特性上あらゆる領域の知見が必要となるので、多くの方のご参加をお待ちしております！',
-    status: 'in-progress',
+    status: 'finished',
     url: 'https://innoplex.org/wp-content/uploads/2019/06/space-indoorfarming000353.jpg',
     span: '4月上～中旬',
     style: 'zoom',
