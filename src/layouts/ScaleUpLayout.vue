@@ -4,10 +4,18 @@
       <div class="date-analytices-top">
         <div class="header">
           <div class="logo-and-name">
-            <a href="https://www.ase-lab.space/?no-ovl=t" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.ase-lab.space/?no-ovl=t"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src="/img/logo.webp" alt="logo" />
             </a>
-            <a href="https://www.ase-lab.space/?no-ovl=t" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.ase-lab.space/?no-ovl=t"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <h1>ASE-Lab.</h1>
             </a>
           </div>

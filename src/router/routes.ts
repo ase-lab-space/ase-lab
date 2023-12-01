@@ -36,11 +36,11 @@ const routes: RouteRecordRaw[] = [
     component: () => import('layouts/ScaleUpLayout.vue'),
     children: [
       {
-      path: '',
-      component: () => import('pages/ScaleUp.vue'),
-      }
-    ]
-  }
+        path: '',
+        component: () => import('pages/ScaleUp.vue'),
+      },
+    ],
+  },
 ];
 
 export default routes;

@@ -62,6 +62,6 @@
 }
 
 .text-body2 {
-  color: #fffffF;
+  color: #ffffff;
 }
 </style>
