@@ -64,8 +64,9 @@ export default {
   padding-bottom: 100px;
 }
 
-
-.button1, .button2, .button3 {
+.button1,
+.button2,
+.button3 {
   font-size: 20px;
   padding: 15px 30px;
   color: #ffffff;
@@ -91,7 +92,7 @@ export default {
   }
 
   .title {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .subtitle {
@@ -104,12 +105,17 @@ export default {
 
   .button-container {
     padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; 
   }
 
-  .button1, .button2, .button3 {
-    font-size: 18px;
-    padding: 15px 30px;
+  .button1,
+  .button2,
+  .button3 {
+    font-size: 16px;
+    padding: 10px 20px;
   }
 }
-
 </style>

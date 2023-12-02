@@ -5,7 +5,7 @@
         <header class="row justify-between">
           <div class="logo-and-name">
             <router-link to="/?no-ovl=t">
-              <img src="/img/logo.webp" alt="logo" class="logo">
+              <img src="/img/logo.webp" alt="logo" class="logo" />
             </router-link>
             <h2 class="ase-lab-title">
               <router-link to="/?no-ovl=t">ASE-Lab.</router-link>
@@ -91,7 +91,7 @@ export default defineComponent({
 
 .ase-lab-title {
   font-family: $typography-title-font-family;
-  font-size: 5.0rem;
+  font-size: 5rem;
 
   a {
     text-decoration: none;
