@@ -72,6 +72,7 @@ export default {
   border-radius: 10px;
   text-decoration: none;
 }
+
 .button1 {
   background-color: #3498db;
 }
@@ -83,4 +84,32 @@ export default {
 .button3 {
   background-color: #9b59b6;
 }
+
+@media screen and (max-width: 768px) {
+  .text-container {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .subtitle {
+    font-size: 80px;
+  }
+
+  .message {
+    font-size: 20px;
+  }
+
+  .button-container {
+    padding-bottom: 20px;
+  }
+
+  .button1, .button2, .button3 {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
 </style>
