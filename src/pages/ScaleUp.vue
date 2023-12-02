@@ -91,11 +91,11 @@ export default {
   }
 
   .title {
-    font-size: 20px;
+    font-size: 10px;
   }
 
   .subtitle {
-    font-size: 80px;
+    font-size: 60px;
   }
 
   .message {
