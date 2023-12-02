@@ -92,7 +92,7 @@ export default {
   }
 
   .title {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .subtitle {
@@ -108,7 +108,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px; 
+    gap: 10px;
   }
 
   .button1,
