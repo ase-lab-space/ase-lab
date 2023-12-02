@@ -91,7 +91,7 @@ export default {
   }
 
   .title {
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .subtitle {
@@ -107,8 +107,8 @@ export default {
   }
 
   .button1, .button2, .button3 {
-    font-size: 16px;
-    padding: 10px 20px;
+    font-size: 18px;
+    padding: 15px 30px;
   }
 }
 
