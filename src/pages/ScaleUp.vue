@@ -1,6 +1,6 @@
 <template>
   <div class="date-analytices">
-    <div class="column items-center text-container">
+    <div class="column items-center justify-evenly text-container">
       <p class="title">ASE-Lab.の衛星データ解析コンテンツ</p>
       <p class="subtitle">Scale Up!</p>
       <p class="message">Webページ準備中！</p>
@@ -26,8 +26,8 @@
         class="button3"
         target="_blank"
         rel="noopener noreferrer"
-        >Mission 2</a
-      >
+        >Mission 2
+      </a>
     </div>
   </div>
 </template>
@@ -64,30 +64,23 @@ export default {
   padding-bottom: 100px;
 }
 
-.button1 {
+
+.button1, .button2, .button3 {
   font-size: 20px;
   padding: 15px 30px;
-  background-color: #3498db;
   color: #ffffff;
   border-radius: 10px;
   text-decoration: none;
+}
+.button1 {
+  background-color: #3498db;
 }
 
 .button2 {
-  font-size: 20px;
-  padding: 15px 30px;
   background-color: #2ecc71;
-  color: #ffffff;
-  border-radius: 10px;
-  text-decoration: none;
 }
 
 .button3 {
-  font-size: 20px;
-  padding: 15px 30px;
   background-color: #9b59b6;
-  color: #ffffff;
-  border-radius: 10px;
-  text-decoration: none;
 }
 </style>
