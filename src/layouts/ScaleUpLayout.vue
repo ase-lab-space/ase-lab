@@ -2,24 +2,16 @@
   <q-layout view="lHh Lpr lff">
     <q-page-container class="date-analytices-container">
       <div class="date-analytices-top">
-        <div class="header">
+        <header class="row justify-between">
           <div class="logo-and-name">
-            <a
-              href="https://www.ase-lab.space/?no-ovl=t"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="/img/logo.webp" alt="logo" />
-            </a>
-            <a
-              href="https://www.ase-lab.space/?no-ovl=t"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <h1>ASE-Lab.</h1>
-            </a>
+            <router-link to="/?no-ovl=t">
+              <img src="/img/logo.webp" alt="logo" class="logo">
+            </router-link>
+            <h2 class="ase-lab-title">
+              <router-link to="/?no-ovl=t">ASE-Lab.</router-link>
+            </h2>
           </div>
-        </div>
+        </header>
 
         <router-view v-slot="{ Component }">
           <transition mode="out-in">
@@ -90,20 +82,20 @@ export default defineComponent({
 .logo-and-name {
   display: flex;
   align-items: center;
+}
 
-  img {
-    width: 80px;
-    margin-right: 10px;
-  }
+.logo {
+  width: 80px;
+  margin-right: 10px;
+}
 
-  h1 {
-    font-family: 'Teko';
-    font-size: 6rem;
-    color: #ffffff;
-  }
+.ase-lab-title {
+  font-family: $typography-title-font-family;
+  font-size: 5.0rem;
+
   a {
     text-decoration: none;
-    color: inherit;
+    color: #ffffff;
   }
 }
 </style>
