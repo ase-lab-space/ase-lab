@@ -43,7 +43,6 @@ export default {
 
 .text-container {
   padding: 100px;
-  color: #ffffff;
 }
 
 .title {
@@ -59,6 +58,7 @@ export default {
 
 .message {
   font-size: 40px;
+  color: #ffffff;
 }
 .button-container {
   padding-bottom: 100px;
