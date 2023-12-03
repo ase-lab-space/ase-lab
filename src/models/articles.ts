@@ -11,7 +11,7 @@ export const articles: IArticleProps[] = [
   {
     img: '/img/laughing_max.webp',
     title: '【ASE-Lab.メンバーの声】 #1 〜東北大学 加藤数麻君 編〜',
-    bodyDigest: '海外や全国各地から宇宙好きメンバーが集うASE-Lab.。都内に拠点を置かない団体の活動に、メンバーは実際どのように参加しているのでしょうか・・・',
+    bodyDigest: $t('articles.person1.digest'),
     date: '2022/04/23',
     url: 'https://note.com/ase_lab_/n/nb899b1739d39',
   },
