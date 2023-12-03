@@ -10,36 +10,36 @@ export interface IArticleProps {
 export const articles: IArticleProps[] = [
   {
     img: '/img/laughing_max.webp',
-    title: $t('articles.person1.title'),
-    bodyDigest: $t('articles.person1.digest'),
+    title: '【ASE-Lab.メンバーの声】 #1 〜東北大学 加藤数麻君 編〜',
+    bodyDigest: '海外や全国各地から宇宙好きメンバーが集うASE-Lab.。都内に拠点を置かない団体の活動に、メンバーは実際どのように参加しているのでしょうか・・・',
     date: '2022/04/23',
     url: 'https://note.com/ase_lab_/n/nb899b1739d39',
   },
   {
     img: 'https://assets.st-note.com/production/uploads/images/80067536/rectangle_large_type_2_fe2fcccac357a2fbe53ca3aa8183e129.jpeg',
-    title: $t('articles.person2.title'),
-    bodyDigest: $t('articles.person2.digest'),
+    title: '【ASE-Lab.メンバーの声】 ＃2 〜国際教養大学 佐藤玲佳さん 編〜',
+    bodyDigest: 'メンバーインタビュー企画第二弾！今回は国際教養大学で学ぶ佐藤玲佳さんを取材してきました！！',
     date: '2022/06/05',
     url: 'https://note.com/ase_lab_/n/nd873fcb66048',
   },
   {
     img: 'https://assets.st-note.com/production/uploads/images/82287733/rectangle_large_type_2_0ff0e012818c4ca826bbd090d4f2355d.jpeg',
-    title: $t('articles.person3.title'),
-    bodyDigest: $t('articles.person3.digest'),
+    title: '【ASE-Lab.メンバーの声】 #3 〜トロント大学 神田芽生さん 編〜',
+    bodyDigest: 'メンバーインタビュー企画第三弾！今回は日本ではなくカナダ在住のメンバーでトロント大学に通われている神田芽生（かんだ　めい）さんを取材してきました！！',
     date: '2022/07/09',
     url: 'https://note.com/ase_lab_/n/nb85dc1be333f',
   },
   {
     img: 'https://assets.st-note.com/production/uploads/images/86050214/rectangle_large_type_2_bd20eea8c3cdf1920ae5fa8034f5e80a.jpeg',
-    title: $t('articles.person4.title'),
-    bodyDigest: $t('articles.person4.digest'),
+    title: '【ASE-Lab.メンバーの声】 ＃4 〜信州大学 瀬戸晴登君 編〜',
+    bodyDigest: 'メンバーインタビュー企画第四弾！今回は長野県のメンバーから声が届いていますよ！！',
     date: '2022/09/03',
     url: 'https://note.com/ase_lab_/n/n257e02a41d76',
   },
   {
     img: 'https://assets.st-note.com/production/uploads/images/91650285/rectangle_large_type_2_5bc8804c6cc339be7f0066147f95f3d1.png',
-    title: $t('articles.person5.title'),
-    bodyDigest: $t('articles.person5.digest'),
+    title: '【ASE-Lab.メンバーの声】 ＃5 〜弘前大学 安田伊吹君 編〜',
+    bodyDigest: 'メンバーインタビュー企画第五弾！今回は弘前大学で宇宙、災害、地球環境などについて幅広く学ぶ安田伊吹（やすだ いぶき）君に取材を行いました。',
     date: '2022/10/09',
     url: 'https://note.com/ase_lab_/n/n2f0c02416e3e',
   },
@@ -62,7 +62,7 @@ export const articles: IArticleProps[] = [
   },
   {
     img: 'https://assets.st-note.com/production/uploads/images/93835557/rectangle_large_type_2_715c2a5daefb1ee101653f678547b6a5.jpeg',
-    title: '〜地方メンバーの声　#6(塩田恭平君編)〜',
+    title: '【ASE-Lab.メンバーの声】 #7 〜九州大学 塩田恭平君 編〜',
     bodyDigest:
       '九州大学工学部の量子物理工学科[1]というところに所属してます、学部二年の塩田恭平と申します。大学で勉強していることについてですが、自分たちの大学は二年の後期から学科...',
     date: '2022/12/23',
@@ -94,7 +94,7 @@ export const articles: IArticleProps[] = [
   },
   {
     img: 'https://assets.st-note.com/production/uploads/images/101058499/rectangle_large_type_2_23ebd1d893c77efcacb8e47c69154b27.jpeg',
-    title: '〜地方メンバーの声　#7(山田琢登君編)〜',
+    title: '【ASE-Lab.メンバーの声】 #8 〜秋田大学 山田琢登君 編〜',
     bodyDigest:
       '去年の4月・5月頃はまだ大学が完全オンラインで、暇だなーというか何かできないかなーと思って、Twitterで色々探していて見つけたのがASE-Lab.でした。...',
     date: '2023/03/29',
@@ -102,7 +102,7 @@ export const articles: IArticleProps[] = [
   },
   {
     img: 'https://assets.st-note.com/production/uploads/images/104413143/rectangle_large_type_2_c4fc975856ac6d31d9abe8693408b30f.jpeg',
-    title: '〜海外メンバーの声　#2(垣内啓邦君編）〜',
+    title: '【ASE-Lab.メンバーの声】 #9 〜テキサスA&M大学 垣内啓邦君 編〜',
     bodyDigest:
       'Texas A&M大学の工学部１年生です。進振りのようなものが１年生の終わりにあるので、学科はまだ決定していないのですが、第１志望は航空宇宙工学科で第２志望は機械工学科です。...',
     date: '2023/05/06',
@@ -110,7 +110,7 @@ export const articles: IArticleProps[] = [
   },
   {
     img: 'https://assets.st-note.com/production/uploads/images/110534554/rectangle_large_type_2_ba2b07783f1ccc3c3b5ddce2bd93e276.jpeg',
-    title: '〜関東メンバーの声　#1(福地理史君編）〜',
+    title: '【ASE-Lab.メンバーの声】 #10 〜東京大学 福地理史君 編～',
     bodyDigest:
       '元々宇宙飛行士なりたい、宇宙エレベーター作りたいという形で宇宙に興味を持っていたのですが、それをやろうとしてる人は結構多いと気づきました。それとは別に並行して、スマート農業や植物工場など農業に関することにも興味がありました。...',
     date: '2023/07/26',
@@ -118,10 +118,18 @@ export const articles: IArticleProps[] = [
   },
   {
     img: 'https://assets.st-note.com/production/uploads/images/120147307/rectangle_large_type_2_124825c34dc93eb3c4ef1b65e571905f.jpeg',
-    title: 'STEAM-Sat&衛星データ解析体験会 -前編-',
+    title: 'ASE-Lab.オープンスクール STEAM-Sat&衛星データ解析体験会 -前編-',
     bodyDigest:
       '今回実施したのは人工衛星の組立て・運用を体験するSTEAM-Sat開発体験会と，人工衛星から得られたデータを解析する衛星データ解析を前後編に分けて実施しました！...',
     date: '2023/10/28',
     url: 'https://note.com/ase_lab_/n/n3c4b6983b07f',
+  },
+  {
+    img: 'https://assets.st-note.com/production/uploads/images/120148919/rectangle_large_type_2_d1fe5db1bce2009132d41ba6b581015d.jpeg',
+    title: 'ASE-Lab.オープンスクール STEAM-Sat&衛星データ解析体験会 -後編-',
+    bodyDigest:
+      '今回実施したのは人工衛星の組立て・運用を体験するSTEAM-Sat開発体験会と，人工衛星から得られたデータを解析する衛星データ解析を前後編に分けて実施しました！...',
+    date: '2023/10/28',
+    url: 'https://note.com/ase_lab_/n/nd871348dc8aa',
   },
 ];
