@@ -18,28 +18,32 @@ export const articles: IArticleProps[] = [
   {
     img: 'https://assets.st-note.com/production/uploads/images/80067536/rectangle_large_type_2_fe2fcccac357a2fbe53ca3aa8183e129.jpeg',
     title: '【ASE-Lab.メンバーの声】 ＃2 〜国際教養大学 佐藤玲佳さん 編〜',
-    bodyDigest: 'メンバーインタビュー企画第二弾！今回は国際教養大学で学ぶ佐藤玲佳さんを取材してきました！！',
+    bodyDigest:
+      'メンバーインタビュー企画第二弾！今回は国際教養大学で学ぶ佐藤玲佳さんを取材してきました！！',
     date: '2022/06/05',
     url: 'https://note.com/ase_lab_/n/nd873fcb66048',
   },
   {
     img: 'https://assets.st-note.com/production/uploads/images/82287733/rectangle_large_type_2_0ff0e012818c4ca826bbd090d4f2355d.jpeg',
     title: '【ASE-Lab.メンバーの声】 #3 〜トロント大学 神田芽生さん 編〜',
-    bodyDigest: 'メンバーインタビュー企画第三弾！今回は日本ではなくカナダ在住のメンバーでトロント大学に通われている神田芽生（かんだ　めい）さんを取材してきました！！',
+    bodyDigest:
+      'メンバーインタビュー企画第三弾！今回は日本ではなくカナダ在住のメンバーでトロント大学に通われている神田芽生（かんだ　めい）さんを取材してきました！！',
     date: '2022/07/09',
     url: 'https://note.com/ase_lab_/n/nb85dc1be333f',
   },
   {
     img: 'https://assets.st-note.com/production/uploads/images/86050214/rectangle_large_type_2_bd20eea8c3cdf1920ae5fa8034f5e80a.jpeg',
     title: '【ASE-Lab.メンバーの声】 ＃4 〜信州大学 瀬戸晴登君 編〜',
-    bodyDigest: 'メンバーインタビュー企画第四弾！今回は長野県のメンバーから声が届いていますよ！！',
+    bodyDigest:
+      'メンバーインタビュー企画第四弾！今回は長野県のメンバーから声が届いていますよ！！',
     date: '2022/09/03',
     url: 'https://note.com/ase_lab_/n/n257e02a41d76',
   },
   {
     img: 'https://assets.st-note.com/production/uploads/images/91650285/rectangle_large_type_2_5bc8804c6cc339be7f0066147f95f3d1.png',
     title: '【ASE-Lab.メンバーの声】 ＃5 〜弘前大学 安田伊吹君 編〜',
-    bodyDigest: 'メンバーインタビュー企画第五弾！今回は弘前大学で宇宙、災害、地球環境などについて幅広く学ぶ安田伊吹（やすだ いぶき）君に取材を行いました。',
+    bodyDigest:
+      'メンバーインタビュー企画第五弾！今回は弘前大学で宇宙、災害、地球環境などについて幅広く学ぶ安田伊吹（やすだ いぶき）君に取材を行いました。',
     date: '2022/10/09',
     url: 'https://note.com/ase_lab_/n/n2f0c02416e3e',
   },
