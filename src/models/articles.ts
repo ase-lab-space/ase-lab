@@ -45,7 +45,7 @@ export const articles: IArticleProps[] = [
   },
   {
     img: 'https://assets.st-note.com/production/uploads/images/90685888/rectangle_large_type_2_49767739b162c9a3458f0f084623e60d.jpeg',
-    title: '〜地方メンバーの声〜#5（濵田莉来さん編）〜',
+    title: '【ASE-Lab.メンバーの声】 #6 〜岐阜大学 濵田莉来さん 編〜',
     bodyDigest:
       '大学二年生の濵田莉来と申します。岐阜大学の工学部、電気電子・情報工学科、応用物理コースに通っています。理学と工学の中間みたいな内容を勉強していて、電気電子コースなので電気回路...',
     date: '2022/11/10',
@@ -118,7 +118,7 @@ export const articles: IArticleProps[] = [
   },
   {
     img: 'https://assets.st-note.com/production/uploads/images/120147307/rectangle_large_type_2_124825c34dc93eb3c4ef1b65e571905f.jpeg',
-    title: 'ASE-Lab.オープンスクール STEAM-Sat&衛星データ解析体験会 -前編-',
+    title: 'STEAM-Sat&衛星データ解析体験会 -前編-',
     bodyDigest:
       '今回実施したのは人工衛星の組立て・運用を体験するSTEAM-Sat開発体験会と，人工衛星から得られたデータを解析する衛星データ解析を前後編に分けて実施しました！...',
     date: '2023/10/28',
@@ -126,7 +126,7 @@ export const articles: IArticleProps[] = [
   },
   {
     img: 'https://assets.st-note.com/production/uploads/images/120148919/rectangle_large_type_2_d1fe5db1bce2009132d41ba6b581015d.jpeg',
-    title: 'ASE-Lab.オープンスクール STEAM-Sat&衛星データ解析体験会 -後編-',
+    title: 'STEAM-Sat&衛星データ解析体験会 -後編-',
     bodyDigest:
       '今回実施したのは人工衛星の組立て・運用を体験するSTEAM-Sat開発体験会と，人工衛星から得られたデータを解析する衛星データ解析を前後編に分けて実施しました！...',
     date: '2023/10/28',
