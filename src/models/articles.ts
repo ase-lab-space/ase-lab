@@ -129,7 +129,7 @@ export const articles: IArticleProps[] = [
     title: 'STEAM-Sat&衛星データ解析体験会 -後編-',
     bodyDigest:
       '今回実施したのは人工衛星の組立て・運用を体験するSTEAM-Sat開発体験会と，人工衛星から得られたデータを解析する衛星データ解析を前後編に分けて実施しました！...',
-    date: '2023/10/28',
+    date: '2023/10/29',
     url: 'https://note.com/ase_lab_/n/nd871348dc8aa',
   },
 ];
