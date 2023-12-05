@@ -45,7 +45,7 @@ export const articles: IArticleProps[] = [
   },
   {
     img: 'https://assets.st-note.com/production/uploads/images/90685888/rectangle_large_type_2_49767739b162c9a3458f0f084623e60d.jpeg',
-    title: '〜地方メンバーの声〜#5（濵田莉来さん編）〜',
+    title: '【ASE-Lab.メンバーの声】 #6 〜岐阜大学 濵田莉来さん 編〜',
     bodyDigest:
       '大学二年生の濵田莉来と申します。岐阜大学の工学部、電気電子・情報工学科、応用物理コースに通っています。理学と工学の中間みたいな内容を勉強していて、電気電子コースなので電気回路...',
     date: '2022/11/10',
@@ -62,7 +62,7 @@ export const articles: IArticleProps[] = [
   },
   {
     img: 'https://assets.st-note.com/production/uploads/images/93835557/rectangle_large_type_2_715c2a5daefb1ee101653f678547b6a5.jpeg',
-    title: '〜地方メンバーの声　#6(塩田恭平君編)〜',
+    title: '【ASE-Lab.メンバーの声】 #7 〜九州大学 塩田恭平君 編〜',
     bodyDigest:
       '九州大学工学部の量子物理工学科[1]というところに所属してます、学部二年の塩田恭平と申します。大学で勉強していることについてですが、自分たちの大学は二年の後期から学科...',
     date: '2022/12/23',
@@ -94,7 +94,7 @@ export const articles: IArticleProps[] = [
   },
   {
     img: 'https://assets.st-note.com/production/uploads/images/101058499/rectangle_large_type_2_23ebd1d893c77efcacb8e47c69154b27.jpeg',
-    title: '〜地方メンバーの声　#7(山田琢登君編)〜',
+    title: '【ASE-Lab.メンバーの声】 #8 〜秋田大学 山田琢登君 編〜',
     bodyDigest:
       '去年の4月・5月頃はまだ大学が完全オンラインで、暇だなーというか何かできないかなーと思って、Twitterで色々探していて見つけたのがASE-Lab.でした。...',
     date: '2023/03/29',
@@ -102,7 +102,7 @@ export const articles: IArticleProps[] = [
   },
   {
     img: 'https://assets.st-note.com/production/uploads/images/104413143/rectangle_large_type_2_c4fc975856ac6d31d9abe8693408b30f.jpeg',
-    title: '〜海外メンバーの声　#2(垣内啓邦君編）〜',
+    title: '【ASE-Lab.メンバーの声】 #9 〜テキサスA&M大学 垣内啓邦君 編〜',
     bodyDigest:
       'Texas A&M大学の工学部１年生です。進振りのようなものが１年生の終わりにあるので、学科はまだ決定していないのですが、第１志望は航空宇宙工学科で第２志望は機械工学科です。...',
     date: '2023/05/06',
@@ -110,7 +110,7 @@ export const articles: IArticleProps[] = [
   },
   {
     img: 'https://assets.st-note.com/production/uploads/images/110534554/rectangle_large_type_2_ba2b07783f1ccc3c3b5ddce2bd93e276.jpeg',
-    title: '〜関東メンバーの声　#1(福地理史君編）〜',
+    title: '【ASE-Lab.メンバーの声】 #10 〜東京大学 福地理史君 編～',
     bodyDigest:
       '元々宇宙飛行士なりたい、宇宙エレベーター作りたいという形で宇宙に興味を持っていたのですが、それをやろうとしてる人は結構多いと気づきました。それとは別に並行して、スマート農業や植物工場など農業に関することにも興味がありました。...',
     date: '2023/07/26',
@@ -128,7 +128,7 @@ export const articles: IArticleProps[] = [
     img: 'https://assets.st-note.com/production/uploads/images/120148919/rectangle_large_type_2_d1fe5db1bce2009132d41ba6b581015d.jpeg',
     title: 'STEAM-Sat&衛星データ解析体験会 -後編-',
     bodyDigest:
-      '解析に使うデータを送ってくれる人工衛星はたくさんあり、解析結果を何に利用したいかによってデータを選ぶ必要があります。そこでまずは人工衛星ごとに違う、「センサ」「高度」「観測幅」「回帰日数」「地上分解能」がどういうものかを説明しました。...',
+      '今回実施したのは人工衛星の組立て・運用を体験するSTEAM-Sat開発体験会と，人工衛星から得られたデータを解析する衛星データ解析を前後編に分けて実施しました！...',
     date: '2023/10/29',
     url: 'https://note.com/ase_lab_/n/nd871348dc8aa',
   },
