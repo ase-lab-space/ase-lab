@@ -41,7 +41,7 @@ export const seminars: ISeminar[] = [
       '宇宙論ゼミでは宇宙を記述する数式を知ることで、宇宙とは何なのかどのような存在なのかを学ぶことができます。インフレーションやビッグバンなどの宇宙初期からダークマターやダークエネルギーなど現在の宇宙、更に将来の宇宙までを理論的に解き明かしていきます！現在の宇宙論は一般相対性理論が基本となっていますが今回は入門書を扱うので、一般相対性理論を理解していなくても、学部1年生からでも参加可能です！',
     status: 'wanted',
     url: 'https://m.media-amazon.com/images/I/51Th42pBs4L._SY291_BO1,204,203,200_QL40_ML2_.jpg',
-    span: '2週に1解',
+    span: '隔週金曜日,22:00~',
     style: 'zoom',
   },
   {
@@ -285,15 +285,6 @@ export const seminars: ISeminar[] = [
     status: 'finished',
     url: 'https://images-na.ssl-images-amazon.com/images/I/41F1M118NXL._SX337_BO1,204,203,200_.jpg',
     span: $t('seminars.introduction-to-aerospace-engineering.span'),
-    style: 'zoom',
-  },
-  {
-    name: $t('seminars.image-processing-2nd.name'),
-    description:
-      '皆さんお待ちかね、画像処理ゼミ2周目です。楽しく勉強しましょう。',
-    status: 'in-preparation',
-    url: 'https://images-na.ssl-images-amazon.com/images/I/41FCF736uWL._SX352_BO1,204,203,200_.jpg',
-    span: $t('seminars.image-processing-2nd.span'),
     style: 'zoom',
   },
   {
