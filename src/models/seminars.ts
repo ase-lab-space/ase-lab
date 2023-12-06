@@ -288,15 +288,6 @@ export const seminars: ISeminar[] = [
     style: 'zoom',
   },
   {
-    name: $t('seminars.image-processing-2nd.name'),
-    description:
-      '皆さんお待ちかね、画像処理ゼミ2周目です。楽しく勉強しましょう。',
-    status: 'in-preparation',
-    url: 'https://images-na.ssl-images-amazon.com/images/I/41FCF736uWL._SX352_BO1,204,203,200_.jpg',
-    span: $t('seminars.image-processing-2nd.span'),
-    style: 'zoom',
-  },
-  {
     name: $t('seminars.astronomy.name'),
     description:
       '隔週ずつのゼミとなります。2週間の2コマのうち、チャンネルでのアンケートで関心が深い方の内容をピックアップしてお届けします。内容によってはディスカッションや調査などを行い、積極的な学びの場を作っていきたいと思っています。 まだゼミに参加できていないという方も予習なしで気楽に参加できるゼミとなっています！どうぞご参加ください！ ',
