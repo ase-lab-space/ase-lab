@@ -132,4 +132,12 @@ export const articles: IArticleProps[] = [
     date: '2023/10/29',
     url: 'https://note.com/ase_lab_/n/nd871348dc8aa',
   },
+  {
+    img: 'https://assets.st-note.com/production/uploads/images/124925429/rectangle_large_type_2_766d55544066e7fc2e378c822db95e59.jpeg',
+    title: '衛星データ解析ワークショップ　イベントレポート',
+    bodyDigest:
+      'このワークショップでは、衛星データ解析に必要な知識をクイズなどを通して学んだ後、実際の人工衛星のデータを使用しながら様々な解析を行っていただきました。',
+    date: '2023/12/18',
+    url: 'https://note.com/ase_lab_/n/n6c17eed303ef',
+  },
 ];
