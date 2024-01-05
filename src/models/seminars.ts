@@ -120,7 +120,7 @@ export const seminars: ISeminar[] = [
     name: '惑星科学ゼミ',
     description:
       '大阪大学大学院で宇宙惑星科学を専攻しているのでみなさんにこの分野の面白さを伝えると同時に一緒にワークショップなどを通して惑星から考える宇宙について考えたいと思っています！',
-    status: 'in-progress',
+    status: 'finished',
     url: 'https://m.media-amazon.com/images/I/41bWNtSZsYL._SY291_BO1,204,203,200_QL40_ML2_.jpg',
     span: '2週に1回',
     style: 'zoom',
