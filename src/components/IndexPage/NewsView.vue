@@ -39,35 +39,35 @@ ja:
 
         <div v-if="i !== news.length - 1" class="divider" />
       </div>
+      <div class="button-container">
+        <slide-in>
+          <double-line-link class="link" to="/news" :label="t('label')" />
+        </slide-in>
+      </div>
     </div>
-    <single-line-link
-          to="/news"
-          :label="t('label')"
-          class="single-line-link"
-    />
   </section>
 </template>
 
 <script>
 import { defineComponent } from 'vue';
-import SingleLineLink from '../Common/Button/SingleLineLink.vue';
+import DoubleLineLink from '../Common/Button/DoubleLineLink.vue';
 import { NEWS_TAG_COLOR, news, TAG } from 'src/models/news';
 import { useI18n } from 'vue-i18n';
 
 export default defineComponent({
   components: {
-    SingleLineLink,
+    DoubleLineLink,
   },
 
   setup() {
-    const { t } = useI18n();
-    return {
-      news,
-      NEWS_TAG_COLOR,
-      TAG,
-      t,
-    };
-  },
+      const { t } = useI18n();
+      return {
+        NEWS_TAG_COLOR,
+        TAG,
+        news: news.slice(0, 4),
+        t,
+      };
+    },
 });
 </script>
 
@@ -136,11 +136,8 @@ export default defineComponent({
   margin: 7px 0;
 }
 
-.single-line-link {
-  margin-top: 10px;
-  margin-left: 910px;
-  @include mq(sm) {
-    display: none;
-  }
+.button-container {
+  margin-left: auto;
+  margin-top: 30px;
 }
 </style>

@@ -2,60 +2,64 @@
 en:
   news: Here is a list of past News.
 ja:
-  news: 過去のNews一覧です。
+  news: 過去のお知らせ一覧です。
 </i18n>
 
 <template>
-  <q-page class="column items-center past-news-container">
+  <q-page class="column past-news-container">
     <page-title
-      title="News Back number"
+      title="NEWS"
       :description="t('news')"
       class="title-container"
     />
+
+    <div>
+      <slide-in
+        v-for="(item, i) in news"
+        :key="i"
+        class="row news-container"
+      >
+        <div class="date">
+          {{ item.date }}
+        </div>
+
+        <div class="tag">
+          <q-chip
+            :label="TAG[item.tag]"
+            size="sm"
+            text-color="white"
+            :color="NEWS_TAG_COLOR[item.tag]"
+          />
+        </div>
+
+        <div class="news-title">
+          <a v-if="item.url" :href="item.url" target="_blank">{{
+            item.title
+          }}</a>
+            <div v-else>
+              {{ item.title }}
+            </div>
+        </div>
+
+        <div v-if="i !== news.length - 1" class="divider" />
+      </slide-in>
+    </div>
   </q-page>
 
-  <div
-    v-for="(item, i) in news"
-    :key="i"
-    class="row justify-start news-container"
-  >
-    <div class="date">
-      {{ item.date }}
-    </div>
-
-    <div class="tag">
-      <q-chip
-        :label="TAG[item.tag]"
-        size="sm"
-        text-color="white"
-        :color="NEWS_TAG_COLOR[item,tag]"
-      />
-    </div>
-
-    <div class="news-title">
-      <a v-if="item.url" :href="item.url" target="_blank">{{
-        item.title
-      }}</a>
-        <div v-else>
-          {{ item.title }}
-        </div>
-    </div>
-
-    <div v-if="i !== news.length - 1" class="divider" />
-
-</div>
 
 </template>
 
 <script>
 import { defineComponent} from 'vue';
 import PageTitle from 'src/components/Common/PageTitle.vue';
+import SlideIn from 'src/components/Common/Transition/SlideIn.vue';
 import { NEWS_TAG_COLOR, news, TAG } from 'src/models/news';
 import { useI18n } from 'vue-i18n';
 
 export default defineComponent({
   components: {
-    PageTitle
+    PageTitle,
+    SlideIn
   },
 
   setup() {
@@ -74,9 +78,6 @@ export default defineComponent({
 // $
 @import 'assets/mq.scss';
 
-.past-content-container {
-  margin: 0 10px;
-}
 
 .news-container {
   margin: 10px;
@@ -86,9 +87,7 @@ export default defineComponent({
   margin-bottom: 60px;
 }
 
-.news-content {
-  margin: 0 10px;
-}
+
 
 .date {
   margin-right: 10px;
