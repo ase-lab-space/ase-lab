@@ -7,18 +7,10 @@ ja:
 
 <template>
   <q-page class="column past-news-container">
-    <page-title
-      title="NEWS"
-      :description="t('news')"
-      class="title-container"
-    />
+    <page-title title="NEWS" :description="t('news')" class="title-container" />
 
     <div>
-      <slide-in
-        v-for="(item, i) in news"
-        :key="i"
-        class="row news-container"
-      >
+      <slide-in v-for="(item, i) in news" :key="i" class="row news-container">
         <div class="date">
           {{ item.date }}
         </div>
@@ -36,21 +28,19 @@ ja:
           <a v-if="item.url" :href="item.url" target="_blank">{{
             item.title
           }}</a>
-            <div v-else>
-              {{ item.title }}
-            </div>
+          <div v-else>
+            {{ item.title }}
+          </div>
         </div>
 
         <div v-if="i !== news.length - 1" class="divider" />
       </slide-in>
     </div>
   </q-page>
-
-
 </template>
 
 <script>
-import { defineComponent} from 'vue';
+import { defineComponent } from 'vue';
 import PageTitle from 'src/components/Common/PageTitle.vue';
 import SlideIn from 'src/components/Common/Transition/SlideIn.vue';
 import { NEWS_TAG_COLOR, news, TAG } from 'src/models/news';
@@ -78,7 +68,6 @@ export default defineComponent({
 // $
 @import 'assets/mq.scss';
 
-
 .news-container {
   margin: 10px;
 }
@@ -86,8 +75,6 @@ export default defineComponent({
 .title-container {
   margin-bottom: 60px;
 }
-
-
 
 .date {
   margin-right: 10px;
@@ -126,5 +113,4 @@ export default defineComponent({
   width: 100%;
   margin: 7px 0;
 }
-
 </style>
