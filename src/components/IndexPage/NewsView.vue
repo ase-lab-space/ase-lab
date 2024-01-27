@@ -51,12 +51,14 @@ ja:
 <script>
 import { defineComponent } from 'vue';
 import DoubleLineLink from '../Common/Button/DoubleLineLink.vue';
+import SlideIn from '../Common/Transition/SlideIn.vue';
 import { NEWS_TAG_COLOR, news, TAG } from 'src/models/news';
 import { useI18n } from 'vue-i18n';
 
 export default defineComponent({
   components: {
     DoubleLineLink,
+    SlideIn,
   },
 
   setup() {
