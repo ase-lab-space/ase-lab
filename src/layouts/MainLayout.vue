@@ -70,6 +70,11 @@ export const links: ILink[] = [
     description: '私たちの活動',
   },
   {
+    text: 'News',
+    path: '/news',
+    description: '過去のNews',
+  },
+  {
     text: 'Articles',
     path: '/articles',
     description: '私たちの記事',

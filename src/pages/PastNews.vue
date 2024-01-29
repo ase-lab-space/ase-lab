@@ -1,20 +1,16 @@
 <i18n lang="yaml">
 en:
-  label: View list →
+  news: Here is a list of past News.
 ja:
-  label: 一覧を見る →
+  news: 過去のお知らせ一覧です。
 </i18n>
 
 <template>
-  <section class="section-container">
-    <div class="content-container column justify-between news-container">
-      <h2 class="section-title">News</h2>
+  <q-page class="column past-news-container">
+    <page-title title="NEWS" :description="t('news')" class="title-container" />
 
-      <div
-        v-for="(item, i) in news"
-        :key="i"
-        class="row justify-start news-content items-center"
-      >
+    <div>
+      <slide-in v-for="(item, i) in news" :key="i" class="row news-container">
         <div class="date">
           {{ item.date }}
         </div>
@@ -38,37 +34,30 @@ ja:
         </div>
 
         <div v-if="i !== news.length - 1" class="divider" />
-      </div>
-      <div class="button-container">
-        <slide-in>
-          <double-line-link class="link" to="/news" :label="t('label')" />
-        </slide-in>
-      </div>
+      </slide-in>
     </div>
-  </section>
+  </q-page>
 </template>
 
 <script>
 import { defineComponent } from 'vue';
-import DoubleLineLink from '../Common/Button/DoubleLineLink.vue';
-import SlideIn from '../Common/Transition/SlideIn.vue';
+import PageTitle from 'src/components/Common/PageTitle.vue';
+import SlideIn from 'src/components/Common/Transition/SlideIn.vue';
 import { NEWS_TAG_COLOR, news, TAG } from 'src/models/news';
 import { useI18n } from 'vue-i18n';
 
 export default defineComponent({
   components: {
-    DoubleLineLink,
+    PageTitle,
     SlideIn,
   },
 
   setup() {
     const { t } = useI18n();
     return {
+      news,
       NEWS_TAG_COLOR,
       TAG,
-      news: news
-        .sort((a, b) => new Date(b.date) - new Date(a.date))
-        .slice(0, 4),
       t,
     };
   },
@@ -79,27 +68,12 @@ export default defineComponent({
 // $
 @import 'assets/mq.scss';
 
-.content-container {
-  margin: 0 100px;
-
-  @include mq(md) {
-    margin: 0;
-  }
-}
-
 .news-container {
-  padding: 15px 30px 30px;
-  background-color: #f2ecff;
-  border-radius: 10px;
+  margin: 10px;
 }
 
-.section-title {
-  font-size: 1.2rem;
-  font-weight: 700;
-}
-
-.news-content {
-  margin: 0 10px;
+.title-container {
+  margin-bottom: 60px;
 }
 
 .date {
@@ -138,10 +112,5 @@ export default defineComponent({
   height: 1px;
   width: 100%;
   margin: 7px 0;
-}
-
-.button-container {
-  margin-left: auto;
-  margin-top: 30px;
 }
 </style>
