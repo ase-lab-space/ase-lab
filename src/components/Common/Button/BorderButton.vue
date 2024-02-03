@@ -30,24 +30,34 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .link {
-  display: inline-block;
   position: relative;
+  background-image: linear-gradient(
+    to right,
+    #4776e6 0%,
+    #8e54e9 50%,
+    #4776e6 100%
+  );
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
   text-decoration: none;
-  border: 1px solid $primary;
-  border-radius: 14px;
-  padding: 10px 32px;
-  overflow: hidden;
-  color: $primary;
-
-  transition: ease-out 0.3s;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: inline-block;
 
   &:hover {
-    background-color: #e6dcff;
+    background-position: right center;
+    box-shadow: 0 20px 5px -10px rgba(#000, 0.2);
+    transform: translateY(-3px);
   }
 }
 
 .link-text {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 700;
+  text-decoration: none;
 }
 </style>

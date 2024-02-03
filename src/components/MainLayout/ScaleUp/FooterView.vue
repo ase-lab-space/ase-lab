@@ -39,7 +39,7 @@
 <style lang="scss" scoped>
 .icon {
   text-decoration: none;
-  color: #525252;
+  color: #ffffff;
 }
 .footer {
   margin: 16px 0;
@@ -49,7 +49,7 @@
 }
 
 .hr {
-  margin: 160px 0 32px;
+  margin: 10px 0 32px;
   height: 1px;
   width: 100%;
   background-color: #e7e7e7;
@@ -58,6 +58,10 @@
 .icon-x .q-btn__x-icon {
   padding-bottom: 8px;
   text-decoration: none;
-  color: #525252;
+  color: #ffffff;
+}
+
+.text-body2 {
+  color: #ffffff;
 }
 </style>

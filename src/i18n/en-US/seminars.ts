@@ -7,7 +7,7 @@ export default {
   },
 
   cansat: {
-    name: 'Cansat Seminar',
+    name: 'CanSat Seminar',
     span: 'Early Sep. ~',
   },
   'introduction-to-electromagnetism': {

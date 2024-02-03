@@ -18,9 +18,9 @@ ja:
     <seminars-view class="seminars-view" />
     <articles-view />
     <border-button
-      to="https://docs.google.com/forms/d/1F3E-cEGQr9geMDtjl_xRRLTiMPqgbR5kOUU5-EBzW_I"
+      to="https://docs.google.com/forms/d/e/1FAIpQLSej-A3hZBeFTush1ZCb2uo4PyXELWvXFiqMKnOchCXNKkTobQ/viewform"
       :label="t('label')"
-      class="entry-button tilt-on-hover"
+      class="entry-button"
     />
   </q-page>
 </template>
