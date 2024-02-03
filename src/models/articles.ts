@@ -46,7 +46,7 @@ export const articles: IArticleProps[] = [
   {
     img: 'https://assets.st-note.com/production/uploads/images/90685888/rectangle_large_type_2_49767739b162c9a3458f0f084623e60d.jpeg',
     title: $t('articles.person6.title'),
-    bodyDigest: $t('articles.person5.digest'),
+    bodyDigest: $t('articles.person6.digest'),
     date: '2022/11/10',
     url: 'https://note.com/ase_lab_/n/nc83a6bb0a31d',
   },
@@ -62,7 +62,7 @@ export const articles: IArticleProps[] = [
   {
     img: 'https://assets.st-note.com/production/uploads/images/93835557/rectangle_large_type_2_715c2a5daefb1ee101653f678547b6a5.jpeg',
     title: $t('articles.person7.title'),
-    bodyDigest: $t('articles.person5.digest'),
+    bodyDigest: $t('articles.person7.digest'),
     date: '2022/12/23',
     url: 'https://note.com/ase_lab_/n/n5937a4acb783',
   },
@@ -93,21 +93,21 @@ export const articles: IArticleProps[] = [
   {
     img: 'https://assets.st-note.com/production/uploads/images/101058499/rectangle_large_type_2_23ebd1d893c77efcacb8e47c69154b27.jpeg',
     title: $t('articles.person8.title'),
-    bodyDigest: $t('articles.person5.digest'),
+    bodyDigest: $t('articles.person8.digest'),
     date: '2023/03/29',
     url: 'https://note.com/ase_lab_/n/n3ae9e0c96b65',
   },
   {
     img: 'https://assets.st-note.com/production/uploads/images/104413143/rectangle_large_type_2_c4fc975856ac6d31d9abe8693408b30f.jpeg',
     title: $t('articles.person9.title'),
-    bodyDigest: $t('articles.person5.digest'),
+    bodyDigest: $t('articles.person9.digest'),
     date: '2023/05/06',
     url: 'https://note.com/ase_lab_/n/n02e3528a80a0',
   },
   {
     img: 'https://assets.st-note.com/production/uploads/images/110534554/rectangle_large_type_2_ba2b07783f1ccc3c3b5ddce2bd93e276.jpeg',
     title: $t('articles.person10.title'),
-    bodyDigest: $t('articles.person5.digest'),
+    bodyDigest: $t('articles.person10.digest'),
     date: '2023/07/26',
     url: 'https://note.com/ase_lab_/n/nfce2bdb8aa57',
   },
