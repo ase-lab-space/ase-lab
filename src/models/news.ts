@@ -42,28 +42,25 @@ export const news: INews[] = [
     url: 'https://www.instagram.com/ase__lab/',
   },
   {
-    title: 'メンバー200名突破！',
+    title: $t('news.news4.title'),
     tag: 'お知らせ',
     date: '2023.07.09',
     url: 'https://twitter.com/ASE_lab_/status/1677996019756433411',
   },
   {
-    title:
-      '「～関東メンバーの声　福地 理史（ふくち さとし）君編～」を公開しました。',
+    title: $t('news.news5.title'),
     tag: 'note更新',
     date: '2023.07.26',
     url: 'https://note.com/ase_lab_/n/nfce2bdb8aa57',
   },
   {
-    title:
-      '「ASE-Lab.オープンスクール STEAM-Sat&衛星データ解析体験会 -前編-」を公開しました。',
+    title: $t('news.news6.title'),
     tag: 'note更新',
     date: '2023.10.28',
     url: 'https://note.com/ase_lab_/n/n3c4b6983b07f',
   },
   {
-    title:
-      '「ASE-Lab.オープンスクール STEAM-Sat&衛星データ解析体験会 -後編-」を公開しました。',
+    title: $t('news.news7.title'),
     tag: 'note更新',
     date: '2023.10.29',
     url: 'https://note.com/ase_lab_/n/nd871348dc8aa',

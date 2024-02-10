@@ -45,9 +45,8 @@ export const articles: IArticleProps[] = [
   },
   {
     img: 'https://assets.st-note.com/production/uploads/images/90685888/rectangle_large_type_2_49767739b162c9a3458f0f084623e60d.jpeg',
-    title: '【ASE-Lab.メンバーの声】 #6 〜岐阜大学 濵田莉来さん 編〜',
-    bodyDigest:
-      '大学二年生の濵田莉来と申します。岐阜大学の工学部、電気電子・情報工学科、応用物理コースに通っています。理学と工学の中間みたいな内容を勉強していて、電気電子コースなので電気回路...',
+    title: $t('articles.person6.title'),
+    bodyDigest: $t('articles.person5.digest'),
     date: '2022/11/10',
     url: 'https://note.com/ase_lab_/n/nc83a6bb0a31d',
   },
@@ -62,9 +61,8 @@ export const articles: IArticleProps[] = [
   },
   {
     img: 'https://assets.st-note.com/production/uploads/images/93835557/rectangle_large_type_2_715c2a5daefb1ee101653f678547b6a5.jpeg',
-    title: '【ASE-Lab.メンバーの声】 #7 〜九州大学 塩田恭平君 編〜',
-    bodyDigest:
-      '九州大学工学部の量子物理工学科[1]というところに所属してます、学部二年の塩田恭平と申します。大学で勉強していることについてですが、自分たちの大学は二年の後期から学科...',
+    title: $t('articles.person7.title'),
+    bodyDigest: $t('articles.person5.digest'),
     date: '2022/12/23',
     url: 'https://note.com/ase_lab_/n/n5937a4acb783',
   },
@@ -94,25 +92,22 @@ export const articles: IArticleProps[] = [
   },
   {
     img: 'https://assets.st-note.com/production/uploads/images/101058499/rectangle_large_type_2_23ebd1d893c77efcacb8e47c69154b27.jpeg',
-    title: '【ASE-Lab.メンバーの声】 #8 〜秋田大学 山田琢登君 編〜',
-    bodyDigest:
-      '去年の4月・5月頃はまだ大学が完全オンラインで、暇だなーというか何かできないかなーと思って、Twitterで色々探していて見つけたのがASE-Lab.でした。...',
+    title: $t('articles.person8.title'),
+    bodyDigest: $t('articles.person5.digest'),
     date: '2023/03/29',
     url: 'https://note.com/ase_lab_/n/n3ae9e0c96b65',
   },
   {
     img: 'https://assets.st-note.com/production/uploads/images/104413143/rectangle_large_type_2_c4fc975856ac6d31d9abe8693408b30f.jpeg',
-    title: '【ASE-Lab.メンバーの声】 #9 〜テキサスA&M大学 垣内啓邦君 編〜',
-    bodyDigest:
-      'Texas A&M大学の工学部１年生です。進振りのようなものが１年生の終わりにあるので、学科はまだ決定していないのですが、第１志望は航空宇宙工学科で第２志望は機械工学科です。...',
+    title: $t('articles.person9.title'),
+    bodyDigest: $t('articles.person5.digest'),
     date: '2023/05/06',
     url: 'https://note.com/ase_lab_/n/n02e3528a80a0',
   },
   {
     img: 'https://assets.st-note.com/production/uploads/images/110534554/rectangle_large_type_2_ba2b07783f1ccc3c3b5ddce2bd93e276.jpeg',
-    title: '【ASE-Lab.メンバーの声】 #10 〜東京大学 福地理史君 編～',
-    bodyDigest:
-      '元々宇宙飛行士なりたい、宇宙エレベーター作りたいという形で宇宙に興味を持っていたのですが、それをやろうとしてる人は結構多いと気づきました。それとは別に並行して、スマート農業や植物工場など農業に関することにも興味がありました。...',
+    title: $t('articles.person10.title'),
+    bodyDigest: $t('articles.person5.digest'),
     date: '2023/07/26',
     url: 'https://note.com/ase_lab_/n/nfce2bdb8aa57',
   },

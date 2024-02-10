@@ -12,20 +12,50 @@ export default {
   },
 
   person3: {
-    title: 'Voices from oversea members (Kanda Mei)',
+    title: 'Voices from members #3 (Kanda Mei)',
     digest:
       'Her interest mainly lies in particle physics, and already engages in the University’s physics experiments in detecting elementary particles.',
   },
 
   person4: {
-    title: 'Voices from members #3 (Seto Haruto)',
+    title: 'Voices from members #4 (Seto Haruto)',
     digest:
       'He has been the planner of the “Introduction to space engineering” seminar in the ASE-Lab. community. Although the seminar has already been finished, the members of the seminar have gone to the next level',
   },
 
   person5: {
-    title: 'Voices from members #4 (Yasuda Ibuki)',
+    title: 'Voices from members #5 (Yasuda Ibuki)',
     digest:
       'He talked in detail about the   advantage   he   gained   from   learning   broadly   in   his   major.   In   the   ASE-Lab. community, he founded the “ASE-talk” event which',
+  },
+
+  person6: {
+    title: 'Voices from members #6 (Riku Hamada)',
+    digest:
+      'My name is Riku Hamada, and I am a second-year university student. I am a student in Gifu University’s Faculty of Engineering, Department of Electrical, Electronic and Information Engineering, and Applied Physics Course. I’m studying something halfway between science and engineering, and since it’s an electrical and electronic course, it’s an electrical circuit...',
+  },
+
+  person7: {
+    title: 'Voices from members #7 (Kyohei Shiota)',
+    digest:
+      'My name is Kyohei Shiota, and I am a second-year undergraduate student in the Department of Quantum Physics and Engineering[1], Faculty of Engineering, Kyushu University. As for what I am studying at university, my university has been in the department since the second semester of the second year ...',
+  },
+
+  person8: {
+    title: 'Voices from members #8 (Takuto Yamada)',
+    digest:
+      'Around April and May of last year, the university was still completely online, and I thought that I had some free time, or that I could do something, so I searched for various things on Twitter and found ASE-Lab. ...',
+  },
+
+  person9: {
+    title: 'Voices from members #9 (Hirokuni Kakiuti)',
+    digest:
+      'I am a first-year engineering student at Texas A&M University. I haven’t decided on a major yet because I have something like a transition at the end of my first year, but my first choice is the Department of Aerospace Engineering and my second choice is the Department of Mechanical Engineering. ...',
+  },
+
+  person10: {
+    title: 'Voices from members #10 (Hukuti Satoshi)',
+    digest:
+      'Originally, I was interested in space in the form of wanting to be an astronaut and building a space elevator, but I realized that there are quite a lot of people who are trying to do that. Apart from that, I was also interested in agriculture-related things such as smart agriculture and plant factories. ...',
   },
 };
