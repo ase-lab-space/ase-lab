@@ -65,4 +65,10 @@ export const news: INews[] = [
     date: '2023.10.29',
     url: 'https://note.com/ase_lab_/n/nd871348dc8aa',
   },
+  {
+    title: '「衛星データ解析ワークショップ　イベントレポート」を公開しました。',
+    tag: 'note更新',
+    date: '2023.12.18',
+    url: 'https://note.com/ase_lab_/n/n6c17eed303ef',
+  },
 ];

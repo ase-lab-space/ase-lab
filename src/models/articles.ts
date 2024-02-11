@@ -46,7 +46,7 @@ export const articles: IArticleProps[] = [
   {
     img: 'https://assets.st-note.com/production/uploads/images/90685888/rectangle_large_type_2_49767739b162c9a3458f0f084623e60d.jpeg',
     title: $t('articles.person6.title'),
-    bodyDigest: $t('articles.person5.digest'),
+    bodyDigest: $t('articles.person6.digest'),
     date: '2022/11/10',
     url: 'https://note.com/ase_lab_/n/nc83a6bb0a31d',
   },
@@ -62,7 +62,7 @@ export const articles: IArticleProps[] = [
   {
     img: 'https://assets.st-note.com/production/uploads/images/93835557/rectangle_large_type_2_715c2a5daefb1ee101653f678547b6a5.jpeg',
     title: $t('articles.person7.title'),
-    bodyDigest: $t('articles.person5.digest'),
+    bodyDigest: $t('articles.person7.digest'),
     date: '2022/12/23',
     url: 'https://note.com/ase_lab_/n/n5937a4acb783',
   },
@@ -93,21 +93,21 @@ export const articles: IArticleProps[] = [
   {
     img: 'https://assets.st-note.com/production/uploads/images/101058499/rectangle_large_type_2_23ebd1d893c77efcacb8e47c69154b27.jpeg',
     title: $t('articles.person8.title'),
-    bodyDigest: $t('articles.person5.digest'),
+    bodyDigest: $t('articles.person8.digest'),
     date: '2023/03/29',
     url: 'https://note.com/ase_lab_/n/n3ae9e0c96b65',
   },
   {
     img: 'https://assets.st-note.com/production/uploads/images/104413143/rectangle_large_type_2_c4fc975856ac6d31d9abe8693408b30f.jpeg',
     title: $t('articles.person9.title'),
-    bodyDigest: $t('articles.person5.digest'),
+    bodyDigest: $t('articles.person9.digest'),
     date: '2023/05/06',
     url: 'https://note.com/ase_lab_/n/n02e3528a80a0',
   },
   {
     img: 'https://assets.st-note.com/production/uploads/images/110534554/rectangle_large_type_2_ba2b07783f1ccc3c3b5ddce2bd93e276.jpeg',
     title: $t('articles.person10.title'),
-    bodyDigest: $t('articles.person5.digest'),
+    bodyDigest: $t('articles.person10.digest'),
     date: '2023/07/26',
     url: 'https://note.com/ase_lab_/n/nfce2bdb8aa57',
   },
@@ -124,7 +124,15 @@ export const articles: IArticleProps[] = [
     title: 'STEAM-Sat&衛星データ解析体験会 -後編-',
     bodyDigest:
       '今回実施したのは人工衛星の組立て・運用を体験するSTEAM-Sat開発体験会と，人工衛星から得られたデータを解析する衛星データ解析を前後編に分けて実施しました！...',
-    date: '2023/10/28',
+    date: '2023/10/29',
     url: 'https://note.com/ase_lab_/n/nd871348dc8aa',
+  },
+  {
+    img: 'https://assets.st-note.com/production/uploads/images/124925429/rectangle_large_type_2_766d55544066e7fc2e378c822db95e59.jpeg',
+    title: '衛星データ解析ワークショップ　イベントレポート',
+    bodyDigest:
+      'このワークショップでは、衛星データ解析に必要な知識をクイズなどを通して学んだ後、実際の人工衛星のデータを使用しながら様々な解析を行っていただきました。',
+    date: '2023/12/18',
+    url: 'https://note.com/ase_lab_/n/n6c17eed303ef',
   },
 ];
