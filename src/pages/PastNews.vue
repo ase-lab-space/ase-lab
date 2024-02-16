@@ -10,7 +10,7 @@ ja:
     <page-title title="NEWS" :description="t('news')" class="title-container" />
 
     <div>
-      <slide-in v-for="(item, i) in news" :key="i" class="row news-container">
+      <slide-in v-for="(item, i) in sortedNews" :key="i" class="row news-container">
         <div class="date">
           {{ item.date }}
         </div>
@@ -33,7 +33,7 @@ ja:
           </div>
         </div>
 
-        <div v-if="i !== news.length - 1" class="divider" />
+        <div v-if="i !== sortedNews.length - 1" class="divider" />
       </slide-in>
     </div>
   </q-page>
@@ -55,13 +55,18 @@ export default defineComponent({
   setup() {
     const { t } = useI18n();
     return {
-      news: news.sort(
-        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-      ),
       NEWS_TAG_COLOR,
       TAG,
       t,
     };
+  },
+
+  computed: {
+    sortedNews() {
+      return [...news].sort(
+        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+      );
+    },
   },
 });
 </script>

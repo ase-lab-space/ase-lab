@@ -11,7 +11,7 @@ ja:
       <h2 class="section-title">News</h2>
 
       <div
-        v-for="(item, i) in news"
+        v-for="(item, i) in sortedNews"
         :key="i"
         class="row justify-start news-content items-center"
       >
@@ -37,7 +37,7 @@ ja:
           </div>
         </div>
 
-        <div v-if="i !== news.length - 1" class="divider" />
+        <div v-if="i !== sortedNews.length - 1" class="divider" />
       </div>
       <div class="button-container">
         <slide-in>
@@ -66,11 +66,16 @@ export default defineComponent({
     return {
       NEWS_TAG_COLOR,
       TAG,
-      news: news
-        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-        .slice(0, 4),
       t,
     };
+  },
+
+  computed: {
+    sortedNews() {
+      return [...news]
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+      .slice(0, 4);
+    },
   },
 });
 </script>
