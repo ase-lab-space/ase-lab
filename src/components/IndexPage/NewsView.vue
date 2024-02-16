@@ -73,8 +73,8 @@ export default defineComponent({
   computed: {
     sortedNews() {
       return [...news]
-      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-      .slice(0, 4);
+        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+        .slice(0, 4);
     },
   },
 });

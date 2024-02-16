@@ -10,7 +10,11 @@ ja:
     <page-title title="NEWS" :description="t('news')" class="title-container" />
 
     <div>
-      <slide-in v-for="(item, i) in sortedNews" :key="i" class="row news-container">
+      <slide-in
+        v-for="(item, i) in sortedNews"
+        :key="i"
+        class="row news-container"
+      >
         <div class="date">
           {{ item.date }}
         </div>
