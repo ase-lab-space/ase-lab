@@ -71,4 +71,10 @@ export const news: INews[] = [
     date: '2023.12.18',
     url: 'https://note.com/ase_lab_/n/n6c17eed303ef',
   },
+  {
+    title: $t('news.news9.title'),
+    tag: 'note更新',
+    date: '2024.1.22',
+    url: 'https://note.com/ase_lab_/n/n225ee1530dad',
+  },
 ];

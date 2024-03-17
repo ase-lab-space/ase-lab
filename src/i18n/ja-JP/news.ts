@@ -30,4 +30,9 @@ export default {
       '「ASE-Lab.オープンスクール STEAM-Sat&衛星データ解析体験会 -後編-」を公開しました。',
     tag: 'お知らせ',
   },
+  news9: {
+    title:
+      '「ASE-Lab.メンバーの声 #11 〜帝京大学 藤本翔太君 編～」を公開しました。',
+    tag: 'note更新',
+  },
 };

@@ -30,4 +30,9 @@ export default {
       '"ASE-Lab. Open School STEAM-Sat & Satellite Data Analysis Experience -Part 2-" has been released.',
     tag: 'Notice',
   },
+  news9: {
+    title:
+      '"~Member’s Voice: Hujimoto Shota’s" Edition~ has been released.',
+    tag: 'note更新',
+  },
 };
