@@ -31,8 +31,7 @@ export default {
     tag: 'Notice',
   },
   news9: {
-    title:
-      '"~Member’s Voice: Hujimoto Shota’s" Edition~ has been released.',
+    title: '"~Member’s Voice: Hujimoto Shota’s" Edition~ has been released.',
     tag: 'note更新',
   },
 };
