@@ -103,4 +103,10 @@ export default {
     digest:
       'In this workshop, the participants learned the knowledge necessary for satellite data analysis through quizzes and other activities. After that, they conducted various analyses using actual satellite data.',
   },
+
+  person12: {
+    title: 'Voices from members #10 (Hujimoto Shota)',
+    digest:
+      'My involvement with satellites started when I was in elementary school, when I saw the news of Hayabusas return and became interested in it. I learned that Hayabusas attitude control was amazing, and I wanted to try it myself.',
+  },
 };
