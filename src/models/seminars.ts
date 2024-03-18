@@ -36,21 +36,21 @@ export interface ISeminar {
 
 export const seminars: ISeminar[] = [
   {
-    //宇宙ビジネスゼミ
-    name: $t('seminars.seminar41.name'),
-    description: $t('seminars.seminar41.discription'),
-    status: 'in-progress',
-    url: 'img/seminars/misson-design.webp',
-    span: $t('seminars.seminar41.span'),
-    style: 'hybrid',
-  },
-  {
-    //ミッション設計ゼミ@アスキャン
+    //宇宙ビジネスゼミ@アスキャン
     name: $t('seminars.seminar42.name'),
     description: $t('seminars.seminar42.discription'),
     status: 'in-progress',
     url: 'img/seminars/space-business.webp',
     span: $t('seminars.seminar42.span'),
+    style: 'hybrid',
+  },
+  {
+    //ミッション設計ゼミ@アスキャン
+    name: $t('seminars.seminar41.name'),
+    description: $t('seminars.seminar41.discription'),
+    status: 'in-progress',
+    url: 'img/seminars/misson-design.webp',
+    span: $t('seminars.seminar41.span'),
     style: 'hybrid',
   },
   {
