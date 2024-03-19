@@ -129,7 +129,7 @@ export const seminars: ISeminar[] = [
     //宇宙ビジネスゼミ
     name: $t('seminars.seminar32.name'),
     description: $t('seminars.seminar32.discription'),
-    status: 'in-progress',
+    status: 'wanted',
     url: 'https://m.media-amazon.com/images/I/41FMzu-YkEL._SX302_BO1,204,203,200_.jpg',
     span: $t('seminars.seminar32.span'),
     style: 'zoom',
@@ -138,7 +138,7 @@ export const seminars: ISeminar[] = [
     //宇宙工学入門ゼミ
     name: $t('seminars.seminar31.name'),
     description: $t('seminars.seminar31.discription'),
-    status: 'wanted',
+    status: 'in-progress',
     url: 'https://www.morikita.co.jp/storage/images/cvr/069071cvr.jpg',
     span: $t('seminars.seminar31.span'),
     style: 'zoom',
@@ -147,7 +147,7 @@ export const seminars: ISeminar[] = [
     //電子工作入門ゼミ
     name: $t('seminars.seminar30.name'),
     description: $t('seminars.seminar30.discription'),
-    status: 'in-progress',
+    status: 'wanted',
     url: 'https://m.media-amazon.com/images/I/81rS30jtYuL._SX522_.jpg',
     span: $t('seminars.seminar30.span'),
     style: 'zoom',
