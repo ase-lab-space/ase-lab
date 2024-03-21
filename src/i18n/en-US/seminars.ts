@@ -6,8 +6,32 @@ export default {
     finished: 'Finished',
   },
 
+  seminar42: {
+    name: 'Space Business Seminar @ Astro Camp',
+    discription:
+      'Students will learn the basics of the space business and deepen their understanding of the space business through in-depth study of specific areas.',
+    span: 'Every other week',
+  },
+  seminar41: {
+    name: 'Misson Design Seminar @ Astro Camp',
+    discription:
+      'Students learn how missions are designed by reading books on space engineering, such as "Fundamentals of Mission Analysis and Trajectory Design," with reference to actual missions.',
+    span: '1-2 times a week',
+  },
+  seminar40: {
+    name: 'Automated Driving Seminar @ Astro Camp',
+    discription:
+      'Students will learn the theory and ROS fundamentals of automated driving technology, which is used in various industries including planetary exploration, and implement automated driving simulations using Autoware.',
+    span: 'Late February - Late March',
+  },
+  seminar39: {
+    name: 'Space Fluid Dynamics Seminar @ Astro Camp',
+    discription:
+      'In the Astro Camp, students are divided into teams to learn and deepen their understanding of different astronomical phenomena and other topics.',
+    span: '1-3 times a week',
+  },
   seminar38: {
-    name: 'cosmology',
+    name: 'Cosmology Seminar',
     discription:
       'In the cosmology seminar, you can learn what the universe is and what kind of existence it is by knowing the mathematical formulas that describe the universe. We will theoretically unravel the early universe such as inflation and the Big Bang, the current universe such as dark matter and dark energy, and the future universe! The current cosmology is based on general relativity, but this time we will be dealing with an introductory book, so even if you do not understand general relativity, you can participate even from the first year of undergraduate studies!',
     span: '1 time per week',
