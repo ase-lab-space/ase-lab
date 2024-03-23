@@ -36,13 +36,11 @@ export default {
     tag: 'note更新',
   },
   news10: {
-    title:
-      'ASE-Lab.は創設2周年を迎えました！',
+    title: 'ASE-Lab.は創設2周年を迎えました！',
     tag: 'お知らせ',
   },
   news11: {
-    title:
-      '対面イベント「アストロキャンプ」開催決定',
+    title: '対面イベント「アストロキャンプ」開催決定',
     tag: 'お知らせ',
   },
   news12: {

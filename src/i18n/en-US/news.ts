@@ -35,13 +35,11 @@ export default {
     tag: 'note更新',
   },
   news10: {
-    title:
-      'ASE-Lab. has reached its 2nd anniversary!',
+    title: 'ASE-Lab. has reached its 2nd anniversary!',
     tag: 'Notice',
   },
   news11: {
-    title:
-      'Face-to-face event "Astro Camp" has been decided to be held.',
+    title: 'Face-to-face event "Astro Camp" has been decided to be held.',
     tag: 'Notice',
   },
   news12: {
