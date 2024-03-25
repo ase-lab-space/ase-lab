@@ -7,25 +7,25 @@ export default {
   },
 
   seminar42: {
-    name: 'Space Business Seminar @ Astro Camp',
+    name: 'Space Business Seminar_Astro Camp',
     discription:
       'Students will learn the basics of the space business and deepen their understanding of the space business through in-depth study of specific areas.',
     span: 'Every other week',
   },
   seminar41: {
-    name: 'Misson Design Seminar @ Astro Camp',
+    name: 'Misson Design Seminar_Astro Camp',
     discription:
       'Students learn how missions are designed by reading books on space engineering, such as "Fundamentals of Mission Analysis and Trajectory Design," with reference to actual missions.',
     span: '1-2 times a week',
   },
   seminar40: {
-    name: 'Automated Driving Seminar @ Astro Camp',
+    name: 'Automated Driving Seminar_Astro Camp',
     discription:
       'Students will learn the theory and ROS fundamentals of automated driving technology, which is used in various industries including planetary exploration, and implement automated driving simulations using Autoware.',
     span: 'Late February - Late March',
   },
   seminar39: {
-    name: 'Space Fluid Dynamics Seminar @ Astro Camp',
+    name: 'Space Fluid Dynamics Seminar_Astro Camp',
     discription:
       'In the Astro Camp, students are divided into teams to learn and deepen their understanding of different astronomical phenomena and other topics.',
     span: '1-3 times a week',

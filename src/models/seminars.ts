@@ -226,7 +226,7 @@ export const seminars: ISeminar[] = [
   },
   {
     //宇宙飛行士を目指す会
-    name: $t('seminars.seminea21.name'),
+    name: $t('seminars.seminar21.name'),
     description: $t('seminars.seminar21.discription'),
     status: 'finished',
     url: '/img/seminars/astronaut-seminar.webp',
