@@ -34,4 +34,8 @@ export default {
     title: '"~Member’s Voice: Hujimoto Shota’s" Edition~ has been released.',
     tag: 'note更新',
   },
+  news10: {
+    title: 'ASE-Lab. celebrates its 2nd anniversary!',
+    tag: 'Notice',
+  },
 };
