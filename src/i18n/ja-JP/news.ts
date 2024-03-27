@@ -35,4 +35,8 @@ export default {
       '「ASE-Lab.メンバーの声 #11 〜帝京大学 藤本翔太君 編～」を公開しました。',
     tag: 'note更新',
   },
+  news10: {
+    title: 'ASE-Lab.は創立2周年を迎えました！',
+    tag: 'お知らせ',
+  },
 };
