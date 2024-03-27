@@ -36,8 +36,7 @@ export default {
     tag: 'note更新',
   },
   news10: {
-    title:
-      'ASE-Lab.は創立2周年を迎えました！',
+    title: 'ASE-Lab.は創立2周年を迎えました！',
     tag: 'お知らせ',
   },
 };
