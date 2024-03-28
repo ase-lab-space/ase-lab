@@ -5,7 +5,7 @@ export const TAG: {
   [key in NewsTagType]: string;
 } = {
   お知らせ: $t('news.news1.tag'),
-  note更新: 'note更新',
+  note更新: $t('news.news9.tag'),
 } as const;
 
 export const NEWS_TAG_COLOR: {
