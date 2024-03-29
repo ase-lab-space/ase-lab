@@ -67,7 +67,7 @@ export default defineComponent({
       NEWS_TAG_COLOR,
       TAG,
       news: news
-        .sort((a, b) => new Date(a.date) - new Date(b.date))
+        .sort((a, b) => new Date(b.date) - new Date(a.date).getTime())
         .slice(0, 4),
       t,
     };
