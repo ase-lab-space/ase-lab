@@ -18,21 +18,21 @@ export default {
   news5: {
     title:
       '"~Kanto Member’s Voice: Satoshi Fukuchi’s Edition~" has been released.',
-    tag: 'Notice',
+    tag: 'note Update',
   },
   news6: {
     title:
       '"ASE-Lab. Open School STEAM-Sat & Satellite Data Analysis Experience -Part 1-" has been released.',
-    tag: 'Notice',
+    tag: 'note Update',
   },
   news7: {
     title:
       '"ASE-Lab. Open School STEAM-Sat & Satellite Data Analysis Experience -Part 2-" has been released.',
-    tag: 'Notice',
+    tag: 'note Update',
   },
   news9: {
     title: '"~Member’s Voice: Hujimoto Shota’s" Edition~ has been released.',
-    tag: 'note更新',
+    tag: 'note Update',
   },
   news10: {
     title: 'ASE-Lab. celebrates its 2nd anniversary!',
