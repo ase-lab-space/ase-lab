@@ -55,7 +55,9 @@ export default defineComponent({
   setup() {
     const { t } = useI18n();
     return {
-      news: news.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()),
+      news: news.sort(
+        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+      ),
       NEWS_TAG_COLOR,
       TAG,
       t,
