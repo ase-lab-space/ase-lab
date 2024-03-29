@@ -71,8 +71,6 @@ export default defineComponent({
     return dateB - dateA;
     });
 
-    console.log(sortedNews);
-
     return {
       NEWS_TAG_COLOR,
       TAG,
