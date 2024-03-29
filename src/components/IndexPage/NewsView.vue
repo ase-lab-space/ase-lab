@@ -64,18 +64,17 @@ export default defineComponent({
   setup() {
     const { t } = useI18n();
     const sortedNews = news.sort((a, b) => {
-    const partsA = a.date.split('.').map(Number);
-    const partsB = b.date.split('.').map(Number);
-    const dateA = new Date(partsA[0], partsA[1] - 1, partsA[2]);
-    const dateB = new Date(partsB[0], partsB[1] - 1, partsB[2]);
-    return dateB - dateA;
+      const partsA = a.date.split('.').map(Number);
+      const partsB = b.date.split('.').map(Number);
+      const dateA = new Date(partsA[0], partsA[1] - 1, partsA[2]);
+      const dateB = new Date(partsB[0], partsB[1] - 1, partsB[2]);
+      return dateB - dateA;
     });
 
     return {
       NEWS_TAG_COLOR,
       TAG,
-      news: sortedNews
-        .slice(0, 4),
+      news: sortedNews.slice(0, 4),
       t,
     };
   },
