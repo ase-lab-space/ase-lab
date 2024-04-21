@@ -6,6 +6,18 @@ export default {
     finished: 'Finished',
   },
 
+  seminar44: {
+    name: 'Space plane, aircraft, and rocket introduction seminar',
+    discription:
+      'This is a very loose seminar where you will be asked to give a presentation about your favorite aerospace mission or aircraft! Please join us! Listeners are also welcome!',
+    span: 'Every other week',
+  },
+  seminar43: {
+    name: 'Space Resources Seminar',
+    discription:
+      'Space resources is a hot field right now, with many interesting topics in terms of both science and engineering. We are in the process of studying space resources from various perspectives according to the ',
+    span: '1 times a week',
+  },
   seminar42: {
     name: 'Space Business Seminar_Astro Camp',
     discription:
