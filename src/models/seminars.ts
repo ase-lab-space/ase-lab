@@ -36,10 +36,28 @@ export interface ISeminar {
 
 export const seminars: ISeminar[] = [
   {
+    //宇宙機・航空機・ロケットなんでも紹介ゼミ
+    name: $t('seminars.seminar44.name'),
+    description: $t('seminars.seminar44.discription'),
+    status: 'wanted',
+    url: 'img/seminars/syoukai.webp',
+    span: $t('seminars.seminar44.span'),
+    style: 'zoom',
+  },
+  {
+    //宇宙資源ゼミ
+    name: $t('seminars.seminar43.name'),
+    description: $t('seminars.seminar43.discription'),
+    status: 'wanted',
+    url: 'https://m.media-amazon.com/images/I/71-LPsliXWL._SY522_.jpg',
+    span: $t('seminars.seminar43.span'),
+    style: 'zoom',
+  },
+  {
     //宇宙ビジネスゼミ@アスキャン
     name: $t('seminars.seminar42.name'),
     description: $t('seminars.seminar42.discription'),
-    status: 'in-progress',
+    status: 'finished',
     url: 'img/seminars/space-business.webp',
     span: $t('seminars.seminar42.span'),
     style: 'hybrid',
@@ -48,7 +66,7 @@ export const seminars: ISeminar[] = [
     //ミッション設計ゼミ@アスキャン
     name: $t('seminars.seminar41.name'),
     description: $t('seminars.seminar41.discription'),
-    status: 'in-progress',
+    status: 'finished',
     url: 'img/seminars/misson-design.webp',
     span: $t('seminars.seminar41.span'),
     style: 'hybrid',
@@ -57,7 +75,7 @@ export const seminars: ISeminar[] = [
     //自動運転ゼミ
     name: $t('seminars.seminar40.name'),
     description: $t('seminars.seminar40.discription'),
-    status: 'in-progress',
+    status: 'finished',
     url: 'img/seminars/automatic-operation.webp',
     span: $t('seminars.seminar40.span'),
     style: 'hybrid',
@@ -66,7 +84,7 @@ export const seminars: ISeminar[] = [
     //宇宙流体力学
     name: $t('seminars.seminar39.name'),
     description: $t('seminars.seminar39.discription'),
-    status: 'in-progress',
+    status: 'finished',
     url: 'img/seminars/cosmological-fluid.webp',
     span: $t('seminars.seminar39.span'),
     style: 'hybrid',
@@ -75,7 +93,7 @@ export const seminars: ISeminar[] = [
     //宇宙論
     name: $t('seminars.seminar38.name'),
     description: $t('seminars.seminar38.discription'),
-    status: 'wanted',
+    status: 'in-progress',
     url: 'https://m.media-amazon.com/images/I/51Th42pBs4L._SY291_BO1,204,203,200_QL40_ML2_.jpg',
     span: $t('seminars.seminar38.span'),
     style: 'zoom',
@@ -93,7 +111,7 @@ export const seminars: ISeminar[] = [
     //宇宙建築学ゼミ
     name: $t('seminars.seminar36.name'),
     description: $t('seminars.seminar36.discription'),
-    status: 'wanted',
+    status: 'in-progress',
     url: '/img/seminars/space-architecture.webp',
     span: $t('seminars.seminar36.span'),
     style: 'zoom',
@@ -129,7 +147,7 @@ export const seminars: ISeminar[] = [
     //宇宙ビジネスゼミ
     name: $t('seminars.seminar32.name'),
     description: $t('seminars.seminar32.discription'),
-    status: 'wanted',
+    status: 'finished',
     url: 'https://m.media-amazon.com/images/I/41FMzu-YkEL._SX302_BO1,204,203,200_.jpg',
     span: $t('seminars.seminar32.span'),
     style: 'zoom',
@@ -138,7 +156,7 @@ export const seminars: ISeminar[] = [
     //宇宙工学入門ゼミ
     name: $t('seminars.seminar31.name'),
     description: $t('seminars.seminar31.discription'),
-    status: 'in-progress',
+    status: 'finished',
     url: 'https://www.morikita.co.jp/storage/images/cvr/069071cvr.jpg',
     span: $t('seminars.seminar31.span'),
     style: 'zoom',
@@ -147,7 +165,7 @@ export const seminars: ISeminar[] = [
     //電子工作入門ゼミ
     name: $t('seminars.seminar30.name'),
     description: $t('seminars.seminar30.discription'),
-    status: 'wanted',
+    status: 'in-progress',
     url: 'https://m.media-amazon.com/images/I/81rS30jtYuL._SX522_.jpg',
     span: $t('seminars.seminar30.span'),
     style: 'zoom',
