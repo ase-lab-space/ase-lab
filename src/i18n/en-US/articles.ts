@@ -105,8 +105,13 @@ export default {
   },
 
   person12: {
-    title: 'Voices from members #10 (Hujimoto Shota)',
+    title: 'Voices from members #11 (Hujimoto Shota)',
     digest:
       'My involvement with satellites started when I was in elementary school, when I saw the news of Hayabusas return and became interested in it. I learned that Hayabusas attitude control was amazing, and I wanted to try it myself.',
+  },
+  person13: {
+    title: 'Voices from members #12 (Ito Risa)',
+    digest:
+      'There I thought space was fun and that space was unknown, but I was impressed by the fact that humans could explore space by flying robots, and I wanted to study rovers, so I entered mechanical engineering.',
   },
 };

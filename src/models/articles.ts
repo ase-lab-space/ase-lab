@@ -134,4 +134,11 @@ export const articles: IArticleProps[] = [
     date: '2024/1/22',
     url: 'https://note.com/ase_lab_/n/n225ee1530dad',
   },
+  {
+    img: 'https://assets.st-note.com/production/uploads/images/136460344/rectangle_large_type_2_e1a9a2184acbe227761fb17e6f434a1f.png',
+    title: $t('articles.person13.title'),
+    bodyDigest: $t('articles.person13.digest'),
+    date: '2024/4/7',
+    url: 'https://note.com/ase_lab_/n/nc581787347b5',
+  },
 ];
