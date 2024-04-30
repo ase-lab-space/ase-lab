@@ -39,4 +39,9 @@ export default {
     title: 'ASE-Lab.は創立2周年を迎えました！',
     tag: 'お知らせ',
   },
+  news11: {
+    title:
+      '「ASE-Lab.メンバーの声 #12 〜慶應義塾大学 伊東 理紗さん 編～」を公開しました。',
+    tag: 'note更新',
+  },
 };

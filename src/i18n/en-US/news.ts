@@ -38,4 +38,8 @@ export default {
     title: 'ASE-Lab. celebrates its 2nd anniversary!',
     tag: 'Notice',
   },
+  news11: {
+    title: '"~Member’s Voice: Ito Risa’s" Edition~ has been released.',
+    tag: 'note Update',
+  },
 };
