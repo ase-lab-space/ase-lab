@@ -118,10 +118,10 @@ export default defineComponent({
       q,
       inProgressSeminars: seminars
         .filter((seminar) => seminar.status === 'in-progress')
-        .slice(0, 2),
+        .slice(0, 3),
       preparingSeminars: seminars
         .filter((seminar) => ['preparing', 'wanted'].includes(seminar.status))
-        .slice(0, 2),
+        .slice(0, 3),
       t,
     };
   },
