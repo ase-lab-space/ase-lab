@@ -36,6 +36,24 @@ export interface ISeminar {
 
 export const seminars: ISeminar[] = [
   {
+    //Autowareゼミ
+    name: $t('seminars.seminar46.name'),
+    description: $t('seminars.seminar46.discription'),
+    status: 'wanted',
+    url: 'https://www.morikita.co.jp/storage/images/cvr/067651cvr.jpg',
+    span: $t('seminars.seminar46.span'),
+    style: 'zoom',
+  },
+  {
+    //科目名   自動車 / ローバー(構造)ゼミ
+    name: $t('seminars.seminar45.name'),
+    description: $t('seminars.seminar45.discription'),
+    status: 'wanted',
+    url: 'https://www.tdupress.jp//images/book/349533.jpg',
+    span: $t('seminars.seminar45.span'),
+    style: 'zoom',
+  },
+  {
     //宇宙機・航空機・ロケットなんでも紹介ゼミ
     name: $t('seminars.seminar44.name'),
     description: $t('seminars.seminar44.discription'),
@@ -48,7 +66,7 @@ export const seminars: ISeminar[] = [
     //宇宙資源ゼミ
     name: $t('seminars.seminar43.name'),
     description: $t('seminars.seminar43.discription'),
-    status: 'wanted',
+    status: 'in-progress',
     url: 'https://m.media-amazon.com/images/I/71-LPsliXWL._SY522_.jpg',
     span: $t('seminars.seminar43.span'),
     style: 'zoom',

@@ -6,6 +6,18 @@ export default {
     finished: 'Finished',
   },
 
+  seminar46: {
+    name: 'Autoware Seminar',
+    discription:
+      'This is a study group to understand the principles of autonomous driving using Autoware! In the future, I am planning to set up a seminar to implement Autoware autonomous driving using ROS! Please join us if you want!',
+    span: '1 time a week',
+  },
+  seminar45: {
+    name: 'Automotive / Rover Seminar',
+    discription:
+      'This is a seminar on the mechanisms and structures of rovers and cars! This seminar focuses on the mechanical parts of cars and rovers from several educational materials! If you are interested, please join us!',
+    span: '1 time a week',
+  },
   seminar44: {
     name: 'Space plane, aircraft, and rocket introduction seminar',
     discription:
@@ -46,7 +58,7 @@ export default {
     name: 'Cosmology Seminar',
     discription:
       'In the cosmology seminar, you can learn what the universe is and what kind of existence it is by knowing the mathematical formulas that describe the universe. We will theoretically unravel the early universe such as inflation and the Big Bang, the current universe such as dark matter and dark energy, and the future universe! The current cosmology is based on general relativity, but this time we will be dealing with an introductory book, so even if you do not understand general relativity, you can participate even from the first year of undergraduate studies!',
-    span: '1 time per week',
+    span: '1 time a week',
   },
   seminar37: {
     name: 'Control Engineering MATLAB Seminar',
@@ -58,13 +70,13 @@ export default {
     name: 'Space Architecture Seminar',
     discription:
       'Students will investigate and learn a wide range of topics, from current space architecture to future space architecture plans. The program is divided into several themes, such as location, architectural style, space environment, and materials for space, and one or more people are in charge of researching → presenting the desired theme.',
-    span: '1 time per week',
+    span: '1 time a week',
   },
   seminar35: {
     name: 'Flight dynamics of aerospace vehicles',
     discription:
       'It is essential knowledge in an industry that makes full use of classical mechanics, and when I was interviewing for a job, I was asked, "I think it is difficult to learn about posture systems, but where did you learn about them?" I think it’s a field that I think it’s impossible to know if you don’t know about it, so I’m aiming for people to say, "I studied at ASE-Lab." in interviews. We will have fun talking about the actual project!',
-    span: '1 time per week',
+    span: '1 time a week',
   },
   seminar34: {
     name: 'Embedded OS Seminar',
