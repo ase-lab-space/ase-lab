@@ -6,6 +6,12 @@ export default {
     finished: 'Finished',
   },
 
+  seminar47: {
+    name: 'Introductory Seminar on Finite Element Method',
+    discription:
+      'This seminar focuses on FEM, which is used in the design of a wide range of products from satellites and rockets to familiar objects used in everyday life.',
+    span: 'Every other week',
+  },
   seminar46: {
     name: 'Autoware Seminar',
     discription:

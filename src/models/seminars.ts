@@ -36,6 +36,15 @@ export interface ISeminar {
 
 export const seminars: ISeminar[] = [
   {
+    //有限要素法入門ゼミ
+    name: $t('seminars.seminar47.name'),
+    description: $t('seminars.seminar47.discription'),
+    status: 'wanted',
+    url: 'https://m.media-amazon.com/images/I/51y33Gkn7zL._SY445_SX342_.jpg',
+    span: $t('seminars.seminar47.span'),
+    style: 'zoom',
+  },
+  {
     //Autowareゼミ
     name: $t('seminars.seminar46.name'),
     description: $t('seminars.seminar46.discription'),

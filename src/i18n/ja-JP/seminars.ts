@@ -6,6 +6,12 @@ export default {
     finished: '終了済',
   },
 
+  seminar47: {
+    name: '有限要素法入門ゼミ',
+    discription:
+      '衛星やロケットから日常生活で使う身近なものまで幅広く設計に使用されている有限要素法(FEM)に注目したゼミです！有限要素法の簡単な理論から商用ソフトAnsysの学生版を用いて解析まで行えたらと考えています！',
+    span: '隔週',
+  },
   seminar46: {
     name: 'Autowareゼミ',
     discription:
