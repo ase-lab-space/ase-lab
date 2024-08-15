@@ -89,4 +89,10 @@ export const news: INews[] = [
     date: '2024.04.07',
     url: 'https://note.com/ase_lab_/n/nc581787347b5',
   },
+  {
+    title: $t('news.news12.title'),
+    tag: 'お知らせ',
+    date: '2024.07.06',
+    url: 'https://aselabopen.peatix.com/view',
+  },
 ];
