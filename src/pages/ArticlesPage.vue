@@ -15,7 +15,7 @@ ja:
     <div class="row justify-center q-col-gutter-lg">
       <slide-in
         v-for="article in articles"
-        :key="article.title"
+        :key="article.id"
         :delay="delay"
         class="col-3 article-container"
       >
@@ -32,7 +32,10 @@ import PageTitle from 'src/components/Common/PageTitle.vue';
 import SlideIn from 'src/components/Common/Transition/SlideIn.vue';
 import ArticleCard from 'src/components/IndexPage/Article/ArticleCard.vue';
 import { sleep } from 'src/utils/PromiseUtil';
-import { articles } from 'src/models/articles';
+import {
+  ArticleProps,
+  MicroCMSRepository,
+} from 'src/repositories/microcms_repository';
 
 export default defineComponent({
   components: {
@@ -44,16 +47,24 @@ export default defineComponent({
   setup() {
     const delay = ref(500);
     const { t } = useI18n();
+    const articles = ref<ArticleProps[]>([]);
+    const microCMSRepository = new MicroCMSRepository();
 
     onMounted(async () => {
       await sleep(500);
       delay.value = 0;
     });
 
+    onMounted(async () => {
+      articles.value = await microCMSRepository.getArticles({
+        queries: {
+          orders: '-date',
+        },
+      });
+    });
+
     return {
-      articles: articles.sort(
-        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-      ),
+      articles,
       delay,
       t,
     };

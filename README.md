@@ -14,7 +14,6 @@ ASE-Lab. メンバーがこのリポジトリを使う用途としては，以�
 
 まず，GitHub 上で以下のいずれかのファイルを編集します．（ローカルで clone して push も可）
 
-- [articles.ts](https://github.com/ase-lab-space/ase-lab/blob/main/src/models/articles.ts)
 - [seminars.ts](https://github.com/ase-lab-space/ase-lab/blob/main/src/models/seminars.ts)
 - [meta.ts](https://github.com/ase-lab-space/ase-lab/blob/main/src/models/meta.ts)
 - [news.ts](https://github.com/ase-lab-space/ase-lab/blob/main/src/models/news.ts)
