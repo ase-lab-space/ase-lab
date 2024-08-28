@@ -76,6 +76,7 @@ import { useI18n } from 'vue-i18n';
 import { QForm, useQuasar } from 'quasar';
 import { SlackRepository } from 'src/repositories/slack_repository';
 import { EmailJSRepository } from 'src/repositories/emailjs_repository';
+import { GASRepository } from 'src/repositories/gas_repository';
 
 const STATUS_TYPE = {
   highSchool: 'teal',
@@ -88,7 +89,9 @@ export default defineComponent({
   setup() {
     const form = ref<QForm>();
     const q = useQuasar();
-    const { t } = useI18n();
+    const { t, locale } = useI18n();
+
+    console.log(locale.value);
 
     const name = ref('');
     const email = ref('');
@@ -131,11 +134,16 @@ export default defineComponent({
 
         const slackRepository = new SlackRepository();
         const emailjsRepository = new EmailJSRepository();
+        const gasRepository = new GASRepository();
 
         try {
           await Promise.all([
             slackRepository.notifyContactForm(params),
             emailjsRepository.notifyContactForm(params),
+            gasRepository.sendConfirmationEmail({
+              ...params,
+              locale: locale.value,
+            }),
           ]);
         } catch {
           q.notify(
