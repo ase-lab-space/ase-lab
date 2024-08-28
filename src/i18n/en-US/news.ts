@@ -42,4 +42,8 @@ export default {
     title: '"~Member’s Voice: Ito Risa’s" Edition~ has been released.',
     tag: 'note Update',
   },
+  news12: {
+    title: 'ASE-Lab. held the "Satellite Design Workshop".',
+    tag: 'Notice',
+  },
 };
