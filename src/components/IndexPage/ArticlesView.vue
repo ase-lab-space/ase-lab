@@ -24,7 +24,7 @@ ja:
         <div class="row no-wrap q-gutter-md">
           <article-card
             v-for="article in articles"
-            :key="article.title"
+            :key="article.id"
             :article="article"
           />
         </div>
@@ -34,12 +34,15 @@ ja:
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, onMounted, ref } from 'vue';
 import SingleLineLink from '../Common/Button/SingleLineLink.vue';
 import SlideIn from '../Common/Transition/SlideIn.vue';
 import ArticleCard from './Article/ArticleCard.vue';
-import { articles } from 'src/models/articles';
 import { useI18n } from 'vue-i18n';
+import {
+  ArticleProps,
+  MicroCMSRepository,
+} from 'src/repositories/microcms_repository';
 
 export default defineComponent({
   components: {
@@ -50,10 +53,18 @@ export default defineComponent({
 
   setup() {
     const { t } = useI18n();
+    const articles = ref<ArticleProps[]>([]);
+    const microCMSRepository = new MicroCMSRepository();
+
+    onMounted(async () => {
+      articles.value = await microCMSRepository.getArticles({
+        queries: {
+          orders: '-date',
+        },
+      });
+    });
     return {
-      articles: articles.sort(
-        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-      ),
+      articles,
       t,
     };
   },

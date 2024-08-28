@@ -1,50 +1,56 @@
 <template>
   <div
     class="card"
-    @click="openInNewTab(article.url)"
+    @click="openInNewTab(article.link)"
     @mouseover="img?.classList.add('img-hover')"
     @mouseleave="img?.classList.remove('img-hover')"
   >
     <img
       ref="img"
-      :src="article.img"
-      :alt="`${article.title}の写真`"
+      :src="article.img.url"
+      :alt="`${article.title.ja}の写真`"
       class="img-container"
     />
 
     <div class="title">
-      {{ article.title }}
+      {{ article.title[t.locale.value] }}
     </div>
 
     <div class="body-digest">
-      {{ article.bodyDigest }}
+      {{ article.bodyDigest[t.locale.value] }}
     </div>
 
     <div class="date">
-      {{ article.date }}
+      {{ format(parseISO(article.date), 'yyyy/MM/dd') }}
     </div>
   </div>
 </template>
 
 <script lang="ts">
+import { ArticleProps } from 'src/repositories/microcms_repository';
 import { defineComponent, PropType, ref } from 'vue';
-import { IArticleProps } from 'src/models/articles';
+import { useI18n } from 'vue-i18n';
+import { parseISO, format } from 'date-fns';
 
 export default defineComponent({
   props: {
     article: {
-      type: Object as PropType<IArticleProps>,
+      type: Object as PropType<ArticleProps>,
       required: true,
     },
   },
 
   setup() {
+    const t = useI18n();
     const img = ref<HTMLElement>();
     return {
+      t,
       img,
       openInNewTab(url: string) {
         window.open(url, '_blank')?.focus();
       },
+      parseISO,
+      format,
     };
   },
 });
