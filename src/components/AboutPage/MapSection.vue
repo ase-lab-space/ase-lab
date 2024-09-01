@@ -18,7 +18,7 @@
         </div>
       </slide-in>
       <slide-in :delay="500" class="univ-container row q-gutter-sm">
-        <div v-for="univ in univs" :key="univ" class="univ">
+        <div v-for="univ in univs.split('\n')" :key="univ" class="univ">
           {{ univ }}
         </div>
         <div>etc.</div>
@@ -31,7 +31,7 @@
 import { defineComponent, onMounted, ref } from 'vue';
 import anime from 'animejs';
 import SlideIn from '../Common/Transition/SlideIn.vue';
-import { participantNumber, univs } from 'src/models/meta';
+import { MicroCMSRepository } from 'src/repositories/microcms_repository';
 
 export default defineComponent({
   components: {
@@ -40,7 +40,13 @@ export default defineComponent({
 
   setup() {
     const num = ref({ value: 0 });
-    onMounted(() => {
+    const univs = ref<string>('');
+    const repository = new MicroCMSRepository();
+
+    onMounted(async () => {
+      const { participantNumber, univs: _univs } = await repository.getMeta();
+      univs.value = _univs;
+
       anime({
         targets: num.value,
         easing: 'easeOutExpo',
