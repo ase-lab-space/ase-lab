@@ -16,7 +16,6 @@ ASE-Lab. メンバーがこのリポジトリを使う用途としては，以�
 
 - [seminars.ts](https://github.com/ase-lab-space/ase-lab/blob/main/src/models/seminars.ts)
 - [meta.ts](https://github.com/ase-lab-space/ase-lab/blob/main/src/models/meta.ts)
-- [news.ts](https://github.com/ase-lab-space/ase-lab/blob/main/src/models/news.ts)
 
 右上の鉛筆マークをクリックすると，編集モードに入ることができます．
 
