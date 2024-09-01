@@ -13,7 +13,6 @@ ASE-Lab. メンバーがこのリポジトリを使う用途としては，以�
 まず，GitHub 上で以下のいずれかのファイルを編集します．（ローカルで clone して push も可）
 
 - [seminars.ts](https://github.com/ase-lab-space/ase-lab/blob/main/src/models/seminars.ts)
-- [news.ts](https://github.com/ase-lab-space/ase-lab/blob/main/src/models/news.ts)
 
 右上の鉛筆マークをクリックすると，編集モードに入ることができます．
 

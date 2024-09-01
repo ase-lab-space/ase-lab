@@ -16,24 +16,24 @@ ja:
         class="row justify-start news-content items-center"
       >
         <div class="date">
-          {{ item.date }}
+          {{ format(parseISO(item.date), 'yyyy.MM.dd') }}
         </div>
 
         <div class="tag">
           <q-chip
-            :label="TAG[item.tag]"
+            :label="TAG[item.tag[0]]"
             size="sm"
             text-color="white"
-            :color="NEWS_TAG_COLOR[item.tag]"
+            :color="NEWS_TAG_COLOR[item.tag[0]]"
           />
         </div>
 
         <div class="news-title">
           <a v-if="item.url" :href="item.url" target="_blank">{{
-            item.title
+            item.title[locale]
           }}</a>
           <div v-else>
-            {{ item.title }}
+            {{ item.title[locale] }}
           </div>
         </div>
 
@@ -48,12 +48,17 @@ ja:
   </section>
 </template>
 
-<script>
-import { defineComponent } from 'vue';
+<script lang="ts">
+import { defineComponent, onMounted, ref } from 'vue';
 import DoubleLineLink from '../Common/Button/DoubleLineLink.vue';
 import SlideIn from '../Common/Transition/SlideIn.vue';
-import { NEWS_TAG_COLOR, news, TAG } from 'src/models/news';
+import { NEWS_TAG_COLOR, TAG } from 'src/models/news';
+import {
+  MicroCMSRepository,
+  type NewsProps,
+} from 'src/repositories/microcms_repository';
 import { useI18n } from 'vue-i18n';
+import { format, parseISO } from 'date-fns';
 
 export default defineComponent({
   components: {
@@ -62,20 +67,27 @@ export default defineComponent({
   },
 
   setup() {
-    const { t } = useI18n();
-    const sortedNews = news.sort((a, b) => {
-      const partsA = a.date.split('.').map(Number);
-      const partsB = b.date.split('.').map(Number);
-      const dateA = new Date(partsA[0], partsA[1] - 1, partsA[2]);
-      const dateB = new Date(partsB[0], partsB[1] - 1, partsB[2]);
-      return dateB - dateA;
+    const { t, locale } = useI18n();
+    const news = ref<NewsProps[]>([]);
+    const microCMSRepository = new MicroCMSRepository();
+
+    onMounted(async () => {
+      news.value = await microCMSRepository.getNews({
+        queries: {
+          orders: '-date',
+          limit: 4,
+        },
+      });
     });
 
     return {
       NEWS_TAG_COLOR,
       TAG,
-      news: sortedNews.slice(0, 4),
+      news,
       t,
+      locale,
+      parseISO,
+      format,
     };
   },
 });
