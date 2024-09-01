@@ -2,6 +2,7 @@ import { BaseRepository } from './base_repository';
 import {
   MicroCMSImage,
   MicroCMSListContent,
+  MicroCMSObjectContent,
   MicroCMSQueries,
   createClient,
 } from 'microcms-js-sdk';
@@ -14,6 +15,13 @@ type MultilingualText = {
   en: string;
   [key: string]: string | undefined;
 };
+
+type Meta = {
+  participantNumber: number;
+  univs: string;
+};
+
+type MetaProps = Meta & MicroCMSObjectContent;
 
 type Article = {
   bodyDigest: MultilingualText;
@@ -33,6 +41,12 @@ export class MicroCMSRepository extends BaseRepository {
     this.#client = createClient({
       serviceDomain: 'ase-lab',
       apiKey,
+    });
+  }
+
+  async getMeta() {
+    return this.#client.getObject<Meta>({
+      endpoint: 'meta',
     });
   }
 

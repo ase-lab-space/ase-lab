@@ -6,8 +6,6 @@ ASE-Lab. メンバーがこのリポジトリを使う用途としては，以�
 
 1. 新しいゼミを追加しそれを表示させたい場合
 1. 既存のゼミの状態を変更し，それを website に反映させたい場合
-1. 新しい記事を追加したい場合
-1. 現在の参加人数や参加大学など，メタデータを編集したい場合
 1. Pull Request を通して website の体裁を調整したり新しいページを追加したい場合
 
 ## ゼミや記事，メタデータを追加・編集する方法
@@ -15,7 +13,6 @@ ASE-Lab. メンバーがこのリポジトリを使う用途としては，以�
 まず，GitHub 上で以下のいずれかのファイルを編集します．（ローカルで clone して push も可）
 
 - [seminars.ts](https://github.com/ase-lab-space/ase-lab/blob/main/src/models/seminars.ts)
-- [meta.ts](https://github.com/ase-lab-space/ase-lab/blob/main/src/models/meta.ts)
 - [news.ts](https://github.com/ase-lab-space/ase-lab/blob/main/src/models/news.ts)
 
 右上の鉛筆マークをクリックすると，編集モードに入ることができます．
