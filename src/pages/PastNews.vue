@@ -12,21 +12,21 @@ ja:
     <div>
       <slide-in v-for="(item, i) in news" :key="i" class="row news-container">
         <div class="date">
-          {{ item.date }}
+          {{ format(parseISO(item.date), 'yyyy/MM/dd') }}
         </div>
 
         <div class="tag">
           <q-chip
-            :label="TAG[item.tag]"
+            :label="TAG[item.tag[0]]"
             size="sm"
             text-color="white"
-            :color="NEWS_TAG_COLOR[item.tag]"
+            :color="NEWS_TAG_COLOR[item.tag[0]]"
           />
         </div>
 
         <div class="news-title">
           <a v-if="item.url" :href="item.url" target="_blank">{{
-            item.title
+            item.title[locale]
           }}</a>
           <div v-else>
             {{ item.title }}
@@ -39,12 +39,17 @@ ja:
   </q-page>
 </template>
 
-<script>
-import { defineComponent } from 'vue';
+<script lang="ts">
+import { defineComponent, onMounted, ref } from 'vue';
 import PageTitle from 'src/components/Common/PageTitle.vue';
 import SlideIn from 'src/components/Common/Transition/SlideIn.vue';
-import { NEWS_TAG_COLOR, news, TAG } from 'src/models/news';
+import { NEWS_TAG_COLOR, TAG } from 'src/models/news';
+import {
+  MicroCMSRepository,
+  type NewsProps,
+} from 'src/repositories/microcms_repository';
 import { useI18n } from 'vue-i18n';
+import { parseISO, format } from 'date-fns';
 
 export default defineComponent({
   components: {
@@ -53,20 +58,26 @@ export default defineComponent({
   },
 
   setup() {
-    const { t } = useI18n();
-    const sortedNews = news.sort((a, b) => {
-      const partsA = a.date.split('.').map(Number);
-      const partsB = b.date.split('.').map(Number);
-      const dateA = new Date(partsA[0], partsA[1] - 1, partsA[2]);
-      const dateB = new Date(partsB[0], partsB[1] - 1, partsB[2]);
-      return dateB - dateA;
+    const { t, locale } = useI18n();
+    const news = ref<NewsProps[]>([]);
+    const microCMSRepository = new MicroCMSRepository();
+
+    onMounted(async () => {
+      news.value = await microCMSRepository.getNews({
+        queries: {
+          orders: '-date',
+        },
+      });
     });
 
     return {
-      news: sortedNews,
+      news,
       NEWS_TAG_COLOR,
       TAG,
       t,
+      locale: locale.value,
+      parseISO,
+      format,
     };
   },
 });

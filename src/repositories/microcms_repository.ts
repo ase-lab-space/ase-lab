@@ -25,6 +25,16 @@ type Article = {
 
 export type ArticleProps = Article & MicroCMSListContent;
 
+export type NewsTagType = 'お知らせ' | 'note更新';
+type News = {
+  title: MultilingualText;
+  tag: NewsTagType[];
+  date: string; // "2022-04-22T15:00:00.000Z"
+  url?: string;
+};
+
+export type NewsProps = News & MicroCMSListContent;
+
 export class MicroCMSRepository extends BaseRepository {
   #client: ReturnType<typeof createClient>;
 
@@ -41,8 +51,31 @@ export class MicroCMSRepository extends BaseRepository {
       queries: undefined,
     }
   ) {
-    return this.#client.getAllContents<Article>({
-      endpoint: 'articles',
+    return this.getList<ArticleProps>('articles', queries);
+  }
+
+  async getNews(
+    { queries }: { queries: MicroCMSQueries | undefined } = {
+      queries: undefined,
+    }
+  ) {
+    return this.getList<NewsProps>('news', queries);
+  }
+
+  private async getList<T>(
+    endpoint: string,
+    queries: MicroCMSQueries | undefined
+  ) {
+    if (queries?.limit) {
+      return (
+        await this.#client.getList<T>({
+          endpoint,
+          queries,
+        })
+      ).contents;
+    }
+    return this.#client.getAllContents<T>({
+      endpoint,
       queries,
     });
   }
