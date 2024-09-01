@@ -2,7 +2,6 @@ import { BaseRepository } from './base_repository';
 import {
   MicroCMSImage,
   MicroCMSListContent,
-  MicroCMSObjectContent,
   MicroCMSQueries,
   createClient,
 } from 'microcms-js-sdk';
@@ -20,8 +19,6 @@ type Meta = {
   participantNumber: number;
   univs: string;
 };
-
-type MetaProps = Meta & MicroCMSObjectContent;
 
 type Article = {
   bodyDigest: MultilingualText;
