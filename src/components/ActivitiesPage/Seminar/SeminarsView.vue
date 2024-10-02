@@ -87,12 +87,12 @@ ja:
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent, onMounted, ref, computed } from 'vue';
 import HeadingView from '../HeadingView.vue';
 import SeminarCard from './SeminarCard.vue';
 import SlideIn from '../../Common/Transition/SlideIn.vue';
-import { seminars, ISeminar } from 'src/models/seminars';
 import SingleLineLink from '../../Common/Button/SingleLineLink.vue';
+import { MicroCMSRepository, type SeminarsProps } from 'src/repositories/microcms_repository';
 import { useI18n } from 'vue-i18n';
 
 export default defineComponent({
@@ -106,22 +106,37 @@ export default defineComponent({
   setup() {
     const showAllSeminars = ref(false);
     const { t } = useI18n();
+    const seminars = ref<SeminarsProps[]>([]);
+    const microCMSRepository = new MicroCMSRepository();
+
+    onMounted(async () => {
+      try {
+        const data = await microCMSRepository.getSeminars({
+          queries: {
+            orders: '-date',
+          },
+        });
+        seminars.value = data;
+      } catch (error) {
+        console.error('Error fetching seminars:', error);
+      }
+    });
+
+    const filteredSeminars = computed(() => {
+      if (showAllSeminars.value) {
+        return seminars.value;
+      }
+      return seminars.value.slice(0, 4);
+    });
 
     return {
-      seminars,
       showAllSeminars,
       t,
+      filteredSeminars,
     };
   },
-
-  computed: {
-    filteredSeminars(): ISeminar[] {
-      return this.showAllSeminars ? this.seminars : this.seminars.slice(0, 4);
-    },
-  },
-});
-</script>
-
+  });
+  </script>
 <style lang="scss" scoped>
 // $
 @import 'assets/mq.scss';

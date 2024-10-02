@@ -35,6 +35,20 @@ type News = {
 
 export type NewsProps = News & MicroCMSListContent;
 
+export type StatusType = '募集中' | '進行中' | '終了済み';
+export type StyleType =  'zoom' | 'hybrid' | 'face-to-face';
+type Seminars = {
+  name: MultilingualText;
+  description: MultilingualText;
+  img: MicroCMSImage;
+  span: MultilingualText;
+  status: StatusType[];
+  tags: StyleType[];
+  tagsData?: { text: string; color: string }[];
+}
+
+export type SeminarsProps = Seminars & MicroCMSListContent;
+
 export class MicroCMSRepository extends BaseRepository {
   #client: ReturnType<typeof createClient>;
 
@@ -60,6 +74,14 @@ export class MicroCMSRepository extends BaseRepository {
     }
   ) {
     return this.getList<NewsProps>('news', queries);
+  }
+
+  async getSeminars(
+    { queries }: { queries: MicroCMSQueries | undefined } = {
+      queries: undefined,
+    }
+  ) {
+    return this.getList<SeminarsProps>('seminars', queries);
   }
 
   private async getList<T>(

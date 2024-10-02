@@ -1,25 +1,29 @@
 <template>
-  <q-card class="seminar-card" @click="router.push('/activities')">
+  <q-card class="seminar-card" @click="navigateToActivities">
     <q-card-section class="row items-center">
       <div class="col-12">
         <div class="row items-end">
-          <h5 class="title">
-            {{ title }}
-          </h5>
+          <h5 class="title">{{ seminar.name[locale] }}</h5>
 
+          <!-- Spanのチップ -->
           <q-chip
-            v-for="tag in tags"
-            :key="tag.text"
-            :label="tag.text"
-            size="sm"
-            :color="tag.color === undefined ? '' : TAG_COLOR[tag.color]"
+            :label="seminar.span[locale]"
+            class="chip unified-chip"
+            :color="randomColor()" 
             text-color="white"
-          />
+          ></q-chip>
+
+          <!-- タグ（スタイル）のチップ -->
+          <q-chip
+            v-if="seminar.tags"
+            :label="getStyleLabel(seminar.tags)"
+            class="chip unified-chip"
+            :color="getStyleColor(seminar.tags)"
+            text-color="white"
+          ></q-chip>
         </div>
 
-        <div class="description">
-          {{ description }}
-        </div>
+        <div class="description">{{ seminar.description[locale] }}</div>
       </div>
     </q-card-section>
   </q-card>
@@ -27,45 +31,59 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from 'vue';
-import { useRouter } from 'vue-router';
-
-export interface ITag {
-  text: string;
-  color?: keyof typeof TAG_COLOR;
-}
-
-export const TAG_COLOR = {
-  green: 'green-14',
-  cyan: 'cyan-14',
-  orange: 'orange-14',
-  red: 'red-14',
-};
+import { SeminarsProps } from 'src/repositories/microcms_repository';
+import { useI18n } from 'vue-i18n';
+import { useRouter } from 'vue-router'; // useRouter をインポート
 
 export default defineComponent({
   props: {
-    title: {
-      type: String,
+    seminar: {
+      type: Object as PropType<SeminarsProps>,
       required: true,
-    },
-
-    description: {
-      type: String,
-      required: true,
-    },
-
-    tags: {
-      type: Array as PropType<ITag[]>,
-      required: false,
-      default() {
-        return [];
-      },
     },
   },
-
   setup() {
+    const { locale } = useI18n();
+    const router = useRouter(); // useRouter を使用して router を取得
+
+    // /activities ページに遷移するメソッド
+    const navigateToActivities = () => {
+      router.push('/activities');
+    };
+
+    // ランダムな色を生成
+    const randomColor = () => {
+      const colors = ['red', 'green', 'blue', 'orange', 'purple'];
+      return colors[Math.floor(Math.random() * colors.length)];
+    };
+
+    // スタイルに基づく色を取得
+    const getStyleColor = (style: string) => {
+      const styleColors: { [key: string]: string } = {
+        'zoom': 'red',
+        'hybrid': 'orange',
+        'face-to-face': 'green',
+      };
+      return styleColors[style] || 'grey';
+    };
+
+    // スタイルに基づくラベルを取得
+    const getStyleLabel = (tags: string[]) => {
+      const tag = tags[0];
+      const styleLabels: { [key: string]: string } = {
+        'zoom': 'Zoom',
+        'hybrid': 'Hybrid',
+        'face-to-face': '対面',
+      };
+      return styleLabels[tag] || tag;
+    };
+
     return {
-      router: useRouter(),
-      TAG_COLOR,
+      locale,
+      navigateToActivities, // ページ遷移用のメソッドを返す
+      randomColor,
+      getStyleColor,
+      getStyleLabel,
     };
   },
 });
@@ -93,17 +111,17 @@ export default defineComponent({
   margin-top: 8px;
   font-weight: 400;
   font-size: 0.8rem;
-  -webkit-line-clamp: 2;
   display: -webkit-box;
   overflow: hidden;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
 
-.icon {
-  transition: all 0.3s;
-}
-
-.icon-hovering {
-  transform: translateX(10px);
+.unified-chip {
+  font-size: 0.85rem;
+  padding: 4px 8px;
+  height: 20px;
+  display: flex;
+  align-items: center;
 }
 </style>

@@ -1,7 +1,6 @@
 export default {
   labels: {
     wanted: 'Wanted',
-    'in-preparation': 'In preparation',
     'in-progress': 'In progress',
     finished: 'Finished',
   },
