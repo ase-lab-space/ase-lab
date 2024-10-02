@@ -1,7 +1,7 @@
 import { StatusType, StyleType } from 'src/repositories/microcms_repository'; // こちらを正しい場所に修正
 
 export const STATUS: {
-  [key in StatusType]: { [locale: string]: string }
+  [key in StatusType]: { [locale: string]: string };
 } = {
   募集中: {
     ja: '募集中',

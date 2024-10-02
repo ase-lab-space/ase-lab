@@ -5,7 +5,11 @@
       :alt="`${seminar.name}の本`"
       class="q-mx-auto book-image"
     />
-    <div v-if="seminar.status[0]" class="badge shadow-18" :class="`badge-${seminar.status[0]}`">
+    <div
+      v-if="seminar.status[0]"
+      class="badge shadow-18"
+      :class="`badge-${seminar.status[0]}`"
+    >
       {{ STATUS[seminar.status[0]][locale] }}
     </div>
     <hr />

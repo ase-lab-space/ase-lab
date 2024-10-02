@@ -5,15 +5,14 @@
         <div class="row items-end">
           <h5 class="title">{{ seminar.name[locale] }}</h5>
 
-          <!-- Spanのチップ -->
+
           <q-chip
             :label="seminar.span[locale]"
             class="chip unified-chip"
-            :color="randomColor()" 
+            :color="randomColor()"
             text-color="white"
           ></q-chip>
 
-          <!-- タグ（スタイル）のチップ -->
           <q-chip
             v-if="seminar.tags"
             :label="getStyleLabel(seminar.tags)"
@@ -33,7 +32,7 @@
 import { defineComponent, PropType } from 'vue';
 import { SeminarsProps } from 'src/repositories/microcms_repository';
 import { useI18n } from 'vue-i18n';
-import { useRouter } from 'vue-router'; // useRouter をインポート
+import { useRouter } from 'vue-router';
 
 export default defineComponent({
   props: {
@@ -44,35 +43,34 @@ export default defineComponent({
   },
   setup() {
     const { locale } = useI18n();
-    const router = useRouter(); // useRouter を使用して router を取得
+    const router = useRouter(); 
 
-    // /activities ページに遷移するメソッド
+
     const navigateToActivities = () => {
       router.push('/activities');
     };
 
-    // ランダムな色を生成
     const randomColor = () => {
       const colors = ['red', 'green', 'blue', 'orange', 'purple'];
       return colors[Math.floor(Math.random() * colors.length)];
     };
 
-    // スタイルに基づく色を取得
+
     const getStyleColor = (style: string) => {
       const styleColors: { [key: string]: string } = {
-        'zoom': 'red',
-        'hybrid': 'orange',
+        zoom: 'red',
+        hybrid: 'orange',
         'face-to-face': 'green',
       };
       return styleColors[style] || 'grey';
     };
 
-    // スタイルに基づくラベルを取得
+ 
     const getStyleLabel = (tags: string[]) => {
       const tag = tags[0];
       const styleLabels: { [key: string]: string } = {
-        'zoom': 'Zoom',
-        'hybrid': 'Hybrid',
+        zoom: 'Zoom',
+        hybrid: 'Hybrid',
         'face-to-face': '対面',
       };
       return styleLabels[tag] || tag;
@@ -80,7 +78,7 @@ export default defineComponent({
 
     return {
       locale,
-      navigateToActivities, // ページ遷移用のメソッドを返す
+      navigateToActivities,
       randomColor,
       getStyleColor,
       getStyleLabel,

@@ -10,32 +10,37 @@ ja:
 </i18n>
 
 <template>
-  <section class="row section-container" :class="q.screen.gt.sm ? ['q-col-gutter-xl'] : []">
+  <section
+    class="row section-container"
+    :class="q.screen.gt.sm ? ['q-col-gutter-xl'] : []"
+  >
     <div class="col-xs-12 col-md-6 column">
       <div class="col row justify-between items-end section-title-container">
         <h4 class="section-title">{{ t('section-title1') }}</h4>
-        <single-line-link to="/activities" :label="t('label')" class="single-line-link" />
+        <single-line-link
+          to="/activities"
+          :label="t('label')"
+          class="single-line-link"
+        />
       </div>
 
       <slide-in v-for="seminar in inProgressSeminars" :key="seminar.id">
-        <seminar-card
-          class="seminar-card"
-          :seminar="seminar"
-        />
+        <seminar-card class="seminar-card" :seminar="seminar" />
       </slide-in>
     </div>
 
     <div class="col-xs-12 col-md-6 column justify-start preparing-container">
       <div class="col row justify-between items-end section-title-container">
         <h4 class="section-title">{{ t('section-title2') }}</h4>
-        <single-line-link to="/activities" :label="t('label')" class="single-line-link" />
+        <single-line-link
+          to="/activities"
+          :label="t('label')"
+          class="single-line-link"
+        />
       </div>
 
       <slide-in v-for="seminar in preparingSeminars" :key="seminar.id">
-        <seminar-card
-          class="seminar-card"
-          :seminar="seminar"
-        />
+        <seminar-card class="seminar-card" :seminar="seminar" />
       </slide-in>
     </div>
   </section>
@@ -48,7 +53,10 @@ import { useI18n } from 'vue-i18n';
 import SingleLineLink from '../Common/Button/SingleLineLink.vue';
 import SlideIn from '../Common/Transition/SlideIn.vue';
 import SeminarCard from './Seminar/SeminarCard.vue';
-import { MicroCMSRepository, SeminarsProps } from 'src/repositories/microcms_repository';
+import {
+  MicroCMSRepository,
+  SeminarsProps,
+} from 'src/repositories/microcms_repository';
 
 export default defineComponent({
   components: {
@@ -57,25 +65,25 @@ export default defineComponent({
     SlideIn,
   },
   setup() {
-  const q = useQuasar();
-  const { t, locale } = useI18n();
-  const microCMSRepository = new MicroCMSRepository();
-  const seminars = ref<SeminarsProps[]>([]);
-  const inProgressSeminars = ref<SeminarsProps[]>([]);
-  const preparingSeminars = ref<SeminarsProps[]>([]);
+    const q = useQuasar();
+    const { t, locale } = useI18n();
+    const microCMSRepository = new MicroCMSRepository();
+    const seminars = ref<SeminarsProps[]>([]);
+    const inProgressSeminars = ref<SeminarsProps[]>([]);
+    const preparingSeminars = ref<SeminarsProps[]>([]);
 
-  onMounted(async () => {
-  const data = await microCMSRepository.getSeminars();
-  seminars.value = data;
+    onMounted(async () => {
+      const data = await microCMSRepository.getSeminars();
+      seminars.value = data;
 
-  inProgressSeminars.value = seminars.value
-    .filter(seminar => seminar.status.includes('進行中'))
-    .slice(0, 4);
+      inProgressSeminars.value = seminars.value
+        .filter((seminar) => seminar.status.includes('進行中'))
+        .slice(0, 4);
 
-  preparingSeminars.value = seminars.value
-    .filter(seminar => seminar.status.includes('募集中'))
-    .slice(0, 4);
-});
+      preparingSeminars.value = seminars.value
+        .filter((seminar) => seminar.status.includes('募集中'))
+        .slice(0, 4);
+    });
 
     return {
       q,

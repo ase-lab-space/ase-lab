@@ -92,7 +92,10 @@ import HeadingView from '../HeadingView.vue';
 import SeminarCard from './SeminarCard.vue';
 import SlideIn from '../../Common/Transition/SlideIn.vue';
 import SingleLineLink from '../../Common/Button/SingleLineLink.vue';
-import { MicroCMSRepository, type SeminarsProps } from 'src/repositories/microcms_repository';
+import {
+  MicroCMSRepository,
+  type SeminarsProps,
+} from 'src/repositories/microcms_repository';
 import { useI18n } from 'vue-i18n';
 
 export default defineComponent({
@@ -135,8 +138,8 @@ export default defineComponent({
       filteredSeminars,
     };
   },
-  });
-  </script>
+});
+</script>
 <style lang="scss" scoped>
 // $
 @import 'assets/mq.scss';

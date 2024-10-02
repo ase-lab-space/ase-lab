@@ -36,7 +36,7 @@ type News = {
 export type NewsProps = News & MicroCMSListContent;
 
 export type StatusType = '募集中' | '進行中' | '終了済み';
-export type StyleType =  'zoom' | 'hybrid' | 'face-to-face';
+export type StyleType = 'zoom' | 'hybrid' | 'face-to-face';
 type Seminars = {
   name: MultilingualText;
   description: MultilingualText;
@@ -45,7 +45,7 @@ type Seminars = {
   status: StatusType[];
   tags: StyleType[];
   tagsData?: { text: string; color: string }[];
-}
+};
 
 export type SeminarsProps = Seminars & MicroCMSListContent;
 

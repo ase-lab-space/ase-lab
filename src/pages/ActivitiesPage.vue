@@ -35,13 +35,13 @@ export default defineComponent({
     const seminars = ref<SeminarsProps[]>([]);
     const microCMSRepository = new MicroCMSRepository();
 
-    onMounted(async () =>{
+    onMounted(async () => {
       seminars.value = await microCMSRepository.getSeminars({
         queries: {
           orders: '-date',
-        }
-      })
-    })
+        },
+      });
+    });
 
     return {
       t,
