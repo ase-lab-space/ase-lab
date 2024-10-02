@@ -5,7 +5,6 @@
         <div class="row items-end">
           <h5 class="title">{{ seminar.name[locale] }}</h5>
 
-
           <q-chip
             :label="seminar.span[locale]"
             class="chip unified-chip"
@@ -43,8 +42,7 @@ export default defineComponent({
   },
   setup() {
     const { locale } = useI18n();
-    const router = useRouter(); 
-
+    const router = useRouter();
 
     const navigateToActivities = () => {
       router.push('/activities');
@@ -55,7 +53,6 @@ export default defineComponent({
       return colors[Math.floor(Math.random() * colors.length)];
     };
 
-
     const getStyleColor = (style: string) => {
       const styleColors: { [key: string]: string } = {
         zoom: 'red',
@@ -65,7 +62,6 @@ export default defineComponent({
       return styleColors[style] || 'grey';
     };
 
- 
     const getStyleLabel = (tags: string[]) => {
       const tag = tags[0];
       const styleLabels: { [key: string]: string } = {
