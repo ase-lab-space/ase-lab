@@ -14,15 +14,11 @@ ja:
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref } from 'vue';
+import { defineComponent } from 'vue';
 import PageTitle from 'src/components/Common/PageTitle.vue';
 import SeminarsView from 'src/components/ActivitiesPage/Seminar/SeminarsView.vue';
 import AseTalkView from 'src/components/ActivitiesPage/AseTalk/AseTalkView.vue';
 import { useI18n } from 'vue-i18n';
-import {
-  MicroCMSRepository,
-  SeminarsProps,
-} from 'src/repositories/microcms_repository';
 
 export default defineComponent({
   components: {
@@ -32,20 +28,8 @@ export default defineComponent({
   },
   setup() {
     const { t } = useI18n();
-    const seminars = ref<SeminarsProps[]>([]);
-    const microCMSRepository = new MicroCMSRepository();
-
-    onMounted(async () => {
-      seminars.value = await microCMSRepository.getSeminars({
-        queries: {
-          orders: '-date',
-        },
-      });
-    });
-
     return {
       t,
-      seminars,
     };
   },
 });

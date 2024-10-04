@@ -40,7 +40,7 @@ export type StyleType = 'zoom' | 'hybrid' | 'face-to-face';
 type Seminars = {
   name: MultilingualText;
   description: MultilingualText;
-  img: MicroCMSImage;
+  image: MicroCMSImage;
   span: MultilingualText;
   status: StatusType[];
   tags: StyleType[];

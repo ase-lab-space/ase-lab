@@ -23,14 +23,15 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, PropType } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { STATUS, STATUS_COLOR } from 'src/models/seminars';
+import { STATUS } from 'src/models/seminars';
+import { SeminarsProps } from 'src/repositories/microcms_repository';
 
 export default defineComponent({
   props: {
     seminar: {
-      type: Object,
+      type: Object as PropType<SeminarsProps>,
       required: true,
     },
   },
@@ -38,7 +39,6 @@ export default defineComponent({
     const { locale } = useI18n();
     return {
       STATUS,
-      STATUS_COLOR,
       locale,
     };
   },
