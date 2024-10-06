@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "ASE-Lab. Home Page",
   "productName": "ASE-Lab. HP",
-  "author": "Hiroaki Honda <82698421+Damin3927@users.noreply.github.com>",
   "private": true,
   "scripts": {
     "dev": "quasar dev",
@@ -57,8 +56,5 @@
     "last 10 iOS versions",
     "last 5 Opera versions"
   ],
-  "engines": {
-    "node": ">= 18.12.1"
-  },
-  "packageManager": "yarn@3.3.0"
+  "packageManager": "yarn@4.5.0"
 }
