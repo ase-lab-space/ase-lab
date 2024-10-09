@@ -2,7 +2,7 @@
 en:
   section-title1: Seminars in progress
   section-title2: Seminars in preparation
-  label: Show more seminars  →
+  label: Show more seminars →
 ja:
   section-title1: 実施中のゼミ
   section-title2: 企画中のゼミ
@@ -17,7 +17,6 @@ ja:
     <div class="col-xs-12 col-md-6 column">
       <div class="col row justify-between items-end section-title-container">
         <h4 class="section-title">{{ t('section-title1') }}</h4>
-
         <single-line-link
           to="/activities"
           :label="t('label')"
@@ -25,20 +24,14 @@ ja:
         />
       </div>
 
-      <slide-in v-for="seminar in inProgressSeminars" :key="seminar.title">
-        <seminar-card
-          class="seminar-card"
-          :title="seminar.title"
-          :description="seminar.description"
-          :tags="seminar.tags"
-        />
+      <slide-in v-for="seminar in inProgressSeminars" :key="seminar.id">
+        <seminar-card class="seminar-card" :seminar="seminar" />
       </slide-in>
     </div>
 
     <div class="col-xs-12 col-md-6 column justify-start preparing-container">
       <div class="col row justify-between items-end section-title-container">
         <h4 class="section-title">{{ t('section-title2') }}</h4>
-
         <single-line-link
           to="/activities"
           :label="t('label')"
@@ -46,42 +39,24 @@ ja:
         />
       </div>
 
-      <slide-in v-for="seminar in preparingSeminars" :key="seminar.title">
-        <seminar-card
-          class="seminar-card"
-          :title="seminar.title"
-          :description="seminar.description"
-          :tags="seminar.tags"
-        />
+      <slide-in v-for="seminar in preparingSeminars" :key="seminar.id">
+        <seminar-card class="seminar-card" :seminar="seminar" />
       </slide-in>
     </div>
   </section>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import SingleLineLink from '../Common/Button/SingleLineLink.vue';
-import SlideIn from '../Common/Transition/SlideIn.vue';
-import SeminarCard, { ITag, TAG_COLOR } from './Seminar/SeminarCard.vue';
-import { hash } from 'src/utils/HashUtil';
-import { StatusType, seminars as _seminars } from 'src/models/seminars';
+import { defineComponent, onMounted, ref } from 'vue';
 import { useQuasar } from 'quasar';
 import { useI18n } from 'vue-i18n';
-
-export interface ISeminar {
-  title: string;
-  description: string;
-  status: StatusType;
-  tags: ITag[];
-}
-
-const TAG_COLOR_KEYS = Object.keys(TAG_COLOR);
-
-const getColor = (s: string) => {
-  return TAG_COLOR_KEYS[
-    Math.abs(hash(s) % TAG_COLOR_KEYS.length)
-  ] as keyof typeof TAG_COLOR;
-};
+import SingleLineLink from '../Common/Button/SingleLineLink.vue';
+import SlideIn from '../Common/Transition/SlideIn.vue';
+import SeminarCard from './Seminar/SeminarCard.vue';
+import {
+  MicroCMSRepository,
+  SeminarsProps,
+} from 'src/repositories/microcms_repository';
 
 export default defineComponent({
   components: {
@@ -91,47 +66,37 @@ export default defineComponent({
   },
   setup() {
     const q = useQuasar();
-    const { t } = useI18n();
+    const { t, locale } = useI18n();
+    const microCMSRepository = new MicroCMSRepository();
+    const seminars = ref<SeminarsProps[]>([]);
+    const inProgressSeminars = ref<SeminarsProps[]>([]);
+    const preparingSeminars = ref<SeminarsProps[]>([]);
 
-    const seminars: ISeminar[] = _seminars
-      .filter((seminar) => seminar.description !== undefined)
-      .map((seminar) => {
-        return {
-          title: seminar.name,
-          // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-          description: seminar.description!,
-          status: seminar.status,
-          tags: [
-            {
-              text: seminar.span,
-              color: getColor(seminar.span),
-            },
-            {
-              text: seminar.style,
-              color: getColor(seminar.style),
-            },
-          ],
-        };
-      });
+    onMounted(async () => {
+      const data = await microCMSRepository.getSeminars();
+      seminars.value = data;
+
+      inProgressSeminars.value = seminars.value
+        .filter((seminar) => seminar.status.includes('進行中'))
+        .slice(0, 4);
+
+      preparingSeminars.value = seminars.value
+        .filter((seminar) => seminar.status.includes('募集中'))
+        .slice(0, 4);
+    });
 
     return {
       q,
-      inProgressSeminars: seminars
-        .filter((seminar) => seminar.status === 'in-progress')
-        .slice(0, 3),
-      preparingSeminars: seminars
-        .filter((seminar) => ['preparing', 'wanted'].includes(seminar.status))
-        .slice(0, 3),
       t,
+      locale,
+      inProgressSeminars,
+      preparingSeminars,
     };
   },
 });
 </script>
 
 <style lang="scss" scoped>
-// $
-@import 'assets/mq.scss';
-
 .section-title {
   font-size: 1.5rem;
   text-decoration: underline;

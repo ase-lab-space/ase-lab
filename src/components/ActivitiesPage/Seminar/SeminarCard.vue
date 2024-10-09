@@ -1,18 +1,22 @@
 <template>
   <q-card class="shadow-2 col-12 seminar-card">
     <img
-      :src="seminar.url"
+      :src="seminar.image.url"
       :alt="`${seminar.name}の本`"
       class="q-mx-auto book-image"
     />
-    <div class="badge shadow-18" :class="`badge-${seminar.status}`">
-      {{ STATUS[seminar.status] }}
+    <div
+      v-if="seminar.status[0]"
+      class="badge shadow-18"
+      :class="`badge-${seminar.status[0]}`"
+    >
+      {{ STATUS[seminar.status[0]][locale] }}
     </div>
     <hr />
     <q-card-section>
-      <div class="name">{{ seminar.name }}</div>
+      <div class="name">{{ seminar.name[locale] }}</div>
       <div class="text-caption text-center">
-        {{ seminar.span }}
+        {{ seminar.span[locale] }}
       </div>
     </q-card-section>
   </q-card>
@@ -20,18 +24,22 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from 'vue';
-import { ISeminar, STATUS } from 'src/models/seminars';
+import { useI18n } from 'vue-i18n';
+import { STATUS } from 'src/models/seminars';
+import { SeminarsProps } from 'src/repositories/microcms_repository';
 
 export default defineComponent({
   props: {
     seminar: {
-      type: Object as PropType<ISeminar>,
+      type: Object as PropType<SeminarsProps>,
       required: true,
     },
   },
   setup() {
+    const { locale } = useI18n();
     return {
       STATUS,
+      locale,
     };
   },
 });
@@ -60,20 +68,21 @@ export default defineComponent({
   z-index: 101;
   font-size: 0.8rem;
   font-weight: 500;
-
-  &-wanted {
-    background-color: rgb(255, 62, 23);
-  }
-  &-in-preparation {
-    background-color: rgb(89, 89, 89);
-  }
-  &-in-progress {
-    background-color: rgb(16, 154, 53);
-  }
-  &-finished {
-    background-color: rgb(0, 87, 217);
-  }
+  background-color: red !important;
 }
+
+.badge-募集中 {
+  background-color: red !important;
+}
+
+.badge-進行中 {
+  background-color: green !important;
+}
+
+.badge-終了済み {
+  background-color: blue !important;
+}
+
 .q-card > .badge {
   box-shadow: inherit !important;
 }
