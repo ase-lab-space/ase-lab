@@ -15,11 +15,6 @@ type MultilingualText = {
   [key: string]: string | undefined;
 };
 
-type Meta = {
-  participantNumber: number;
-  univs: string;
-};
-
 type Article = {
   bodyDigest: MultilingualText;
   date: string; // "2022-04-22T15:00:00.000Z"
@@ -62,12 +57,6 @@ export class MicroCMSRepository extends BaseRepository {
     this.#client = createClient({
       serviceDomain: 'ase-lab',
       apiKey,
-    });
-  }
-
-  async getMeta() {
-    return this.#client.getObject<Meta>({
-      endpoint: 'meta',
     });
   }
 
