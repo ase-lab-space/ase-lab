@@ -15,7 +15,6 @@ type MultilingualText = {
   [key: string]: string | undefined;
 };
 
-
 type Article = {
   bodyDigest: MultilingualText;
   date: string; // "2022-04-22T15:00:00.000Z"
@@ -60,7 +59,6 @@ export class MicroCMSRepository extends BaseRepository {
       apiKey,
     });
   }
-
 
   async getArticles(
     { queries }: { queries: MicroCMSQueries | undefined } = {
