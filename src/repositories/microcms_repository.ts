@@ -15,10 +15,6 @@ type MultilingualText = {
   [key: string]: string | undefined;
 };
 
-type Meta = {
-  participantNumber: number;
-  univs: string;
-};
 
 type Article = {
   bodyDigest: MultilingualText;
@@ -65,11 +61,6 @@ export class MicroCMSRepository extends BaseRepository {
     });
   }
 
-  async getMeta() {
-    return this.#client.getObject<Meta>({
-      endpoint: 'meta',
-    });
-  }
 
   async getArticles(
     { queries }: { queries: MicroCMSQueries | undefined } = {
