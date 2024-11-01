@@ -31,7 +31,7 @@
 import { defineComponent, onMounted, ref } from 'vue';
 import anime from 'animejs';
 import SlideIn from '../Common/Transition/SlideIn.vue';
-import { participantNumber, univs } from 'src/models/meta';
+import { MetaRepository } from 'src/repositories/meta_repository';
 
 export default defineComponent({
   components: {
@@ -40,7 +40,14 @@ export default defineComponent({
 
   setup() {
     const num = ref({ value: 0 });
-    onMounted(() => {
+    const univs = ref<string[]>([]);
+    const metaRepository = new MetaRepository();
+
+    onMounted(async () => {
+      const metaInfo = await metaRepository.getMetaInfo();
+      const participantNumber = metaInfo.memberCount;
+      univs.value = metaInfo.universities;
+
       anime({
         targets: num.value,
         easing: 'easeOutExpo',
