@@ -6,20 +6,6 @@ ASE-Lab. メンバーがこのリポジトリを使う用途としては，以�
 
 1. Pull Request を通して website の体裁を調整したり新しいページを追加したい場合
 
-## メタデータを追加・編集する方法
-
-まず，GitHub 上で以下のいずれかのファイルを編集します．（ローカルで clone して push も可）
-
-- [seminars.ts](https://github.com/ase-lab-space/ase-lab/blob/main/src/models/seminars.ts)
-
-右上の鉛筆マークをクリックすると，編集モードに入ることができます．
-
-次に，編集したファイルをコミットして，新しいブランチを作ります．ページ下部から作れます．
-
-> [SHOULD] ブランチ名に関しては，変更内容がわかりやすいケバブケースであると良いです．例えば，`modify-bla-bla-seminar` や `add-bla-bla-article`などのようにです．
-
-そのままプルリクエストを作り，必要事項を埋め，@Damin3927 に Reviewer を設定しメンションを飛ばしてください．レビューして，問題なければマージされ自動でデプロイされます．
-
 ## 環境構築
 
 まず，この repository を clone します．
