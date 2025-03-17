@@ -17,7 +17,7 @@
     "@quasar/extras": "^1.16.4",
     "@tweenjs/tween.js": "^21.0.0",
     "animejs": "^3.2.1",
-    "axios": "^1.7.4",
+    "axios": "^1.8.2",
     "core-js": "^3.31.0",
     "date-fns": "^3.6.0",
     "disable-scroll": "^0.6.0",
