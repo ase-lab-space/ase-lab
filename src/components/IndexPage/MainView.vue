@@ -6,7 +6,7 @@ en:
   description1: ASE-Lab. is a community of space enthusiasts who learn from each other by holding independent seminars related to their interests and knowledge.
   description2: We sometimes hold study events with people who are active in the front lines of space business and research, and social gatherings among ASE-Lab. members.
 ja:
-  clickHere: 参加はフォームから
+  clickHere: 参加はコチラから
   catch-phrase1: 宇宙好きが集まり、
   catch-phrase2: 思い思いの勉強会を。
   description1: ASE-Lab.は宇宙が大好きな人が集まって、勉強会をするコミュニティです。
