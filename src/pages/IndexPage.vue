@@ -18,7 +18,7 @@ ja:
     <seminars-view class="seminars-view" />
     <articles-view />
     <border-button
-      to="https://docs.google.com/forms/d/18dhq82BQmeeSrxJgKtGRjCm2z6fM52P8rwFig8iyQ_o/edit"
+      to="https://docs.google.com/forms/d/e/1FAIpQLSdOKt4_07XD7MxRKdQNKARKr9LHHXu6lcnMAqUbyxiUwQRdzg/viewform?usp=dialog"
       :label="t('label')"
       class="entry-button"
     />
