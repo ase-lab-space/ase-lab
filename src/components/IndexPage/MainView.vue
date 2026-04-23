@@ -37,7 +37,7 @@ ja:
         </div>
 
         <border-button
-          to="https://docs.google.com/forms/d/e/1FAIpQLSeLGWm5rdl1MFwwIkWf5s_LBXlqpbVhInfbSb7PCsAAjS9yaA/viewform?usp=dialog"
+          to="https://docs.google.com/forms/d/e/1FAIpQLSdOKt4_07XD7MxRKdQNKARKr9LHHXu6lcnMAqUbyxiUwQRdzg/viewform?usp=dialog"
           :label="t('clickHere')"
           class="entry-button"
         />
