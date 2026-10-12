@@ -56,5 +56,9 @@
     "last 10 iOS versions",
     "last 5 Opera versions"
   ],
-  "packageManager": "yarn@4.5.0"
+  "packageManager": "yarn@4.5.0",
+  "resolutions": {
+    "serialize-javascript": "^7.0.3",
+    "tmp": "^0.2.6"
+  }
 }
