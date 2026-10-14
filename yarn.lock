@@ -5741,7 +5741,7 @@ __metadata:
     microcms-js-sdk: "npm:^3.1.2"
     pinia: "npm:^2.1.4"
     prettier: "npm:^2.8.8"
-    quasar: "npm:^2.12.1"
+    quasar: "npm:^2.32.2"
     three: "npm:^0.154.0"
     three-globe: "npm:^2.27.4"
     typescript: "npm:^4.9.5"
@@ -8477,10 +8477,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"quasar@npm:^2.12.1":
-  version: 2.12.1
-  resolution: "quasar@npm:2.12.1"
-  checksum: 10/04f4a0ec9bbd75d1a258a00f8d4dc2f5027c5dcc3d72c76550bf0078d5a77b8ca5724bf0146a2cc41a18e07f2b70563e426771970a563651dc27c079ec3d426b
+"quasar@npm:^2.32.2":
+  version: 2.32.2
+  resolution: "quasar@npm:2.32.2"
+  checksum: 10/bdec148f2ed402c42a15995ba581dfc24c3a3b99258c6dcd553775045a3aae0dbaae9db274495ae4235273dcb73528595b48e3009d25deb9f27b9d56e7645dd9
   languageName: node
   linkType: hard
 
